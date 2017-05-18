@@ -1,10 +1,6 @@
-# Pre-developer Notes
-
 ## Introduction
 
-This repository has two main purposes: **learn about GIT and GitHub** while I am doing it and **organise all my notes and exercices** to become a developer
-
-> For those that don't know where to start I recommend visit [kamranahmedse developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
+This repository has two main purposes: **learn about GIT and GitHub** while I am doing it and **organise all my notes and exercices** to become a developer. For those that don't know where to start I recommend visit [kamranahmedse developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
 
 ## List of Subjects
 
@@ -16,13 +12,13 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :clock1: Algorithms
 
-:clock1: API Development
+:clock1: [API Development](api-development.md)
 
 :clock1: Data Structures
 
 :clock1: Design Patterns
 
-:clock1: Encryption, security
+:clock1: [Encryption, security, authentication](encryption-security-authentication.md)
 
 :clock1: HTTP, Network Layers
 
@@ -30,19 +26,21 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :white_medium_square: REGEX
 
+:white_medium_square: [REST](rest.md)
+
 ### Languages, Markups, Frameworks
 
-:clock1: Bootstrap
+:clock1: [Bootstrap](bootstrap.md)
 
-:clock1: CSS
+:clock1: [CSS](css.md)
 
-:clock1: HTML
+:clock1: [HTML](html.md)
 
 :clock1: Java (core)
 
-:clock1: JavaScript
+:clock1: [JavaScript](javascript.md)
 
-:white_medium_square: JQuery
+:white_medium_square: [JQuery](jquery.md)
 
 :white_medium_square: Junit
 
@@ -50,11 +48,11 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :clock1: Maven (Java)
 
-:white_medium_square: MongoDB
+:white_medium_square: [MongoDB](mongodb.md)
 
 :white_medium_square: MySQL
 
-:white_medium_square: NodeJS
+:white_medium_square: [NodeJS](nodejs.md)
 
 :clock1: Ruby
 
@@ -90,11 +88,11 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :white_medium_square: IntelliJ IDE
 
-:clock1: Linux command line and bash
+:clock1: [Linux/Unix command line and bash](bash.md)
 
 :clock1: Netbeans IDE
 
-:clock1: Sublime Editor
+:clock1: [Sublime Editor](sublime-editor.md)
 
 > <sub>Subjects are marked as :white_check_mark: done when I achieve my target for that matter (it does not mean that I have full knowledge of it)</sub>
 
@@ -145,7 +143,7 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 
 :clock1: [The Ruby on rails tutorial, Michael Hartl (Book)](https://www.railstutorial.org/book/beginning)
 
-:clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](https://www.udemy.com/the-web-developer-bootcamp/)
+:clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](twdb.md)
 
 ## Repository Structure
 
