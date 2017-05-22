@@ -6,6 +6,8 @@
 
 ## Courses, books...
 
+> HTML & CSS design and build websites, Jon Duckett (Book)
+
 >[The Web developer bootcamp, Colt Steele (Udemy course)](twdb.md)
 
 ## Documentation, manual references...

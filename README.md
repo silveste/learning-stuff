@@ -10,21 +10,21 @@ To become a full stack developer the following list shows the topics that I aim 
 
 ### General Concepts
 
-:clock1: Algorithms
+:clock1: [Algorithms](algorithms.md)
 
 :clock1: [API Development](api-development.md)
 
-:clock1: Data Structures
+:clock1: [Data Structures](data-structures.md)
 
-:clock1: Design Patterns
+:clock1: [Design Patterns](design-patterns.md)
 
 :clock1: [Encryption, security, authentication](encryption-security-authentication.md)
 
-:clock1: HTTP, Network Layers
+:clock1: [Project development, Agile methodologies, scrum...](project-development.md)
 
-:clock1: Project management, Agile methodologies, scrum
+:clock1: [Network: Protocols, Layers, models...](network.md)
 
-:white_medium_square: REGEX
+:white_medium_square: [REGEX](regex.md)
 
 :white_medium_square: [REST](rest.md)
 
@@ -117,7 +117,7 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 
 :white_medium_square: Grokking Algorithms: An illustrated guide for programmers and other curious people, Aditya Bhargava (Book)
 
-:white_check_mark: HTML & CSS design and build websites, Jon Duckett (Book)
+:white_check_mark: [HTML & CSS design and build websites, Jon Duckett (Book)](hcdbw.md)
 
 :white_medium_square: HTML5 & CSS3, Brian P. Hogan (Book)
 
@@ -135,7 +135,7 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 
 :white_medium_square: Ry's Git Tutorial, Ryan Hodson (Book)
 
-:white_check_mark: Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)
+:white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](sbbai.md)
 
 :clock1: [Spring Framework Tutorial, javaBrains (Youtube tutorials)](https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7)
 
@@ -144,7 +144,3 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 :clock1: [The Ruby on rails tutorial, Michael Hartl (Book)](https://www.railstutorial.org/book/beginning)
 
 :clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](twdb.md)
-
-## Repository Structure
-
-Notes and exercises done during the reading of a book, video tutorial or course will be stored as a separate folder in the repository. Therefore, every folder match the reference list and contains exercises and notes related with the course or book. Every folder it also contains a list of subjects covered within the course or book.
