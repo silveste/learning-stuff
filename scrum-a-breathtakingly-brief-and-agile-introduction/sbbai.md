@@ -8,4 +8,4 @@
 
 >### General Concepts
 
->>[Project development, Agile methodologies, scrum...](subjects/project-development.md)
+>>[Project development, Agile methodologies, scrum...](../subjects/project-development.md)

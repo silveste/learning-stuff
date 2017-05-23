@@ -8,7 +8,7 @@
 
 ## Courses, books...
 
->[Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
+>[Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](../scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
 ## Documentation, manual references...
 

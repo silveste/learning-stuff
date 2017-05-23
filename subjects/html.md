@@ -6,9 +6,9 @@
 
 ## Courses, books...
 
->[HTML & CSS design and build websites, Jon Duckett (Book)](html-and-css-design-and-build-websites/hcdbw.md)
+>[HTML & CSS design and build websites, Jon Duckett (Book)](../html-and-css-design-and-build-websites/hcdbw.md)
 
->[The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
+>[The Web developer bootcamp, Colt Steele (Udemy course)](../the-web-developer-bootcamp/twdb.md)
 
 ## Documentation, manual references...
 

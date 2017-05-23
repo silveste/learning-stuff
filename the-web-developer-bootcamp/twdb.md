@@ -1,4 +1,4 @@
-# The Web developer bootcamp, Colt Steele
+../subjects/# The Web developer bootcamp, Colt Steele
 
 
 ## Source
@@ -10,31 +10,31 @@
 
 >### General concepts
 
->>[API Development](api-development.md)
+>>[API Development](../subjects/api-development.md)
 
->>[Encryption, security, authentication](encryption-security-authentication.md)
+>>[Encryption, security, authentication](../subjects/encryption-security-authentication.md)
 
 
 >### Languages, Markups, Frameworks
 
->>[Bootstrap](bootstrap.md)
+>>[Bootstrap](../subjects/bootstrap.md)
 
->>[CSS](css.md)
+>>[CSS](../subjects/css.md)
 
->>[HTML](html.md)
+>>[HTML](../subjects/html.md)
 
->>[JavaScript](javascript.md)
+>>[JavaScript](../subjects/javascript.md)
 
->>[JQuery](jquery.md)
+>>[JQuery](../subjects/jquery.md)
 
->>[MongoDB](mongodb.md)
+>>[MongoDB](../subjects/mongodb.md)
 
->>[NodeJS](nodejs.md)
+>>[NodeJS](../subjects/nodejs.md)
 
 
 >### Tools, Servers, Operating systems, Deployment
 
->>[Linux/Unix command line and bash](bash.md)
+>>[Linux/Unix command line and bash](../subjects/bash.md)
 
->>[Sublime Editor](sublime-editor.md)
+>>[Sublime Editor](../subjects/sublime-editor.md)
 
