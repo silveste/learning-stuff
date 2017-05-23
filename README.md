@@ -30,17 +30,17 @@ To become a full stack developer the following list shows the topics that I aim 
 
 ### Languages, Markups, Frameworks
 
-:clock1: [Bootstrap](bootstrap.md)
+:clock1: [Bootstrap](subjects/bootstrap.md)
 
-:clock1: [CSS](css.md)
+:clock1: [CSS](subjects/css.md)
 
-:clock1: [HTML](html.md)
+:clock1: [HTML](subjects/html.md)
 
 :clock1: Java (core)
 
-:clock1: [JavaScript](javascript.md)
+:clock1: [JavaScript](subjects/javascript.md)
 
-:white_medium_square: [JQuery](jquery.md)
+:white_medium_square: [JQuery](subjects/jquery.md)
 
 :white_medium_square: Junit
 
@@ -48,11 +48,11 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :clock1: Maven (Java)
 
-:white_medium_square: [MongoDB](mongodb.md)
+:white_medium_square: [MongoDB](subjects/mongodb.md)
 
 :white_medium_square: MySQL
 
-:white_medium_square: [NodeJS](nodejs.md)
+:white_medium_square: [NodeJS](subjects/nodejs.md)
 
 :clock1: Ruby
 
@@ -88,11 +88,11 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :white_medium_square: IntelliJ IDE
 
-:clock1: [Linux/Unix command line and bash](bash.md)
+:clock1: [Linux/Unix command line and bash](subjects/bash.md)
 
 :clock1: Netbeans IDE
 
-:clock1: [Sublime Editor](sublime-editor.md)
+:clock1: [Sublime Editor](subjects/sublime-editor.md)
 
 > <sub>Subjects are marked as :white_check_mark: done when I achieve my target for that matter (it does not mean that I have full knowledge of it)</sub>
 
@@ -117,7 +117,7 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 
 :white_medium_square: Grokking Algorithms: An illustrated guide for programmers and other curious people, Aditya Bhargava (Book)
 
-:white_check_mark: [HTML & CSS design and build websites, Jon Duckett (Book)](hcdbw.md)
+:white_check_mark: [HTML & CSS design and build websites, Jon Duckett (Book)](html-and-css-design-and-build-websites/hcdbw.md)
 
 :white_medium_square: HTML5 & CSS3, Brian P. Hogan (Book)
 
@@ -135,7 +135,7 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 
 :white_medium_square: Ry's Git Tutorial, Ryan Hodson (Book)
 
-:white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](sbbai.md)
+:white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
 :clock1: [Spring Framework Tutorial, javaBrains (Youtube tutorials)](https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7)
 
@@ -143,4 +143,4 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 
 :clock1: [The Ruby on rails tutorial, Michael Hartl (Book)](https://www.railstutorial.org/book/beginning)
 
-:clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](twdb.md)
+:clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)

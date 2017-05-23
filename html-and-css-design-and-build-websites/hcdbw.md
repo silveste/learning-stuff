@@ -10,6 +10,6 @@
 
 >### Languages, Markups, Frameworks
 
->>[CSS](css.md)
+>>[CSS](subjects/css.md)
 
->>[HTML](html.md)
+>>[HTML](subjects/html.md)
