@@ -10,23 +10,23 @@ To become a full stack developer the following list shows the topics that I aim 
 
 ### General Concepts
 
-:clock1: [Algorithms](algorithms.md)
+:clock1: [Algorithms](subjects/algorithms.md)
 
-:clock1: [API Development](api-development.md)
+:clock1: [API Development](subjects/api-development.md)
 
-:clock1: [Data Structures](data-structures.md)
+:clock1: [Data Structures](subjects/data-structures.md)
 
-:clock1: [Design Patterns](design-patterns.md)
+:clock1: [Design Patterns](subjects/design-patterns.md)
 
-:clock1: [Encryption, security, authentication](encryption-security-authentication.md)
+:clock1: [Encryption, security, authentication](subjects/encryption-security-authentication.md)
 
-:clock1: [Project development, Agile methodologies, scrum...](project-development.md)
+:clock1: [Project development, Agile methodologies, scrum...](subjects/project-development.md)
 
-:clock1: [Network: Protocols, Layers, models...](network.md)
+:clock1: [Network: Protocols, Layers, models...](subjects/network.md)
 
-:white_medium_square: [REGEX](regex.md)
+:white_medium_square: [REGEX](subjects/regex.md)
 
-:white_medium_square: [REST](rest.md)
+:white_medium_square: [REST](subjects/rest.md)
 
 ### Languages, Markups, Frameworks
 
