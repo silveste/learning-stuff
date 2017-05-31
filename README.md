@@ -1,12 +1,25 @@
 ## Introduction
 
-This repository has two main purposes: **learn about GIT and GitHub** while I am doing it and **organise all my notes and exercices** to become a developer. For those that don't know where to start I recommend visit [kamranahmedse developer-roadmap](https://github.com/kamranahmedse/developer-roadmap)
+This repository has two main purposes: **learn about GIT and GitHub** while I am doing it and **organise all my notes and exercices** to become a developer and also a third one smaller goal which is learn markdown.
 
-## List of Subjects
+The repository will probably have unnecessary branches and commits in order to find out how git and github works.
 
-To become a full stack developer the following list shows the topics that I aim to learn sorted by areas and listed in alphabetical order:
+In order to organise all topics that I would like to learn. I set a list of subjects which are my learning targets and a list of learning materials that are the means to achieve them.
 
-(:white_medium_square: not started, :clock1: started, :white_check_mark: done)
+Regarding the subjects, all the information is contained in markdown files in subjects directory. The reason why there are a lot of markdown files is because I used them to learn it.
+
+The chosen topics to learn are based in [kamranahmedse developer-roadmap](https://github.com/kamranahmedse/developer-roadmap) and in my personal preferences. From my personal point of view I decided to learn a bit about everything (Frontend and Backend) to have a general overview and then decide which one I would like to specialize.
+
+This repository only covers the general overview part. Regarding the time needed to achieve all goals I consider that it would take around 3 years (1.5 already done at the time that I started the repository) or 1 dedicating full time.
+
+## List of Subjects <!--Future: If a new subject is added remember update MD template-->
+
+The following topics are my goals to become a frontend, backend or even full stack developer. The topics are sorted by areas and listed in alphabetical order.
+
+Every link leads to a markdown in the subjects directory that contains a comprehensive description (usually from wikipedia), the materials used to learn about it, documentation used as a reference guides and related topics.
+
+The following emticons show the status achieved:
+(:white_medium_square: not started, :clock1: started, :white_check_mark: goal)
 
 ### General Concepts
 
@@ -58,7 +71,7 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :clock1: Ruby on rails
 
-:white_medium_square: SQL
+:white_medium_square: [SQL](subjects/sql.md)
 
 :white_medium_square: SASS, LESS
 
@@ -94,14 +107,12 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :clock1: [Sublime Editor](subjects/sublime-editor.md)
 
-> <sub>Subjects are marked as :white_check_mark: done when I achieve my target for that matter (it does not mean that I have full knowledge of it)</sub>
 
+## Learning materials: courses, books <!--Future: If a new material is included use the MD template to include it-->
 
-## Reference list: courses, books
+To achieve the goals the follwoing materials will be or have been used. Every link leads to a markdown file stored in a subdirectory that also contains files and subfolders with exercises related with the course:
 
-To achieve the goals the follwoing materials will be or have been used (sorted by alphabetical order):
-
-(:white_medium_square: not started, :clock1: started, :white_check_mark: done)
+(:white_medium_square: not started, :clock1: started, :white_check_mark: completed)
 
 :white_medium_square: Advanced Data Structures, Peter Brass (Book)
 
@@ -136,6 +147,8 @@ To achieve the goals the follwoing materials will be or have been used (sorted b
 :white_medium_square: Ry's Git Tutorial, Ryan Hodson (Book)
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
+
+:clock1: [SQLite For Beginners - Learn SQL from Scratch, Eduonix Learning Solutions (Udemy course)](/sqlite-for-beginners-learn-sql-from-scratch/sblss.md)
 
 :clock1: [Spring Framework Tutorial, javaBrains (Youtube tutorials)](https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7)
 
