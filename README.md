@@ -36,13 +36,13 @@ To become a full stack developer the following list shows the topics that I aim 
 
 :clock1: [HTML](subjects/html.md)
 
-:clock1: Java (core)
+:clock1: [Java (core)](subjects/java(core).md)
 
 :clock1: [JavaScript](subjects/javascript.md)
 
 :white_medium_square: [JQuery](subjects/jquery.md)
 
-:white_medium_square: Junit
+:white_medium_square: Junit <!--Todo: Find curses and resources and add file to /subjects-->
 
 :white_check_mark: Markdown
 

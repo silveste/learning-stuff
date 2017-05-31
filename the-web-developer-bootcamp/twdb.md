@@ -1,5 +1,4 @@
-../subjects/# The Web developer bootcamp, Colt Steele
-
+# The Web developer bootcamp, Colt Steele
 
 ## Source
 
