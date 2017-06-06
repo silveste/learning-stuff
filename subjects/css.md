@@ -2,7 +2,9 @@
 
 ## Description
 
->[Wikipedia](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
+>[Style Sheet Language (Wikipedia)](https://en.wikipedia.org/wiki/Style_sheet_language)
+
+>[Cascading Style Sheets (Wikipedia)](https://en.wikipedia.org/wiki/Cascading_Style_Sheets)
 
 ## Courses, books...
 
@@ -15,3 +17,5 @@
 >[w3schools](https://www.w3schools.com/css/)
 
 >[Mozilla Developer Network](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
+>[SASS](sass.md)

@@ -55,29 +55,29 @@ The following emticons show the status achieved:
 
 :white_medium_square: [JQuery](subjects/jquery.md)
 
-:white_medium_square: Junit <!--Todo: Find curses and resources and add file to /subjects-->
+:white_medium_square: [Junit](subjects/junit.md)
 
-:white_check_mark: Markdown
+:clock1: [Markdown](subjects/markdown.md)
 
-:clock1: Maven (Java)
+:clock1: [Maven](subjects/maven.md)
 
 :white_medium_square: [MongoDB](subjects/mongodb.md)
 
-:white_medium_square: MySQL
+:white_medium_square: [MySQL](subjects/mysql.md)
 
 :white_medium_square: [NodeJS](subjects/nodejs.md)
 
-:clock1: Ruby
+:clock1: [Ruby](subjects/ruby.md)
 
-:clock1: Ruby on rails
+:clock1: [Ruby on rails](ruby-on-rails.md)
+
+:white_medium_square: [SASS](subjects/sass.md)
 
 :white_medium_square: [SQL](subjects/sql.md)
 
-:white_medium_square: SASS, LESS
+:white_medium_square: [Spring](subjects/spring.md)
 
-:white_medium_square: Spring (Java)
-
-:white_medium_square: Swing (Java)
+:white_medium_square: [Swing](subjects/swing.md)
 
 ### Tools, Servers, Operating systems, Deployment
 
@@ -139,10 +139,6 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 :white_medium_square: [Learn Ruby the Hard Way, Zed A. Shaw (Book)](https://learnrubythehardway.org/)
 
 :white_medium_square: Linux Essentials The LPI Introductory Programme, Tobias Elsner, Thomas Erker, Anselm Lingnau (Book)
-
-:white_check_mark: [Mastering Markdown - GitHub Guides (Webpage)](https://guides.github.com/features/mastering-markdown/)
-
-:white_check_mark: [Markdown Cheatsheet, adam-p (Guide)](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
 :white_medium_square: Ry's Git Tutorial, Ryan Hodson (Book)
 

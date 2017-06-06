@@ -6,17 +6,25 @@
 
 ## Courses, books...
 
-> [Complete Java Masterclass, Tim Buchalka (Udemy course)](../complete-java-masterclass/cjm.md)
+>[Complete Java Masterclass, Tim Buchalka (Udemy course)](../complete-java-masterclass/cjm.md)
 <!--TODO: Include and upload coursera exercises-->
 
 ## Documentation, manual references...
 
-> [Oracle documentation Standard Edition 8 API](https://docs.oracle.com/javase/8/docs/api/index.html)
+>[Oracle documentation Standard Edition 8 API](https://docs.oracle.com/javase/8/docs/api/index.html)
 
-> [Oracle documentation Standard Edition 8](https://docs.oracle.com/javase/8/)
+>[Oracle documentation Standard Edition 8](https://docs.oracle.com/javase/8/)
 
 ## Related content
 
-> [OpenJDK](http://openjdk.java.net/)
+>[Maven](maven.md)
 
-> [OpenJDK Documentation](http://devdocs.io/openjdk~8/)
+>[OpenJDK](http://openjdk.java.net/)
+
+>[OpenJDK Documentation](http://devdocs.io/openjdk~8/)
+
+>[Junit](junit.md)
+
+>[Spring](spring.md)
+
+>[Swing](swing.md)
