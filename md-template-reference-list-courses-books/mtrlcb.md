@@ -88,7 +88,7 @@
 
 >>Fedora (Linux distribution, yum, dnf package manager)
 
->>GIT & GitHub
+>>[GIT & GitHub](../subjects/git.md)
 
 >>Heroku
 

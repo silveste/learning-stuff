@@ -95,7 +95,7 @@ The following emticons show the status achieved:
 
 :clock1: Fedora (Linux distribution, yum, dnf package manager)
 
-:clock1: GIT & GitHub
+:clock1: [GIT & GitHub](subjects/git.md)
 
 :clock1: Heroku
 
@@ -140,7 +140,7 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_medium_square: Linux Essentials The LPI Introductory Programme, Tobias Elsner, Thomas Erker, Anselm Lingnau (Book)
 
-:white_medium_square: Ry's Git Tutorial, Ryan Hodson (Book)
+:white_medium_square: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
