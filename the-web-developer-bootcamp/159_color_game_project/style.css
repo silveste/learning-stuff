@@ -1,0 +1,72 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #232323;
+  font-family: "Montserrat", "Avenir";
+}
+
+#head{
+  text-align: center;
+  color: cornsilk;
+  background-color: steelblue;
+  padding: 2% 0;
+}
+h1{
+  margin: 0;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 0.05em;
+}
+
+#to-guess{
+  font-size: 4em;
+}
+
+.bar {
+  background: #fefefe;
+  padding: 0;
+  height: 30px;
+  text-align: center;
+}
+button:hover, .selected {
+  border: none;
+  background: steelblue;
+  color: #fefefe;
+}
+
+button{
+  border: none;
+  background: none;
+  text-transform: uppercase;
+  height: 100%;
+  font-weight: 700;
+  font-size: inherit;
+  letter-spacing: 0.1em;
+  color: steelblue;
+  transition: all .3s;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+}
+.messages{
+  display: inline-block;
+  width: 20%;
+  text-align: center;
+}
+.square {
+  width: 30%;
+  padding-bottom: 30%;
+  margin: 1.66%;
+  float: left;
+  border-radius: 15%;
+  transition: background 0.6s;
+  -webkit-transition: background 0.6s;
+  -moz-transition: background 0.6s;
+}
+.hidden{
+  display: none;
+}
+
+.game-container {
+  margin: 15px auto;
+  max-width: 600px;
+}
