@@ -34,7 +34,7 @@
 
 >### Tools, Servers, Operating systems, Deployment
 
->>[Linux/Unix command line and bash](../subjects/bash.md)
+>>[Integration Development Environments](../subjects/ide.md)
 
->>[Sublime Editor](../subjects/sublime-editor.md)
+>>[Linux/Unix command line and bash](../subjects/bash.md)
 

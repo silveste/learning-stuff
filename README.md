@@ -81,31 +81,13 @@ The following emticons show the status achieved:
 
 ### Tools, Servers, Operating systems, Deployment
 
-:clock1: Atom Editor
-
-:clock1: Brackets editor
-
-:clock1: Debian (Linux distribution, apt package manager)
-
-:clock1: Docker
-
-:clock1: Eclipse IDE
-
-:clock1: Emmet
-
-:clock1: Fedora (Linux distribution, yum, dnf package manager)
+:clock1: [Integration Development Environments](subjects/ide.md)
 
 :clock1: [GIT & GitHub](subjects/git.md)
 
-:clock1: Heroku
-
-:white_medium_square: IntelliJ IDE
-
 :clock1: [Linux/Unix command line and bash](subjects/bash.md)
 
-:clock1: Netbeans IDE
-
-:clock1: [Sublime Editor](subjects/sublime-editor.md)
+:clock1: [Source Code Editors](subjects/source-code-editors.md)
 
 
 ## Learning materials: courses, books <!--Future: If a new material is included use the MD template to include it-->
@@ -122,7 +104,7 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :clock1: [APIs on Rails, Building REST APIs with Rails, Abraham Kuri (Book)](http://apionrails.icalialabs.com/book/chapter_one)
 
-:clock1: [Complete Java Masterclass, Tim Buchalka (Udemy course)](https://www.udemy.com/java-the-complete-java-developer-course/)
+:clock1: [Complete Java Masterclass, Tim Buchalka (Udemy course)](complete-java-masterclass/cjm.md)
 
 :clock1: [GitHub Training & Guides, GitHub (Youtube tutorial)](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
 
