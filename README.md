@@ -18,6 +18,10 @@ The following topics are my goals to become a frontend, backend or even full sta
 
 Every link leads to a markdown in the subjects directory that contains a comprehensive description (usually from wikipedia), the materials used to learn about it, documentation used as a reference guides and related topics.
 
+The repository is organised in branches related with subjects, so that the information is more concise regarding a particular subject when switching to its branch. This is because a specific subject can be covered by more than one course and a specific course can include more than one subject, therefore, it is possible to see only the exercises of a particular subject by changing the branch for that subject. For example, the branch learning-jquery contains only exercises related with jQuery.
+
+The courses/books where the exercises come from are indicated in every commit message
+
 The following emticons show the status achieved:
 (:white_medium_square: not started, :clock1: started, :white_check_mark: goal)
 
