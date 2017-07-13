@@ -1,1 +1,2 @@
-*.md merge=ours
+*.md = merge=ours
+
