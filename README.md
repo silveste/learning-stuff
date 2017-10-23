@@ -57,7 +57,7 @@ The following emticons show the status achieved:
 
 :white_medium_square: [Junit](subjects/junit.md)
 
-:clock1: [Markdown](subjects/markdown.md)
+:white_check_mark: [Markdown](subjects/markdown.md)
 
 :clock1: [Maven](subjects/maven.md)
 
