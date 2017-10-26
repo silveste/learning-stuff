@@ -1,0 +1,14 @@
+#container {
+  width: 360px;
+  margin: 0 auto;
+  border: 2px solid rgb(128, 128, 128);
+}
+
+.task-off {
+  color: rgb(128, 128, 128);
+  text-decoration:  line-through;
+}
+
+div[id^='template'] {
+  display: none;
+}
