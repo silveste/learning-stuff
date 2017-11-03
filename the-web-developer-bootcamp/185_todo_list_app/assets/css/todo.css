@@ -67,7 +67,6 @@ li:hover span {
   float: right;
 }
 
-
 .task-off {
   color: rgb(128, 128, 128);
   text-decoration:  line-through;

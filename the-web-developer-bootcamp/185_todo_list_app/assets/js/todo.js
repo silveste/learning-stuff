@@ -1,5 +1,7 @@
 /* global $ */
 
+
+
 // Check in/off todos by clicking
 $('ul').on('click', '.todo', function(){
   $(this).toggleClass('task-off');
