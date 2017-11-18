@@ -1,0 +1,18 @@
+{
+  "name": "express-basics-exercise",
+  "version": "1.0.0",
+  "description": "A basic exercise to learn express",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silveste/becoming-a-developer/tree/master/the-web-developer-bootcamp/230_express_basics_exercise"
+  },
+  "author": "Silveste",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.2"
+  }
+}
