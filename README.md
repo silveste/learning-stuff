@@ -100,6 +100,8 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 (:white_medium_square: not started, :clock1: started, :white_check_mark: completed)
 
+:clock1: [Advanced CSS and Sass: Take Your CSS to the Next Level!](advanced-css-and-sass/acas.md)
+
 :white_medium_square: Advanced Data Structures, Peter Brass (Book)
 
 :white_medium_square: Algorithms, Robert Sedgewick (Book)
