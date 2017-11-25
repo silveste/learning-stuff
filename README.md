@@ -130,6 +130,8 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_medium_square: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
 
+:white_check_mark: [Sams Teach Yourself Regular Expressions in 10 Minutes, Ben Forta](sams-teach-yourself-regular-expressions-in-10-minutes/styrem.md)
+
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
 :clock1: [SQLite For Beginners - Learn SQL from Scratch, Eduonix Learning Solutions (Udemy course)](/sqlite-for-beginners-learn-sql-from-scratch/sblss.md)
