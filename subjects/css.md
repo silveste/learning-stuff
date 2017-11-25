@@ -8,7 +8,7 @@
 
 ## Courses, books...
 
->[Advanced CSS and Sass: Take Your CSS to the Next Level!](../advanced-css-and-sass/acas.md)
+>[Advanced CSS and Sass: Take Your CSS to the Next Level!, Jonas Schmedtmann (Udemy course)](../advanced-css-and-sass/acas.md)
 
 >[HTML & CSS design and build websites, Jon Duckett (Book)](../html-and-css-design-and-build-websites/hcdbw.md)
 
