@@ -1,0 +1,20 @@
+{
+  "name": "post_requests_exercise",
+  "version": "1.0.0",
+  "description": "Exercise lesson 235-236 The web developer bootcamp (Udemy.org)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silveste/becoming-a-developer/tree/master/the-web-developer-bootcamp/235_post_requests"
+  },
+  "author": "Antonio Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2"
+  }
+}
