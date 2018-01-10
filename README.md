@@ -75,7 +75,7 @@ The following emticons show the status achieved:
 
 :clock1: [Ruby on rails](ruby-on-rails.md)
 
-:white_medium_square: [SASS](subjects/sass.md)
+:clock1: [SASS](subjects/sass.md)
 
 :white_medium_square: [SQL](subjects/sql.md)
 
