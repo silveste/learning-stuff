@@ -1,0 +1,20 @@
+{
+  "name": "movie_search_app",
+  "version": "1.0.0",
+  "description": "App that gets info from external API",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silveste/becoming-a-developer/tree/master/the-web-developer-bootcamp/242-245_movie_api_app"
+  },
+  "author": "Antonio Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "request": "^2.83.0"
+  }
+}
