@@ -1,6 +1,8 @@
 <% include partials/header %>
 
 <h1>You're in capgrounds</h1>
+
+<a href="/campgrounds/new">Add New Campground &raquo;</a>
 <% campgrounds.forEach(function(campground){ %>
   <div>
     <h3><%= campground.name %></h3>
