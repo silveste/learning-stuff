@@ -1,5 +1,9 @@
 # HTML & CSS design and build websites, Jon Duckett
 
+## Requirements
+
+>Basic level, no special knowledge is required
+
 ## Information
 
 >[Goodreads reviews](https://www.goodreads.com/book/show/10361330-html-and-css)

@@ -4,6 +4,9 @@
 
 >[The Web developer bootcamp - Udemy](https://www.udemy.com/the-web-developer-bootcamp/)
 
+## Requirements
+
+>Basic level, no special knowledge is required
 
 ## Subjects
 

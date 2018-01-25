@@ -4,6 +4,10 @@
 
 >Link to the source if is accesible
 
+## Requirements
+
+>Include what knowledge is compulsory/advisable to undertake the course
+
 ## Information
 
 >Include links to review, previews etc
