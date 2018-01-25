@@ -134,8 +134,6 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
-:clock1: [SQLite For Beginners - Learn SQL from Scratch, Eduonix Learning Solutions (Udemy course)](/sqlite-for-beginners-learn-sql-from-scratch/sblss.md)
-
 :clock1: [Spring Framework Tutorial, javaBrains (Youtube tutorials)](https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7)
 
 :clock1: [The Java Spring Tutorial: Learn Java's Popular Web Framework, John Purcell (Udemy course)](https://www.udemy.com/javaspring/)
