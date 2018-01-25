@@ -65,7 +65,7 @@ The following emticons show the status achieved:
 
 :clock1: [Maven](subjects/maven.md)
 
-:white_medium_square: [MongoDB](subjects/mongodb.md)
+:clock1: [MongoDB](subjects/mongodb.md)
 
 :white_medium_square: [MySQL](subjects/mysql.md)
 

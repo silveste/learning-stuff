@@ -18,7 +18,7 @@
 
 ## Documentation, manual references...
 
->[MongoDB Website](https://docs.mongodb.com/?_ga=2.115288711.186278714.1495120384-114145863.1495120328)
+>[Official MongoDB docs](https://docs.mongodb.com)
 
 ## Related content
 
