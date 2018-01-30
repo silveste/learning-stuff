@@ -6,7 +6,8 @@ var faker =require("faker");
 function fakeCampground (){
   return {
     name: faker.commerce.productName(),
-    image: faker.image.image()
+    image: faker.image.image(),
+    description: faker.lorem.paragraph()
   };
 }
 
@@ -32,22 +33,35 @@ mongoose.connect("mongodb://localhost/yelpcamp");
 //Schemas
 var campgroundSchema = new mongoose.Schema({
   name: String,
-  image: String
+  image: String,
+  description: String
 });
 var Campground = mongoose.model("Campground", campgroundSchema);
 /*END CONFIG SECTION ---------------------------------------------------------*/
 
-/*
-//Creating fake campgrounds
-Campground.create(fakeCampground(), function (err, campground){
+/*TESTING ---------------------------------------------------------*/
+//Creating a minimum of 10 items in the DB
+Campground.find({}, function(err, campgrounds){
   if(err){
-    console.log(err);
+    console.log(err)
+    return -1;
   } else {
-    console.log("New campground created");
-    console.log(campground);
+    console.log("Setting campgrounds to a minimum of 10 for testing puposes");
+    console.log("Initial campgrounds:" + campgrounds.length);
+    for (var i = campgrounds.length; i < 10; i++) {
+      Campground.create(fakeCampground(), function (err, campground){
+        if(err){
+          console.log(err);
+        } else {
+          console.log("New campground created");
+          console.log(campground);
+        }
+      });
+    }
   }
 });
-*/
+
+/*END TESTING ---------------------------------------------------------*/
 
 app.get("/", function(req, res){
   res.render("landing");
@@ -65,10 +79,12 @@ app.get("/campgrounds", function(req, res){
   
 });
 
+//INDEX - show all campgrounds
 app.post("/campgrounds", function(req, res){
   var name = req.body.name;
   var image = req.body.image;
-  var newCampground = {name:name, image: image};
+  var description = req.body.description;
+  var newCampground = {name:name, image: image, description: description };
   Campground.create(newCampground, function(err, newCampground){
     if(err){
       console.log(err);
@@ -80,8 +96,20 @@ app.post("/campgrounds", function(req, res){
   res.redirect("/campgrounds");
 });
 
+//NEW - Page that creates a new campground
 app.get("/campgrounds/new", function(req,res){
   res.render("new");
+});
+
+//SHOW - Page that shows detailed info about a campground
+app.get("/campgrounds/:id", function(req,res){
+  Campground.findById(req.params.id, function(err, campground){
+    if(err){
+      console.log(err);
+    }else{
+      res.render("show", {campground: campground});
+    }
+  });
 });
 
 app.listen(process.env.PORT, process.env.IP, function(){

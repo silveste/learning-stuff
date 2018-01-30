@@ -1,0 +1,6 @@
+<% include partials/header %>
+<h1><%= campground.name %></h1>
+<img src="<%= campground.image %>">
+<%# Description can have line breaks that should be reflected in the html as different paragrphs%>
+<p><%= campground.description %></p>
+<% include partials/footer %>
