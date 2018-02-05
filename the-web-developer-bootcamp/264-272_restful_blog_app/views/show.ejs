@@ -1,0 +1,23 @@
+<% include ./partials/header %>
+<article class="ui main text container items segment">
+    <div class="item">
+        <div class="content">
+            <img class="ui small left floated rounded image" src="<%= article.image%>">
+            <header class="ui huge header"><%= article.title %></header>
+            <aside class="meta"><%= article.created.toDateString() %></aside>
+            <div class="description">
+                <% article.body.split(/[\r]\n/).forEach(function(paragraph){ %>
+                    <p><%= paragraph %></p>
+                <% });%> 
+            </div>
+            <div class="extra">
+                <a href="/articles/<%= article._id %>/edit" class="positive left attached ui button" >Edit</a>
+               <form action="/articles/<%= article._id %>?_method=DELETE" method="POST">
+                    <button class="negative right attached ui button" >Delete</button>
+                </form>
+            </div>
+
+        </div>
+    </div>
+</article>
+<% include ./partials/footer %>
