@@ -42,7 +42,7 @@ app.get("/", function(req, res){
 
 //INDEX - show all campgrounds
 app.get("/campgrounds", function(req, res){
-  
+
   Campground.find({},function(err,foundCampgrounds){
     if(err){
       console.log(err);
@@ -50,7 +50,7 @@ app.get("/campgrounds", function(req, res){
       res.render("campgrounds/index", {campgrounds: foundCampgrounds});
     }
   });
-  
+
 });
 
 //CREATE - create a new campground
@@ -126,6 +126,11 @@ app.post("/campgrounds/:id/comments", function(req, res){
   })
 });
 
-app.listen(process.env.PORT, process.env.IP, function(){
-  console.log("YelpCamp server running on https://" + process.env.C9_HOSTNAME);
+// Listener C9
+// app.listen(process.env.PORT, process.env.IP, function(){
+//   console.log("YelpCamp server running on https://" + process.env.C9_HOSTNAME);
+// });
+// Listener local computer
+app.listen(3000, function(){
+  console.log("YelpCamp server running on http://localhost:3000");
 });
