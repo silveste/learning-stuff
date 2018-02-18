@@ -1,0 +1,30 @@
+i.icon  {
+    font-size: 1.5em;
+}
+
+header.ui + .container {
+    margin-top: 7em;
+}
+
+.item .content .image {
+    margin-top: 2em;
+    box-shadow: 1px 1px 10px rgba(0, 0, 0, .25);
+}
+
+.ui.items > .item > .content > .header {
+    display: block;
+}
+.ui.items > .item > .content > p:not(:last-child) {
+    margin: 0 0 .1em;
+}
+.ui.items > .item > .content > .extra {
+    font-size: 0;
+}
+
+.ui.items > .item > .content > .extra > * {
+    margin-right: 0;
+}
+.ui.items > .item > .content > .extra > form {
+   display: inline;
+   padding: 0;
+}
