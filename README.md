@@ -35,7 +35,7 @@ The following emticons show the status achieved:
 
 :clock1: [Design Patterns](subjects/design-patterns.md)
 
-:clock1: [Encryption, security, authentication](subjects/encryption-security-authentication.md)
+:clock1: [Encryption, security, authentication](subjects/security.md)
 
 :clock1: [Project development, Agile methodologies, scrum...](subjects/project-development.md)
 
@@ -134,10 +134,10 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
-:clock1: [Spring Framework Tutorial, javaBrains (Youtube tutorials)](https://www.youtube.com/playlist?list=PLC97BDEFDCDD169D7)
+The chosen topics to learn are based in my personal preferences. From my personal point of view I decided to learn a bit about everything (Frontend and Backend) to have a general overview and then decide which one I would like to specialize.
 
-:clock1: [The Java Spring Tutorial: Learn Java's Popular Web Framework, John Purcell (Udemy course)](https://www.udemy.com/javaspring/)
+This repository only covers the general overview part. Regarding the time needed to achieve all goals I consider that it would take around 3 years (1.5 already done at the time that I started the repository) or 1 dedicating full time.
 
-:clock1: [The Ruby on rails tutorial, Michael Hartl (Book)](https://www.railstutorial.org/book/beginning)
+## [Encryption, security, Authentication](subjects/security.md)
 
 :clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
