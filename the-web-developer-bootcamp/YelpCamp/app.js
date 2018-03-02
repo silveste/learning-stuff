@@ -10,15 +10,16 @@ var express            = require("express"),
     mongoose           = require("mongoose"),
     passport           = require("passport"),
     LocalStrategy      = require("passport-local"),
+    methodOverride     = require("method-override"),
     Campground         = require("./models/campground"),
     Comment            = require("./models/comment"),
     User               = require("./models/user"),
     seedDB             = require("./seeds");
-    
+
 var commentRoutes      = require("./routes/comments"),
     campgroundRoutes   = require("./routes/campgrounds"),
     indexRoutes         = require("./routes/index");
-    
+
 //Using body-parser to parse post requests
 app.use(bodyParser.urlencoded({extended: true}));
 
@@ -36,6 +37,7 @@ app.use(require("express-session")({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
+app.use(methodOverride("_method"));
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -59,10 +61,10 @@ app.use("/campgrounds/:id/comments", commentRoutes);
 
 
 // Listener C9
-app.listen(process.env.PORT, process.env.IP, function(){
-  console.log("YelpCamp server running on https://" + process.env.C9_HOSTNAME);
-});
-// Listener local computer
-// app.listen(3000, function(){
-//   console.log("YelpCamp server running on http://localhost:3000");
+// app.listen(process.env.PORT, process.env.IP, function(){
+//   console.log("YelpCamp server running on https://" + process.env.C9_HOSTNAME);
 // });
+// Listener local computer
+app.listen(3000, function(){
+  console.log("YelpCamp server running on http://localhost:3000");
+});
