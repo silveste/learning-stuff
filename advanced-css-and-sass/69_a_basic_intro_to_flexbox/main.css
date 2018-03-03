@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  background-color: #9dc9a2;
+  padding: 10px;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+}
+
+.item {
+  background-color: rgb(129, 56, 82);
+  padding: 30px;
+  margin: 30px;
+  font-size: 40px;
+  color: #fff;
+
+}
