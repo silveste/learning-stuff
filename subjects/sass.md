@@ -10,7 +10,7 @@
 
 ## Courses, books...
 
-> <!--Todo: add courses-->
+>[Advanced CSS and Sass: Take Your CSS to the Next Level!](../advanced-css-and-sass/acas.md)
 
 ## Documentation, manual references...
 
