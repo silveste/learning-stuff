@@ -6,11 +6,14 @@
 // required packages
 var express            = require("express"),
     app                = express(),
+
     bodyParser         = require("body-parser"),
-    mongoose           = require("mongoose"),
-    passport           = require("passport"),
+    flash              = require("connect-flash"),
     LocalStrategy      = require("passport-local"),
     methodOverride     = require("method-override"),
+    mongoose           = require("mongoose"),
+    passport           = require("passport"),
+
     Campground         = require("./models/campground"),
     Comment            = require("./models/comment"),
     User               = require("./models/user"),
@@ -29,6 +32,12 @@ app.use(express.static(__dirname + "/public"));
 //Set ejs as default template egine, avoiding write extension when call files
 app.set("view engine", "ejs");
 
+// Set method override to fix issues with forms and verbs different thant post
+app.use(methodOverride("_method"));
+
+// Set flash to deliver messages to the user
+app.use(flash());
+
 // Passport configuration
 app.use(require("express-session")({
   secret: "Que tengo que tengo que tengo de tooo!!!",
@@ -37,7 +46,6 @@ app.use(require("express-session")({
 }));
 app.use(passport.initialize());
 app.use(passport.session());
-app.use(methodOverride("_method"));
 passport.use(new LocalStrategy(User.authenticate()));
 passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
@@ -45,6 +53,12 @@ passport.deserializeUser(User.deserializeUser());
 //Adding user to all routes
 app.use(function(req,res,next){
   res.locals.currentUser = req.user;
+  res.locals.messages = [
+    { type: "danger", text: req.flash("error")},
+    { type: "success", text: req.flash("success")},
+    { type: "info", text: req.flash("info")},
+    { type: "warning", text: req.flash("warning")}
+  ];
   next();
 });
 //Conecting database
