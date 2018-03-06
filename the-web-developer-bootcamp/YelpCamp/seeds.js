@@ -22,7 +22,7 @@ function seedDB() {
     });
 }
 
-module.exports = seedDB; 
+module.exports = seedDB;
 
 /*FAKE CAMPGROUNDS ----------------------------------------------------------------*/
 function fakeCampground (){
@@ -45,24 +45,24 @@ function initialCampgrounds(number){
         if(err){
           console.log("Error creating campgrounds");
         } else {
-          Comment.create(fakeComment(), function (err, comment){
-               if(err){
-                   console.log("Can't create a comment inside " + campground.name);
-               }else{
-                   campground.comments.push(comment._id);
-                   campground.save(function(err){
-                       if(err){
-                           console.log(err);
-                       } else {
-                           console.log("New campground: " + campground.name);
-                           console.log("with " + comment.author + " comment");
-                       }
-                   });
-               }   
-          });
+        //   Comment.create(fakeComment(), function (err, comment){
+        //       if(err){
+        //           console.log("Can't create a comment inside " + campground.name);
+        //       }else{
+        //           campground.comments.push(comment._id);
+        //           campground.save(function(err){
+        //               if(err){
+        //                   console.log(err);
+        //               } else {
+        //                   console.log("New campground: " + campground.name);
+        //                   console.log("with " + comment.author + " comment");
+        //               }
+        //           });
+        //       }
+        //   });
+        console.log("New campground: " + campground.name);
         }
       });
     }
 }
 /*End fake crea ------------------------------------------------------------*/
-
