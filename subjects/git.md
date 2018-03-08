@@ -1,10 +1,8 @@
-# Git & GitHub
+# Git
 
 ## Description
 
 >[Git (Wikipedia)](https://en.wikipedia.org/wiki/Git))
-
->[GitHub (Wikipedia)](https://en.wikipedia.org/wiki/GitHub)
 
 ## Courses, books...
 
@@ -15,5 +13,7 @@
 >[Pro Git](https://git-scm.com/book/en/v2)
 
 ## Related content
+
+>[GitHub (Wikipedia)](https://github.com)
 
 >[BitBucket](https://bitbucket.org)
