@@ -134,10 +134,4 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
-The chosen topics to learn are based in my personal preferences. From my personal point of view I decided to learn a bit about everything (Frontend and Backend) to have a general overview and then decide which one I would like to specialize.
-
-This repository only covers the general overview part. Regarding the time needed to achieve all goals I consider that it would take around 3 years (1.5 already done at the time that I started the repository) or 1 dedicating full time.
-
-## [Encryption, security, Authentication](subjects/security.md)
-
-:clock1: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
+:white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
