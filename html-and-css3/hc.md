@@ -4,7 +4,7 @@
 
 ## Requirements
 
->Basic level, no special knowledge is required
+> Basic knowledge of HTML, CSS Javascript and jQuery
 
 ## Information
 
