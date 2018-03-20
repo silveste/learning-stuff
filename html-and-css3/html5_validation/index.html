@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8" />
+    <title>Tip 5 Forms</title>
+  </head>
+  <body>
+    <form action="/projects/1" method="post">
+      <fieldset id="personal_information">
+        <legend>Project Information</legend>
+        <ol>
+          <li>
+            <label for="first_name">Name</label>
+            <input type="text" name="first_name" id="first_name" autofocus="true" required placeholder="'John'">
+          </li>
+          <li>
+            <label for="last_name">Name</label>
+            <input type="text" name="last_name" id="last_name" required placeholder="'Smith'">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required placeholder="'user@email.com'">
+          </li>
+          <li>
+            <label for="password">Password</label>
+          <input type="password" name="password" id="password" required placeholder="8-10 Characters" pattern="^(?=.{8,})(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.{8,})(?=.*[\W]).*$" title="Password must have 8 or more characters with at least one number, a uppercase letter and one special character">
+          </li>
+          <li>
+            <input type="submit" value="Submit">
+          </li>
+        </ol>
+      </fieldset>
+    </form>
+  </body>
+</html>
+
