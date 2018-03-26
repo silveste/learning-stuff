@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8" />
+    <title>Tip 5 Forms</title>
+  </head>
+  <body>
+    <form action="/projects/1" method="post">
+      <fieldset id="personal_information">
+        <legend>Project Information</legend>
+        <ol>
+          <li>
+            <label for="name">Name</label>
+            <input type="text" name="name" id="name">
+          </li>
+          <li>
+            <label for="priority">Priority</label>
+            <input type="range" min="0" max="10" name="priority" value="0" id="priority">
+          </li>
+          <li>
+            <label for="estimated_hours">Estimated Hours</label>
+            <input type="number" min="0" max="1000" id="estimated_hours" name="estimated_hours">
+          </li>
+          <li>
+            <label for="start_date">Start Date</label>
+            <input type="date" name="start_date" id="start_date" value="14-03-2018">
+          </li>
+          <li>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email">
+          </li>
+          <li>
+            <label for="url">Staging URL</label>
+            <input type="url" name="url" id="url">
+          </li>
+          <li>
+            <label for="project_color">Project Color</label>
+            <input type="color" name="project_color" id="project_color">
+          </li>
+          <li>
+            <input type="submit" value="Submit">
+          </li>
+        </ol>
+      </fieldset>
+    </form>
+    <!-- JQuery CDN -->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="javascripts/fallback.js"></script>
+  </body>
+</html>
+
