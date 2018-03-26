@@ -1,6 +1,7 @@
 ## Introduction
 
 This repository has two main purposes: **learn about GIT and GitHub** while I am doing it and **organise all my notes and exercices** to become a developer and also a third one smaller goal which is learn markdown.
+<<<<<<< HEAD
 
 The repository will probably have unnecessary branches and commits in order to find out how git and github works.
 
@@ -118,15 +119,13 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_check_mark: [HTML & CSS design and build websites, Jon Duckett (Book)](html-and-css-design-and-build-websites/hcdbw.md)
 
-:white_medium_square: HTML5 & CSS3, Brian P. Hogan (Book)
+:white_medium_square: [HTML5 & CSS3, Brian P. Hogan (Book)](html-and-css3/hc.md)
 
 :white_medium_square: Introduction to the Theory of Computation, Michael Sipser (Book)
 
 :clock1: [Java EE with Vaadin, Spring Boot and Maven, Holczer Balazs (Udemy course)](https://www.udemy.com/java-ee-with-vaadin-spring-boot-and-maven/)
 
 :white_medium_square: [Learn Ruby the Hard Way, Zed A. Shaw (Book)](https://learnrubythehardway.org/)
-
-:white_medium_square: Linux Essentials The LPI Introductory Programme, Tobias Elsner, Thomas Erker, Anselm Lingnau (Book)
 
 :white_medium_square: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
 
@@ -135,3 +134,4 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
+
