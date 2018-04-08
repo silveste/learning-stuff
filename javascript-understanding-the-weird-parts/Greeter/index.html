@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <title>Greetr Library</title>
+    </head>
+    <body>
+        <div id="login-div">
+          <input id="name" type="text" name="name" placeholder="Name"/>
+          <input id="last-name" type="text" name="last-name" placeholder="Last Name"/>
+          <select name="" id="lang">
+            <option value="en">English</option>
+            <option value="es">Español</option>
+            <option value="fk">Fake</option><!--This option must make the code throw an error-->
+          </select>
+          <input type="button" name="login" value="login" id="login"/>
+        </div>
+        <h1 id="greeting"></h1>
+        <script src="jquery-1.11.2.js"></script> <!-- Not included in the repository-->
+        <script src="Greetr.js"></script>
+        <script src="app.js"></script>
+    </body>
+</html>
