@@ -1,25 +1,16 @@
 # The Web developer bootcamp, Colt Steele
 
-<<<<<<< HEAD
-=======
-(On branch **learning-javascript**, switch to master if you want to see all contents)
 
->>>>>>> learning-javascript
 ## Source
 
 >[The Web developer bootcamp - Udemy](https://www.udemy.com/the-web-developer-bootcamp/)
 
-<<<<<<< HEAD
 ## Requirements
 
 >Basic level, no special knowledge is required
-=======
->>>>>>> learning-javascript
 
 ## Subjects
 
-
-<<<<<<< HEAD
 >### General concepts
 
 >>[API Development](../subjects/api-development.md)
@@ -49,10 +40,3 @@
 >>[Integration Development Environments](../subjects/ide.md)
 
 >>[Linux/Unix command line and bash](../subjects/bash.md)
-
-=======
->### Languages, Markups, Frameworks
-
->>[JavaScript](../subjects/javascript.md)
-
->>>>>>> learning-javascript
