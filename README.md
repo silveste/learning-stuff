@@ -53,7 +53,7 @@ The following emoticons show the status achieved:
 
 :clock1: [HTML](subjects/html.md)
 
-:clock1: [Java (core)](subjects/java(core\).md)
+:clock1: [Java (core)](subjects/java`(`core`)`.md)
 
 :clock1: [JavaScript](subjects/javascript.md)
 
