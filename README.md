@@ -134,4 +134,6 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
+:clock1: [The Advanced Web Developer Bootcamp](the-advanced-web-developer-bootcamp/tawdb.md)
+
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)

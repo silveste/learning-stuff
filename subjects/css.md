@@ -12,6 +12,8 @@
 
 >[HTML & CSS design and build websites, Jon Duckett (Book)](../html-and-css-design-and-build-websites/hcdbw.md)
 
+>[The Advanced Web Developer Bootcamp](../the-advanced-web-developer-bootcamp/tawdb.md)
+
 >[The Web developer bootcamp, Colt Steele (Udemy course)](../the-web-developer-bootcamp/twdb.md)
 
 ## Documentation, manual references...
