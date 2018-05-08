@@ -1,76 +1,49 @@
 <!DOCTYPE html>
 <html lang="en-uk">
   <head>
-    <!-- [if lte IE 8]>
-      <script>
-        document.createElement("nav"):
-        document.createElement("header"):
-        document.createElement("footer"):
-        document.createElement("section"):
-        document.createElement("aside"):
-        document.createElement("article"):
-      </script>
-    <![endif]-->
     <meta charset="utf-8" />
     <link rel="stylesheet" href="stylesheets/style.css">
-    <title>AwesomeCo Blog</title>
+    <title>AwesomeCo</title>
   </head>
   <body>
-    <header id="page_header" role="banner">
-      <h1>Awesome Co Blog!</h1>
+    <header id="header" role="banner">
+      <h1>AwesomeCo</h1>
       <nav role="navigation">
         <ul>
-          <li><a href="#">Latest Posts</a></li>
-                <li><a href="#">Archives</a></li>
-          <li><a href="#">Contributors</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#welcome">Welcome</a></li>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#about">About</a></li>
         </ul>
       </nav>
     </header>
-    <section id="sidebar" role="complementary">
-      <nav>
-        <h3>Archives</h3>
-        <ul>
-          <li><a href="2018/02">February 2018</a></li>
-          <li><a href="2018/01">January 2018</a></li>
-          <li><a href="2017/12">December 2017</a></li>
-          <li><a href="2017/11">November 2017</a></li>
-          <li><a href="2017/10">October 2017</a></li>
-          <li><a href="2017/09">September 2017</a></li>
-          <li><a href="2017/08">August 2017</a></li>
-          <li><a href="2017/07">July 2017</a></li>
-          <li><a href="2017/06">June 2017</a></li>
-          <li><a href="2017/05">May 2017</a></li>
-          <li><a href="2017/04">April 2017</a></li>
-          <li><a href="2017/03">March 2017</a></li>
-        </ul>
-      </nav>
+    <section id="content" role="document" aria-live="assertive" aria-atomic="true">
+     <section id="welcome">
+       <header>
+         <h2>Welcome</h2>
+       </header>
+       <p>The welcome section</p>
+     </section>
+     <section id="services">
+       <header>
+         <h2>Services</h2>
+       </header>
+       <p>The services section</p>
+     </section>
+     <section id="contact">
+       <header>
+         <h2>contact</h2>
+       </header>
+       <p>The contact section</p>
+     </section>
+     <section id="about">
+       <header>
+         <h2>about</h2>
+       </header>
+       <p>The about section</p>
+     </section>
     </section>
-    <section id="posts" role="main">
-      <article class="post">
-        <header>
-          <h2>This is one post example</h2>
-          <p>Posted by Toni on
-            <time datetime="2018-03-08T17:48">March 3rd, 2018 at 17:48</time>
-          </p>
-        </header>
-        <aside>
-          <p>
-            &ldquo;lo que sea lo escribo aqui&rdquo;
-          </p>
-        </aside>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-        </p>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum
-        </p>
-        <footer>
-          <p><a href="comments"><i>25 Comments</i></a> ...</p>
-        </footer>
-      </article>
-    </section>
-    <footer id="page_footer" role="contentinfo">
+    <footer id="footer" role="contentinfo">
       <p>Copyright c 2013 AwesomeCo.</p>
       <nav>
         <ul>
@@ -89,5 +62,11 @@
         </ul>
       </nav>
     </footer>
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="javascripts/script.js"></script>
   </body>
 </html>
