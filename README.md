@@ -8,17 +8,13 @@ In order to organise all topics that I would like to learn. I set a list of subj
 
 Regarding the subjects, all the information is contained in markdown files in subjects directory. The reason why there are a lot of markdown files is because I used them to learn it.
 
-The chosen topics to learn are based in my personal preferences. From my personal point of view I decided to learn a bit about everything (Frontend and Backend) to have a general overview and then decide which one I would like to specialize.
-
-This repository only covers the general overview part. Regarding the time needed to achieve all goals I consider that it would take around 3 years (1.5 already done at the time that I started the repository) or 1 dedicating full time.
-
 ## List of Subjects <!--Future: If a new subject is added remember update MD template-->
 
 The following topics are my goals to become a frontend, backend or even full stack developer. The topics are sorted by areas and listed in alphabetical order.
 
 Every link leads to a markdown in the subjects directory that contains a comprehensive description (usually from wikipedia), the materials used to learn about it, documentation used as a reference guides and related topics.
 
-The repository is organised in branches related with subjects, so that the information is more concise regarding a particular subject when switching to its branch. This is because a specific subject can be covered by more than one course and a specific course can include more than one subject, therefore, it is possible to see only the exercises of a particular subject by changing the branch for that subject. For example, the branch learning-jquery contains only exercises related with jQuery.
+The repository is organised in branches related with subjects, so that the information is more concise regarding a particular subject when switching to its branch. This is because a specific subject can be covered by more than one course and a specific course can include more than one subject, therefore, it is possible to see only the exercises of a particular subject by changing the branch for that subject. For example, the branch learning-javascript contains only exercises related with javascript.
 
 The courses/books where the exercises come from are indicated in every commit message
 
