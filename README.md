@@ -12,6 +12,8 @@ Regarding the subjects, all the information is contained in markdown files in su
 
 The following topics are my goals to become a frontend, backend or even full stack developer. The topics are sorted by areas and listed in alphabetical order.
 
+Once the goal is achieved, I should be able to understand and use the concept, language or tool in my day to day work.
+
 Every link leads to a markdown in the subjects directory that contains a comprehensive description (usually from wikipedia), the materials used to learn about it, documentation used as a reference guides and related topics.
 
 The repository is organised in branches related with subjects, so that the information is more concise regarding a particular subject when switching to its branch. This is because a specific subject can be covered by more than one course and a specific course can include more than one subject, therefore, it is possible to see only the exercises of a particular subject by changing the branch for that subject. For example, the branch learning-javascript contains only exercises related with javascript.
@@ -83,7 +85,7 @@ The following emoticons show the status achieved:
 
 :clock1: [Integration Development Environments](subjects/ide.md)
 
-:clock1: [GIT & GitHub](subjects/git.md)
+:white_check_mark: [GIT & GitHub](subjects/git.md)
 
 :clock1: [Linux/Unix command line and bash](subjects/bash.md)
 
@@ -124,7 +126,7 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_medium_square: [Learn Ruby the Hard Way, Zed A. Shaw (Book)](https://learnrubythehardway.org/)
 
-:white_medium_square: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
+:white_check_mark: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
 
 :white_check_mark: [Sams Teach Yourself Regular Expressions in 10 Minutes, Ben Forta](sams-teach-yourself-regular-expressions-in-10-minutes/styrem.md)
 
