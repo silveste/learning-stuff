@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8" />
+    <title>Audio Samples</title>
+  </head>
+  <body>
+    <article class="sample">
+      <header>
+        <h2>Night</h2>
+      </header>
+      <audio id="night" controls>
+        <source src="../assets/audio/ogg/0110.ogg" type="audio/ogg" />
+        <source src="../assets/audio/mp3/0110.mp3" type="audio/mp3" />
+      </audio>
+      <a href="../assets/audio/ogg/0110.ogg" class="fallback">Download audio file</a>
+    </article>
+    <article class="sample">
+      <header>
+        <h2>Action in a thriller movie</h2>
+      </header>
+      <audio id="action" controls>
+        <source src="../assets/audio/ogg/0788.ogg" type="audio/ogg" />
+        <source src="../assets/audio/mp3/0788.mp3" type="audio/mp3" />
+      </audio>
+      <a href="../assets/audio/ogg/0788.ogg" class="fallback">Download audio file</a>
+    </article>
+    <article class="sample">
+      <header>
+        <h2>Mistery in a movie</h2>
+      </header>
+      <audio id="mistery" controls>
+        <source src="../assets/audio/ogg/0842.ogg" type="audio/ogg" />
+        <source src="../assets/audio/mp3/0842.mp3" type="audio/mp3" />
+      </audio>
+      <a href="../assets/audio/ogg/0999.ogg" class="fallback">Download audio file</a>
+    </article>
+    <article class="sample">
+      <header>
+        <h2>Birds during the day</h2>
+      </header>
+      <audio id="birds" controls>
+        <source src="../assets/audio/ogg/0999.ogg" type="audio/ogg" />
+        <source src="../assets/audio/mp3/0999.mp3" type="audio/mp3" />
+      </audio>
+      <a href="../assets/audio/ogg/0999.ogg" class="fallback">Download audio file</a>
+    </article>
+    <p>Source of audio files: <a href="https://bigsoundbank.com" target="_blank">www.bigsoundbank.com</a></p>
+    <!-- JQuery CDN -->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script type="text/javascript">
+      alert("Yuhuuuu");
+      // Checking if the browser has support for audio elements
+      //canPlayType returns a string with values "probably", "maybe" or "" that is falsey value
+      if (document.createElement('audio').canPlayType('audio/mp3') || document.createElement('audio').canPlayType('audio/ogg')) {
+        var links = document.getElementsByClassName('fallback');
+        for (var i = 0; i < links.length; i++){
+          links[i].style.display =  'none';
+        }
+      }
+    </script>
+  </body>
+</html>
