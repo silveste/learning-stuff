@@ -6,7 +6,6 @@ function preview(innerText){
     .text(innerText)
     .classed("hidden", !innerText);
 }
-var newNote = d3.select('.new-prev');
 
 d3.select(".remove")
   .on("click", function(){
