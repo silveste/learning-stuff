@@ -268,9 +268,16 @@ body {
   cursor: pointer;
   transition: all .2s; }
   /* line 292, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .btn-inline span {
+    margin-left: 3px;
+    transition: margin-left .2s; }
+  /* line 298, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
   .btn-inline:hover {
     color: var(--color-grey-dark-1); }
-  /* line 296, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+    /* line 301, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+    .btn-inline:hover span {
+      margin-left: 8px; }
+  /* line 306, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
   .btn-inline:focus {
     outline: none;
     animation: pulse 1s infinite; }
@@ -286,11 +293,11 @@ body {
     transform: scale(1);
     box-shadow: none; } }
 
-/* line 322, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+/* line 332, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
 .paragraph:not(:last-of-type) {
   margin-bottom: 2rem; }
 
-/* line 328, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+/* line 338, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
 .list {
   list-style: none;
   margin: 3rem 0;
@@ -299,11 +306,11 @@ body {
   border-bottom: var(--line);
   display: flex;
   flex-wrap: wrap; }
-  /* line 338, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  /* line 348, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
   .list__item {
     flex: 0 0 50%;
     margin-bottom: .7rem; }
-  /* line 343, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  /* line 353, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
   .list__item::before {
     content: "";
     display: inline-block;
@@ -316,25 +323,78 @@ body {
     -webkit-mask-image: url(../img/chevron-thin-right.svg);
     -webkit-mask-size: cover; }
 
-/* line 366, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+/* line 376, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
 .recommend {
   font-size: 1.3rem;
   color: var(--color-grey-dark-3);
   display: flex;
   align-items: center; }
-  /* line 373, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  /* line 383, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
   .recommend__count {
     margin-right: auto; }
-  /* line 381, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  /* line 391, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
   .recommend__photo {
     box-sizing: content-box;
     height: 4rem;
     width: 4rem;
     border-radius: 50%;
     border: 3px solid #fff; }
-    /* line 388, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+    /* line 398, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
     .recommend__photo:not(:last-child) {
       margin-right: -1.5rem; }
+
+/* line 406, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+.review {
+  background-color: #fff;
+  box-shadow: var(--shadow-light);
+  padding: 3rem;
+  margin-bottom: 3.5rem;
+  position: relative;
+  overflow: hidden; }
+  /* line 414, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__text {
+    margin-bottom: 2rem;
+    z-index: 10;
+    position: relative; }
+  /* line 420, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__user {
+    display: flex;
+    align-items: center; }
+  /* line 425, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__photo {
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    margin-right: 1.5rem; }
+  /* line 432, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__user-box {
+    margin-right: auto; }
+  /* line 436, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__user-name {
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    margin-bottom: .4rem; }
+  /* line 443, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__user-date {
+    font-size: 1rem;
+    color: var(--color-grey-dark-3); }
+  /* line 448, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review__rating {
+    color: var(--color-primary);
+    font-size: 2.2rem;
+    font-weight: 300; }
+  /* line 455, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_components.scss */
+  .review::before {
+    content: "\201C";
+    position: absolute;
+    top: -2.75rem;
+    left: -1rem;
+    font-size: 20rem;
+    color: var(--color-grey-light-2);
+    font-family: sans-serif;
+    line-height: 1;
+    z-index: 1; }
 
 /* line 1, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_layout.scss */
 .container {
@@ -373,14 +433,14 @@ body {
 
 /* line 40, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_layout.scss */
 .detail {
+  font-size: 1.4rem;
   display: flex;
   padding: 4.5rem;
   background-color: var(--color-grey-light-1);
   border-bottom: ver(--line); }
 
-/* line 47, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_layout.scss */
+/* line 48, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_layout.scss */
 .description {
-  font-size: 1.4rem;
   flex: 0 0 60%;
   margin-right: 4.5rem;
   background-color: #fff;
@@ -390,6 +450,8 @@ body {
 /* line 56, /Users/antoniofe/Workspace/becoming-a-developer/advanced-css-and-sass/sec_7_trillo_project/sass/_layout.scss */
 .user-reviews {
   flex: 1;
-  background-color: greenyellow; }
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
 
 /*# sourceMappingURL=style.css.map */
