@@ -1,0 +1,37 @@
+.grid {
+  width: 900px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 300px;
+  grid-gap: 30px;
+}
+
+.grid > * {
+  background-color: aqua;
+  padding: 20px;
+  color: #444;
+  font-family: fantasy;
+  font-size 48px;
+  font-weight: 700;
+}
+
+.header {
+  grid-column: 1 / -1;
+}
+
+.sidebar {
+  grid-column: 4 /5;
+  grid-row: 2 / span 2;
+}
+
+.main-content {
+  grid-column: 1 / span 3;
+}
+
+.footer {
+  grid-column: 1 / -1;
+}
+
+
