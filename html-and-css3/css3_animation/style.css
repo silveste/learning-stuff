@@ -1,0 +1,72 @@
+
+.login {
+  width: 250px;
+  margin: 30px auto;
+}
+
+.login fieldset {
+  background-color: #ddd;
+  border: none;
+}
+
+.login legend {
+  background-color: #ddd;
+  padding: 0 15px 0 15px;
+
+}
+
+.login ol {
+  list-style: none;
+  margin: 2px;
+  padding: 0;
+}
+
+.login li {
+  margin: 0 0 9px 0;
+  padding: 0;
+}
+
+.login input {
+  background-color: #fff;
+  border: 1px solid #bbb;
+  display: block;
+  width: 200px;
+}
+
+.login input[type="submit"] {
+  background-color: #bbb;
+  padding: 0;
+  width: 202px;
+}
+
+.login input, .login fieldset, .login legend {
+  border-radius: 5px;
+}
+
+.login input[type="email"], .login input[type="password"] {
+  outline: none;
+  transition: background 0.3s linear,
+              border 0.3s linear;
+}
+
+.login input[type="email"]:focus, .login input[type="password"]:focus {
+  background-color: #ffe;
+  border: 1px solid #0e0;
+}
+.shake {
+  animation-name: shake;
+  animation-duration: 0.5s;
+  animation-delay: 0;
+  animation-iteration-count: 1;
+  animation-timing-function: linear;
+}
+
+@keyframes shake {
+  0% {transform: translateX(0);}
+  20% {transform: translateX(5px);}
+  40% {transform: translateX(-5px);}
+  60% {transform: translateX(5px);}
+  80% {transform: translateX(-5px);}
+  100% {transform: translateX(0);}
+}
+
