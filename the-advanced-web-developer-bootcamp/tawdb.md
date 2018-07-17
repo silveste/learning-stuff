@@ -1,6 +1,6 @@
 # The Advanced Web Developer Bootcamp,  Colt Steele, Elie Schoppik, Tim Garcia, Matt Lane
 
-(On branch **learning-css**, switch to master if you want to see all contents)
+(On branch **learning-javascript**, switch to master if you want to see all contents)
 
 ## Source
 
