@@ -1,17 +1,43 @@
 import React, { Component } from 'react';
+import Box from './Box';
 import './App.css';
 
+const NUM_BOXES = 32;
+
 class App extends Component {
-  
+
   constructor(props) {
     super(props);
-  }
-  
-  render() {
+    const boxes = Array(NUM_BOXES).fill().map(this.getRandomColor, this); //Second parameter in map method changes this to apply to this object instead something else
+    this.state= {boxes};
 
+    //Remember use arrow function inside setInterval to keep 'this' referring to this object
+    setInterval(()=> {
+      //Remember avoid to change inputs. setInterval must be a pure function
+      const boxes = this.state.boxes.slice(); //Create copy of boxes array
+      const randBox = Math.floor(Math.random() * boxes.length);
+      boxes[randBox] = this.getRandomColor();
+      /*Explanation code above: by calling getRandomColor we are changing the reference
+      boxes[i] from App.defaultProps.allColors[a] to App.defaultProps.allColors[b]
+      Only boxes (which is a new copy of this.state.boxes) changes App.defaultProps.allColors
+      remains the same so we can say that this function is a pure function
+      */
+      this.setState({boxes});
+    }, 300);
+  }
+
+  getRandomColor() {
+    let i = Math.floor(Math.random() * this.props.allColors.length);
+    return this.props.allColors[i];
+  }
+
+  render() {
+    const boxes = this.state.boxes.map( (val, i) =>(
+      <Box key={i} color={val} />
+    ));
     return (
       <div className="App">
-        Render boxes here
+        {boxes}
       </div>
     );
   }
