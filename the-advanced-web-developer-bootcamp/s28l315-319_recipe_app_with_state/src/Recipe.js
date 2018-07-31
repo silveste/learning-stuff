@@ -1,11 +1,22 @@
 import React, {Component} from 'react';
+import PropTypes from 'prop-types';
 import './Recipe.css';
 
 class Recipe extends Component {
+
+  static propTypes = {
+    title: PropTypes.String,
+    img: PropTypes.String,
+    instructions: PropTypes.String,
+    ingredients: PropTypes.arrayOf(PropTypes.String),
+    id: PropTypes.number.isRequired,
+    onDelete: PropTypes.func.isRequired
+  }
+
   render() {
-    const {title, img, instructions} = this.props;
+    const {title, img, instructions, id, onDelete} = this.props;
     const ingredients = this.props.ingredients.map((ing, index) => (
-      <li key={index}>{ing}</li> 
+      <li key={index}>{ing}</li>
     ));
     return (
       <div className="recipe-card">
@@ -20,8 +31,9 @@ class Recipe extends Component {
           </ul>
           <h4>Instructions:</h4>
           <p>{instructions}</p>
+          <button type="button" onClick={() => onDelete(id)}>DELETE</button>
         </div>
-        
+
       </div>
     );
   }
