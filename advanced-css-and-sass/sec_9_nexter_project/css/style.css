@@ -62,7 +62,27 @@ body {
 .sidebar {
   background-color: #c69963;
   grid-column: sidebar-start / sidebar-end;
-  grid-row: 1 / -1; }
+  grid-row: 1 / -1;
+  display: flex;
+  justify-content: center; }
+
+.nav-btn {
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+  height: 2px;
+  width: 4.5rem;
+  margin-top: 4rem; }
+  .nav-btn::before, .nav-btn::after {
+    background-color: #fff;
+    height: 2px;
+    width: 4.5rem;
+    content: "";
+    display: block; }
+  .nav-btn::before {
+    transform: translateY(-1.5rem); }
+  .nav-btn::after {
+    transform: translateY(1.3rem); }
 
 .header {
   background-color: #b28451;
@@ -280,13 +300,13 @@ body {
   width: 60%;
   margin-left: auto;
   margin-right: auto; }
-  .copyright #udemy__link:link,
-  .copyright #udemy__link:visited {
+  .copyright #udemy-link:link,
+  .copyright #udemy-link:visited {
     text-decoration: none;
     color: inherit;
     transition: all .2s; }
-  .copyright #udemy__link:hover,
-  .copyright #udemy__link:active {
+  .copyright #udemy-link:hover,
+  .copyright #udemy-link:active {
     color: #f9f7f6; }
 
 .mb-sm {

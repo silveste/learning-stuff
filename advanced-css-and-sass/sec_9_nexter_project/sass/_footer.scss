@@ -44,15 +44,15 @@
   margin-left: auto;
   margin-right: auto;
 
-  #udemy__link:link,
-  #udemy__link:visited {
+  #udemy-link:link,
+  #udemy-link:visited {
     text-decoration: none;
     color: inherit;
     transition: all .2s;
   }
 
-  #udemy__link:hover,
-  #udemy__link:active {
+  #udemy-link:hover,
+  #udemy-link:active {
     color: $color-grey-light-1;
   }
 
