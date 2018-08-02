@@ -1,5 +1,7 @@
 # HTML5 and CSS3: Develop with Tomorrow's Standards Today, Brian P. Hogan
 
+(On branch learning-css switch to master to see all contents)
+
 ## Requirements
 
 > Basic knowledge of HTML, CSS Javascript and jQuery
@@ -12,4 +14,4 @@
 
 >### Languages, Markups, Frameworks
 
->>[HTML](../subjects/html.md)
+>>[CSS](../subjects/css.md)
