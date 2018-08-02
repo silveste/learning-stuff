@@ -73,7 +73,7 @@ The following emoticons show the status achieved:
 
 :clock1: [Ruby on rails](ruby-on-rails.md)
 
-:clock1: [SASS](subjects/sass.md)
+:white_check_mark: [SASS](subjects/sass.md)
 
 :white_medium_square: [SQL](subjects/sql.md)
 
@@ -98,7 +98,7 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 (:white_medium_square: not started, :clock1: started, :white_check_mark: completed)
 
-:clock1: [Advanced CSS and Sass: Take Your CSS to the Next Level!](advanced-css-and-sass/acas.md)
+:white_check_mark: [Advanced CSS and Sass: Take Your CSS to the Next Level!](advanced-css-and-sass/acas.md)
 
 :white_medium_square: Advanced Data Structures, Peter Brass (Book)
 
