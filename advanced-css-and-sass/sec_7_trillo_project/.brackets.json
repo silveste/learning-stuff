@@ -1,0 +1,18 @@
+{
+    "sass.enabled": false,
+    "path": {
+        "sass/main.scss": {
+            "sass.enabled": true,
+            "sass.options": {
+                "outputDir": "../css/",
+                "output": "style.css",
+                "includePaths": [
+                    "sass"
+                ],
+                "sourceComments": true,
+                "outputStyle": "nested"
+            },
+            "brackets-git.gitPath": "git"
+        }
+    }
+}

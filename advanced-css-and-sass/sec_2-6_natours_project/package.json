@@ -1,0 +1,20 @@
+{
+  "name": "natours_page",
+  "version": "1.0.0",
+  "description": "A landing page made using SASS and HTML to practise CSS and SASS",
+  "main": "index.js",
+  "scripts": {
+    "compile:sass": "node-sass sass/main.scss css/style.css -w",
+    "server": "live-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/silveste/becoming-a-developer/tree/master/advanced-css-and-sass/sec_2-6_natours_project"
+  },
+  "author": "Silveste",
+  "license": "ISC",
+  "devDependencies": {
+    "live-server": "^1.2.0",
+    "node-sass": "^4.9.0"
+  }
+}

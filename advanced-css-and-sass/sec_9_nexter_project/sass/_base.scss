@@ -1,0 +1,75 @@
+// COLOR VARIABLES
+$color-primary: #c69963;
+$color-primary-dark: #b28451;
+
+$color-secondary: #101d2c;
+
+$color-grey-light-1: #f9f7f6;
+$color-grey-light-2: #aaa;
+
+$color-grey-dark-1: #54483a;
+$color-grey-dark-2: #6d5d4b;
+
+// FONT VARIABLES
+$font-primary: 'Nunito', sans-serif;
+$font-display: 'Josefin Sans', sans-serif;
+
+// BREAKPOINTS
+$bp-largest: 75em; //1200px
+$bp-large: 62.5em; //1000px
+$bp-medium: 50em; //800px
+$bp-small: 37.5em; //600px
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 62.5%; //1rem = 10 px
+
+  @media only screen and (max-width: $bp-largest) {
+    font-size: 50%; //1rem = 8px
+  }
+}
+
+body {
+  color: $color-grey-dark-2;
+  font-family: $font-primary;
+  font-weight: 300;
+  line-height: 1.6;
+}
+
+.container {
+  display: grid;
+  //There is 1fr after side bar and at the end in order to center the content in the 8 repeated columns.
+  //As a result will have a side bar with 8rem and then 2 columns (second one and last) that will occupy the remaining space and will shrink if neccessary.
+  //The 8 columns that have the content always will appear centered
+  //There is 1fr after side bar and at the end in order to center the content in the 8 repeated columns.
+  //As a result will have a side bar with 8rem and then 2 columns (second one and last) that will occupy the remaining space and will shrink if neccessary.
+  //The 8 columns that have the content always will appear centered
+  grid-template-columns: [ sidebar-start ] 8rem [ sidebar-end full-start ] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  //Min content adapts the height to the content = auto
+  grid-template-rows: minmax(min-content, 80vh) min-content 40vw repeat(3, min-content);
+
+  @media only screen and (max-width: $bp-large) {
+    //changing first row and first column to place the side bar at the top. See .sidebar selector as it changes grid position at this breakpoint.
+    //Note that because all column/rows lines are named we don't need to worry about removing them as all selectors that refers to the grid are using the names instead numbers
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    grid-template-rows: [sidebar-start] 6rem [sidebar-end] minmax(min-content, 80vh) min-content 40vw repeat(3, min-content);
+  }
+
+  @media only screen and (max-width: $bp-medium) {
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+
+    //Used calc function to make header occupy 100% of viewport less 6rem (height of side bar)
+    grid-template-rows: [sidebar-start] 6rem [sidebar-end] calc(100vh - 6rem) repeat(5, min-content);
+  }
+}
+
+

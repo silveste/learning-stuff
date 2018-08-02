@@ -1,0 +1,48 @@
+@mixin clearfix {
+  &::after {
+    clear: both;
+    content: "";
+    display: table;
+  }
+}
+
+@mixin absCenter {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+//MEDIA QUERY MANAGER
+/*
+device-type options:
+phone			0-600 Phone
+tab-port	600-900 Table Portrait
+tab-land	900-1200 Table Landscape
+					1200-1800 Normal styles (Desktop first approach)
+big-desk	1800 + Big Screens
+*/
+
+@mixin respond ($device-type) {
+	
+	@if $device-type == phone {
+		@media only screen and (max-width: 37.5em) { @content } //600px
+	
+	}
+
+	@if $device-type == tab-port {
+		@media only screen and (max-width: 56.25em) { @content } //900px
+	
+	}
+
+	@if $device-type == tab-land {
+		@media only screen and (max-width: 75em) { @content } //1200px
+	}
+
+	@if $device-type == big-desk {
+		@media only screen and (min-width: 112.5) { @content } //1800px
+	
+	}
+
+
+}
