@@ -1,0 +1,41 @@
+.grid {
+  width: 900px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: 100px 200px 400px 100px;
+  grid-template-columns: repeat(3, 1fr) 300px;
+  grid-gap: 30px;
+
+  grid-template-areas: "head head head head"
+                       "box box box side"
+                       "main main main side"
+                       "foot foot foot foot";
+}
+
+.grid > * {
+  background-color: aqua;
+  padding: 20px;
+  color: #444;
+  font-family: fantasy;
+  font-size 48px;
+  font-weight: 700;
+}
+
+.header {
+  grid-area: head;
+}
+
+.sidebar {
+  grid-area: side;
+}
+
+.main-content {
+  grid-area: main;
+}
+
+.footer {
+  grid-area: foot;
+}
+
+

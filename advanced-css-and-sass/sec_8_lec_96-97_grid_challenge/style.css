@@ -1,0 +1,37 @@
+.grid {
+  width: 900px;
+  margin: 30px auto;
+
+  display: grid;
+  grid-template-rows: [header-start]  100px [header-end box-start] 200px [box-end main-start] 400px [main-end footer-start] 100px [footer-end];
+  grid-template-columns: repeat(3, [col-start] 1fr [col-end]) 300px [grid-end];
+  grid-gap: 30px;
+}
+
+.grid > * {
+  background-color: aqua;
+  padding: 20px;
+  color: #444;
+  font-family: fantasy;
+  font-size: 48px;
+  font-weight: 700;
+}
+
+.header {
+  grid-column: col-start 1 / grid-end;
+}
+
+.sidebar {
+  grid-column: col-end 3 / grid-end;
+  grid-row: box-start / main-end;
+}
+
+.main-content {
+  grid-column: col-start 1 / col-end 3;
+}
+
+.footer {
+  grid-column: col-start 1 / grid-end;
+}
+
+
