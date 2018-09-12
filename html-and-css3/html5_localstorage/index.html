@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8" />
+    <title>Preferences</title>
+  </head>
+  <body>
+    <div id="container">
+       <p><strong>Preferences</strong></p>
+      <form id="preferences" action="save_prefs" method="post" acept-charset="utf-8">
+        <fieldset id="colors" class="">
+          <legend>Colors</legend>
+          <ol>
+            <li>
+              <label for="background_color">Background Color</label>
+              <input class="color" type="color" name="background_color" value="" id="background_color">
+            </li>
+            <li>
+              <label for="text_color">Text Color</label>
+              <input class="color" type="color" name="text_color" value="" id="text_color">
+            </li>
+            <li>
+              <label for="text_size">Text Size</label>
+              <select name="text_sizxe" id="text_size">
+                <option value="16">16</option>
+                <option value="20">20</option>
+                <option value="24">24</option>
+                <option value="32">32</option>
+              </select>
+            </li>
+          </ol>
+        </fieldset>
+        <input type="submit" value="Save changes">
+      </form>
+    </div>
+    <!-- JQuery CDN -->
+    <script src="javascripts/storage.js"></script>
+  </body>
+</html>
+
