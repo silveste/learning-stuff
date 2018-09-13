@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8" />
+    <title>AwesomeNotes</title>
+  </head>
+  <body>
+    <div id="container">
+      <section id="sidebar">
+        <input type="button" value="New note" id="new_btn">
+        <input type="button" value="Delete All" id="delete_all_btn">
+        <ul aria-live="polite" id="notes">
+        </ul>
+      </section>
+      <section id="main" aria-live="polite">
+        <form>
+          <ol>
+            <li>
+              <label for="title">Title</label>
+              <input type="text" id="title">
+            </li>
+            <li>
+              <label for="note">Note</label>
+              <textarea id="note"></textarea>
+            </li>
+            <li>
+              <input type="submit" id="save_btn" value="Save">
+              <input type="submit" id="delete_btn" value="Delete">
+            </li>
+          </ol>
+        </form>
+      </section>
+    </div>
+    <!-- JQuery CDN -->
+    <script
+            src="https://code.jquery.com/jquery-3.3.1.min.js"
+            integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+            crossorigin="anonymous">
+    </script>
+    <script src="javascripts/notes.js"></script>
+  </body>
+</html>
