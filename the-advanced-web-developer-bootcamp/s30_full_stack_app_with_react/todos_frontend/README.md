@@ -1,4 +1,4 @@
-This project requires connects to API developed on ./s13-s14_153-170_todos_app
+This project is a frontend for the API developed on [section 13: Todos App](../../s13-s14_153-170_todos_app)
 
 This project was bootstrapped with [Create React App](https://github.com/facebookincubator/create-react-app).
 
