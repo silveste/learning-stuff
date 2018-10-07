@@ -1,0 +1,19 @@
+{
+  "name": "sec_33_full_stack_react_app_with_redux",
+  "version": "1.0.0",
+  "description": "Create react app for full stack react app with redux. Usually there is no need to add this to a repository and the packages could be installed globally",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio Fernandez",
+  "license": "ISC",
+  "dependencies": {
+    "create-react-app": "^2.0.3",
+    "eslint": "5.6.0",
+    "eslint-plugin-react": "^7.11.1"
+  },
+  "devDependencies": {
+    "eslint-plugin-node": "^7.0.1"
+  }
+}
