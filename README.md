@@ -1,26 +1,21 @@
 ## Introduction
 
-This repository has two main purposes: **learn about GIT and GitHub** while I am doing it and **organise all my notes and exercices** to become a developer and also a third one smaller goal which is learn markdown.
+This repository has two main purposes: **learn about GIT and GitHub** while I am building it, and **organise all my notes and exercices** about languages, frameworks etc.
 
 The repository will probably have unnecessary branches and commits in order to find out how git and github works.
 
-In order to organise all topics that I would like to learn. I set a list of subjects which are my learning targets and a list of learning materials that are the means to achieve them.
+In order to organise all topics, there is a list of subjects, which are the learning targets, and a list of learning materials that are the resources to achieve the targets.
 
-Regarding the subjects, all the information is contained in markdown files in subjects directory. The reason why there are a lot of markdown files is because I used them to learn it.
+All the information about subjects is contained in markdown files in the "subjects" directory. The reason because there are a lot of ".md" files is because I used them to learn markdown.
+
+The topics to learn are based in my personal preferences.
 
 ## List of Subjects <!--Future: If a new subject is added remember update MD template-->
 
-The following topics are my goals to become a frontend, backend or even full stack developer. The topics are sorted by areas and listed in alphabetical order.
+The following topics has been chosen to have a general overview about the frontend and backend. The topics are sorted by areas and listed in alphabetical order.
 
-Once the goal is achieved, I should be able to understand and use the concept, language or tool in my day to day work.
+The repository is organised in branches related with subjects. Therefore by switching to a branch different than master, only the information (exercices, notes) will be shown.
 
-Every link leads to a markdown in the subjects directory that contains a comprehensive description (usually from wikipedia), the materials used to learn about it, documentation used as a reference guides and related topics.
-
-The repository is organised in branches related with subjects, so that the information is more concise regarding a particular subject when switching to its branch. This is because a specific subject can be covered by more than one course and a specific course can include more than one subject, therefore, it is possible to see only the exercises of a particular subject by changing the branch for that subject. For example, the branch learning-javascript contains only exercises related with javascript.
-
-The courses/books where the exercises come from are indicated in every commit message
-
-The following emoticons show the status achieved:
 (:white_medium_square: not started, :clock1: started, :white_check_mark: goal)
 
 ### General Concepts
