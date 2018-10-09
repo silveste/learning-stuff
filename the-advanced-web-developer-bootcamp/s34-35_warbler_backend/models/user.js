@@ -21,6 +21,33 @@ const userSchema = new mongoose.Schema({
   }
 });
 
+//Add pre hook (Right before saving) function to hash the password
+userSchema.pre('save', async function(next){
+  try {
+    //If the password is not modified continue
+    if(!this.isModified('password')){
+      return next();
+    }
+    let hashedPassword = await bcrypt.hash(this.password, 10);
+    this.password = hashedPassword;
+    return next();
+  } catch (err) {
+    return next(err);
+  }
+});
+
+
+//This method will be included in all objects made from user model
+userSchema.method.comparePassword = async function(candidatePassword, next){
+  try {
+    let isMatch = await bcrypt.compare(candidatePassword, this.password);
+    return isMatch;
+  } catch (err) {
+    return next(err);
+  }
+};
+
+
 const User = mongoose.model('User', userSchema);
 
 module.exports = User;

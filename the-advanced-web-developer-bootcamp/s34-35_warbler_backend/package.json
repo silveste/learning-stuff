@@ -8,6 +8,10 @@
   },
   "author": "",
   "license": "ISC",
+  "engines": {
+    "node": ">=7.6.0"
+  },
+  "engineStrict": true,
   "dependencies": {
     "bcrypt": "^3.0.1",
     "body-parser": "^1.18.3",
