@@ -22,26 +22,26 @@
       "node/prefer-global/url-search-params": ["error", "always"],
       "node/prefer-global/url": ["error", "always"],
       "node/no-unpublished-require": ["error", {
-            "allowModules": ["dotenv"],
-            "convertPath": null,
-            "tryExtensions": [".js", ".json", ".node"]
+        "allowModules": ["dotenv"],
+        "convertPath": null,
+        "tryExtensions": [".js", ".json", ".node"]
       }],
       "indent": [
-          "warn",
-          2
+        "warn",
+        2
       ],
       "linebreak-style": [
-          "error",
-          "unix"
+        "error",
+        "unix"
       ],
-      "no-unused-vars": "warn",
+      "no-unused-vars": ["warn", { "argsIgnorePattern": "^next$" }],
       "quotes": [
-          "warn",
-          "single"
+        "warn",
+        "single"
       ],
       "semi": [
-          "error",
-          "always"
+        "error",
+        "always"
       ],
       "no-console": "off"
     }
