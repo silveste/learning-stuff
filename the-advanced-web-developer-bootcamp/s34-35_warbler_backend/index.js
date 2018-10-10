@@ -13,6 +13,7 @@ const app = express();
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const errorHandler = require('./handlers/error');
+const authRoutes = require('./routes/auth');
 
 const PORT = process.env.PORT || 8081;
 const HOSTNAME = process.env.HOSTNAME || 'http://localhost';
@@ -20,6 +21,7 @@ const HOSTNAME = process.env.HOSTNAME || 'http://localhost';
 app.use(cors());
 app.use(bodyParser.json());
 
+app.use('/api/auth', authRoutes);
 //Error handler - Should be after all routes, so that if non of the routes is
 //reached the error handler will be executed
 app.use(function(req, res ,next){
