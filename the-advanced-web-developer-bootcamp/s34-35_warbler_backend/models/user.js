@@ -18,7 +18,11 @@ const userSchema = new mongoose.Schema({
   },
   profileImageUrl: {
     type: String
-  }
+  },
+  messages: [{
+    type: mongoose.Schema.Types.ObjectId,
+    ref: 'Message'
+  }]
 });
 
 //Add pre hook (Right before saving) function to hash the password
@@ -38,7 +42,7 @@ userSchema.pre('save', async function(next){
 
 
 //This method will be included in all objects made from user model
-userSchema.method.comparePassword = async function(candidatePassword, next){
+userSchema.methods.comparePassword = async function(candidatePassword, next){
   try {
     let isMatch = await bcrypt.compare(candidatePassword, this.password);
     return isMatch;

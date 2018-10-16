@@ -4,7 +4,39 @@ const db = require('../models'); //When leaving off the file node look for index
 const jwt = require('jsonwebtoken');
 
 
-const signing = function(){};
+const signin = async function(req, res, next){
+  try {
+    let user = await db.User.findOne({
+      email: req.body.email
+    });
+    if (!user){
+      throw new Error('Invalid user name');
+    }
+    let {id, username, profileImageUrl} = user;
+    let isMatch = await user.comparePassword(req.body.password);
+    if(isMatch){
+      let token = jwt.sign({
+        id,
+        username,
+        profileImageUrl
+      }, process.env.SECRET_KEY
+      );
+      return res.status(200).json({
+        id,
+        username,
+        profileImageUrl,
+        token
+      });
+    }
+    throw new Error('Invalid Password.');
+  } catch(e) {
+    console.log(e);
+    return next({
+      status: 400,
+      message: e.message
+    });
+  }
+};
 
 const signup = async function(req,res,next){
   try {
@@ -37,4 +69,4 @@ const signup = async function(req,res,next){
   }
 };
 
-module.exports = {signing, signup};
+module.exports = {signin, signup};
