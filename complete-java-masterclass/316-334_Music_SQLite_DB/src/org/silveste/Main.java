@@ -65,6 +65,7 @@ public class Main {
                     " Track: " + sa.getTrack());
         }
 
+        ds.insertSong("Touch of grey", "Grateful Dead", "In The Dark", 1);
         ds.close();
     }
 }
