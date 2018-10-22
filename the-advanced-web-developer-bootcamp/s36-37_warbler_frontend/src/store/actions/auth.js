@@ -1,6 +1,6 @@
 import {apiCall} from '../../services/api';
 import {SET_CURRENT_USER} from '../actionsTypes';
-
+import { addError } from './errors';
 
 export function setCurrentUser(user){
   return {
@@ -16,7 +16,11 @@ export function authUser(type,userData){
         .then( ({token, ...user}) =>{
           localStorage.setItem('jwtToken', token);
           dispatch(setCurrentUser(user));
-          resolve();
+          resolve(); //API call succeeded
+        })
+        .catch(err => {
+          dispatch(addError(err.message));
+          reject(); //API call failed
         });
     });
   };

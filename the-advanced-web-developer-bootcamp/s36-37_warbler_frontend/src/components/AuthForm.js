@@ -22,18 +22,42 @@ export default class AuthForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     const authType = this.props.signUp ? 'signup' : 'signin';
-    this.props.onAuth(authType, this.state).then(() =>{
-      console.log('Logged In');
-    });
+    this.props
+      .onAuth(authType, this.state)
+      .then(() =>{
+        this.props.history.push('/');
+      })
+      .catch(()=> {
+        return;
+      });
   }
   render(){
     const { email, username, password, profileImageUrl } = this.state;
-    const { heading, buttonText, signUp } = this.props;
+    const {
+      heading,
+      buttonText,
+      signUp,
+      errors,
+      history,
+      removeError
+    } = this.props;
+
+    //history comes from the router, we'll listen to any change in the history
+    //to remove the errors
+    history.listen(() => {
+      removeError();
+    });
+
     return(
       <div className="row justify-content-md-center text-center">
         <div className="col-md-6">
           <form onSubmit={this.handleSubmit}>
             <h2>{heading}</h2>
+            {errors.message &&
+              <div className="alert alert-danger">
+                {errors.message}
+              </div>
+            }
             <label htmlFor="email">Email:</label>
             <input
               className="form-control"
@@ -89,4 +113,7 @@ AuthForm.propTypes = {
   buttonText: PropTypes.string,
   signUp: PropTypes.bool,
   onAuth: PropTypes.func,
+  errors: PropTypes.object,
+  history: PropTypes.object,
+  removeError: PropTypes.func
 };
