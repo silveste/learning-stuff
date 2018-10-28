@@ -46,9 +46,9 @@ The repository is organised in branches related with subjects. Therefore by swit
 
 :clock1: [HTML](subjects/html.md)
 
-:clock1: [Java (core)](subjects/java`(`core`)`.md)
+:clock1: [Java (core)](subjects/java%28core%29.md)
 
-:clock1: [JavaScript](subjects/javascript.md)
+:white_check_mark: [JavaScript](subjects/javascript.md)
 
 :white_medium_square: [JQuery](subjects/jquery.md)
 
@@ -75,8 +75,6 @@ The repository is organised in branches related with subjects. Therefore by swit
 :white_medium_square: [SQL](subjects/sql.md)
 
 :white_medium_square: [Spring](subjects/spring.md)
-
-:white_medium_square: [Swing](subjects/swing.md)
 
 ### Tools, Servers, Operating systems, Deployment
 
