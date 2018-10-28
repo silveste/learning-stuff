@@ -18,4 +18,4 @@
 
 >### Languages, Markups, Frameworks
 
->>[JavaScript](../subjects/react.md)
+>>[React](../subjects/react.md)
