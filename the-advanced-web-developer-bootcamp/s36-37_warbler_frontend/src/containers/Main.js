@@ -6,6 +6,8 @@ import Homepage from '../components/Homepage';
 import AuthForm from '../components/AuthForm';
 import {authUser} from '../store/actions/auth';
 import { removeError } from '../store/actions/errors';
+import withAuth from '../hocs/withAuth';
+import MessageForm from './MessageForm';
 
 const Main = props => {
   const { authUser, errors, removeError, currentUser } = props;
@@ -42,6 +44,12 @@ const Main = props => {
             />
           );
         }} />
+        {/*
+          The next route leads to a hihger order component (hoc)
+          hocs are functions that wraps other components and render one depending
+          on certain conditions. Usually hocs are named starting with "with..."
+        */}
+        <Route exact path='/users/:id/messages/new' component={withAuth(MessageForm)} />
       </Switch>
     </div>
   );
