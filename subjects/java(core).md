@@ -26,5 +26,3 @@
 >[Junit](junit.md)
 
 >[Spring](spring.md)
-
->[Swing](swing.md)
