@@ -1,0 +1,17 @@
+{
+  "name": "react_app_country_flag_guessing",
+  "version": "1.0.0",
+  "description": "Create react app and eslint, boiler plate for react app",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio Fernandez",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "create-react-app": "^1.5.2",
+    "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}

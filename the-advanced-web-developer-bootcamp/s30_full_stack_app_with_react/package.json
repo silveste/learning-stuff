@@ -1,0 +1,17 @@
+{
+  "name": "s30_full_stack_app_with_react",
+  "version": "1.0.0",
+  "description": "Create react app for full stack app with react. Usually there is no need to add this to a repository and make it a project",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Antonio Fernandez",
+  "license": "ISC",
+  "dependencies": {},
+  "devDependencies": {
+    "create-react-app": "^1.5.2",
+    "eslint": "^5.5.0",
+    "eslint-plugin-react": "^7.11.1"
+  }
+}
