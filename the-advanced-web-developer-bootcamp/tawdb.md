@@ -1,6 +1,5 @@
 # The Advanced Web Developer Bootcamp,  Colt Steele, Elie Schoppik, Tim Garcia, Matt Lane
 
-(On branch **learning-react**, switch to master if you want to see all contents)
 
 ## Source
 
@@ -19,5 +18,7 @@
 >### Languages, Markups, Frameworks
 
 >>[CSS](../subjects/css.md)
+
+>>[JavaScript](../subjects/javascript.md)
 
 >>[React](../subjects/react.md)

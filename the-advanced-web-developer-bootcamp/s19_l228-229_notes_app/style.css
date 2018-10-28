@@ -1,0 +1,75 @@
+body {
+  background-color: #e4e4e4;
+}
+
+h1 {
+  text-align: center;
+}
+
+#notes {
+  margin: 0 auto;
+  width: 75%;
+}
+
+#notes > p {
+  border-radius: 8px;
+  padding: 10px;
+}
+
+.note{
+  background-color: #fdffb7;
+  border: 8px solid #d4daa7;
+}
+
+.new {
+  background-color: #5ef245;
+  border: 8px solid #84bf77;
+}
+
+.hidden {
+  display: none;
+}
+
+form {
+  text-align: center;
+}
+
+input {
+  width: 50%;
+}
+
+input,
+button {
+  padding: 10px;
+}
+
+button {
+  background-color: #e7ee85;
+  border: none;
+  border-radius: 5px;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: #efe11e;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.remove {
+  background-color: #ff9494;
+}
+
+button.remove:hover {
+  background-color: #fe2222;
+}
+
+button.something {
+  background-color: #9df58e;
+}
+
+button.something:hover {
+  background-color: #31ee10;
+}

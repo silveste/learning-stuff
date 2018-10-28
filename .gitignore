@@ -50,6 +50,7 @@
 **/fabric.properties
 
 #------------NODE JS---------------------------------
+
 # Logs
 logs
 *.log
@@ -88,7 +89,8 @@ build/Release
 node_modules/
 jspm_packages/
 
-# TypeScript v1 declaration files
+# Typescript v1 declaration files
+typings/
 
 # Optional npm cache directory
 .npm
