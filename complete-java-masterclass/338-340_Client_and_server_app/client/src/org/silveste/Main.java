@@ -12,6 +12,8 @@ public class Main {
     public static void main(String[] args) {
         //client socket need the IP and port where server is listening
        try (Socket cSocket = new Socket("localhost", 5000)){
+           //Set a timeout in case server is nt responding
+           cSocket.setSoTimeout(5000);
 
            //A common pattern using sockets is to wrap the input with a bufferedReader and
            //the output with a printWriter
@@ -32,7 +34,7 @@ public class Main {
                 output.println(echoString);
                 if(!echoString.equals("exit")){
                     response = input.readLine();
-                    System.out.println(response);
+                    System.out.println("Server says: " + response);
                 }
 
             }while (!echoString.equals("exit"));
