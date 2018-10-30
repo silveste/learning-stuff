@@ -5,13 +5,14 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.net.Socket;
+import java.net.SocketTimeoutException;
 import java.util.Scanner;
 
 public class Main {
 
     public static void main(String[] args) {
         //client socket need the IP and port where server is listening
-       try (Socket cSocket = new Socket("localhost", 5000)){
+       try (Socket cSocket = new Socket("localhost", 5000)) {
            //Set a timeout in case server is nt responding
            cSocket.setSoTimeout(5000);
 
@@ -28,16 +29,18 @@ public class Main {
            Scanner sc = new Scanner(System.in);
            String echoString, response;
 
-            do {
-                System.out.println("Type the string to send: ");
-                echoString = sc.nextLine();
-                output.println(echoString);
-                if(!echoString.equals("exit")){
-                    response = input.readLine();
-                    System.out.println("Server says: " + response);
-                }
+           do {
+               System.out.println("Type the string to send: ");
+               echoString = sc.nextLine();
+               output.println(echoString);
+               if (!echoString.equals("exit")) {
+                   response = input.readLine();
+                   System.out.println("Server says: " + response);
+               }
 
-            }while (!echoString.equals("exit"));
+           } while (!echoString.equals("exit"));
+       } catch (SocketTimeoutException e){
+           System.out.println("Server timed out");
        } catch (IOException e) {
            System.out.println("Client I/O exception " + e.getMessage());
        }
