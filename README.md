@@ -46,7 +46,7 @@ The repository is organised in branches related with subjects. Therefore by swit
 
 :clock1: [HTML](subjects/html.md)
 
-:clock1: [Java (core)](subjects/java%28core%29.md)
+:white_check_mark: [Java (core)](subjects/java%28core%29.md)
 
 :white_check_mark: [JavaScript](subjects/javascript.md)
 
@@ -103,7 +103,7 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :clock1: [APIs on Rails, Building REST APIs with Rails, Abraham Kuri (Book)](http://apionrails.icalialabs.com/book/chapter_one)
 
-:clock1: [Complete Java Masterclass, Tim Buchalka (Udemy course)](complete-java-masterclass/cjm.md)
+:white_check_mark: [Complete Java Masterclass, Tim Buchalka (Udemy course)](complete-java-masterclass/cjm.md)
 
 :clock1: [GitHub Training & Guides, GitHub (Youtube tutorial)](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
 

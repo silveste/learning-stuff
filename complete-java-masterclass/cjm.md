@@ -10,8 +10,4 @@
 
 >### Languages, Markups, Frameworks
 
->>[Java (core)](../subjects/java(core).md)
-
->### Tools, Servers, Operating systems, Deployment
-
->>[Integration Development Environments](../subjects/ide.md)
+>>[Java (core)](../subjects/java%28core%29.md)

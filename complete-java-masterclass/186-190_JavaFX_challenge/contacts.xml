@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<contacts>
+<contact>
+	<first_name>Toni</first_name>
+	<last_name>DoBolo</last_name>
+	<phone_number>00 000 000 000</phone_number>
+	<notes>Bla Bla Bla...</notes>
+</contact>
+<contact>
+	<first_name>Michelle</first_name>
+	<last_name>Cooney</last_name>
+	<phone_number>11 111 111 111</phone_number>
+	<notes>Helloooo, Iḿ here ....</notes>
+</contact>
+<contact>
+	<first_name>Leah</first_name>
+	<last_name>Cooney</last_name>
+	<phone_number>44 444 444 444</phone_number>
+	<notes>Bye bye ...</notes>
+</contact>
+<contact>
+	<first_name>Laura</first_name>
+	<last_name>Collins</last_name>
+	<phone_number>33 333 333 333</phone_number>
+	<notes>I like sweets</notes>
+</contact>
+</contacts>

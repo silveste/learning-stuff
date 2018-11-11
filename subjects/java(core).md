@@ -7,7 +7,6 @@
 ## Courses, books...
 
 >[Complete Java Masterclass, Tim Buchalka (Udemy course)](../complete-java-masterclass/cjm.md)
-<!--TODO: Include and upload coursera exercises-->
 
 ## Documentation, manual references...
 
@@ -17,12 +16,6 @@
 
 ## Related content
 
->[Maven](maven.md)
-
 >[OpenJDK](http://openjdk.java.net/)
 
 >[OpenJDK Documentation](http://devdocs.io/openjdk~8/)
-
->[Junit](junit.md)
-
->[Spring](spring.md)
