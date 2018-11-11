@@ -8,10 +8,6 @@ In order to organise all topics that I would like to learn. I set a list of subj
 
 Regarding the subjects, all the information is contained in markdown files in subjects directory. The reason why there are a lot of markdown files is because I used them to learn it.
 
-The chosen topics to learn are based in [kamranahmedse developer-roadmap](https://github.com/kamranahmedse/developer-roadmap) and in my personal preferences. From my personal point of view I decided to learn a bit about everything (Frontend and Backend) to have a general overview and then decide which one I would like to specialize.
-
-This repository only covers the general overview part. Regarding the time needed to achieve all goals I consider that it would take around 3 years (1.5 already done at the time that I started the repository) or 1 dedicating full time.
-
 ## [Java (core)](subjects/java(core).md)
 
 You are currently in branch **learning-java-core**, if you want to see all subjects switch to master

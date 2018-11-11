@@ -4,8 +4,6 @@
 
 (On branch learning-java-core, switch to master if you want to see all contents)
 
-## Subjects
-
 >### Languages, Markups, Frameworks
 
->>[Java (core)](../subjects/java(core).md)
+>>[Java (core)](../subjects/java%28core%29.md)
