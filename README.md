@@ -42,9 +42,9 @@ The repository is organised in branches related with subjects. Therefore by swit
 
 :clock1: [Bootstrap](subjects/bootstrap.md)
 
-:clock1: [CSS](subjects/css.md)
+:white_check_mark: [CSS](subjects/css.md)
 
-:clock1: [HTML](subjects/html.md)
+:white_check_mark: [HTML](subjects/html.md)
 
 :white_check_mark: [Java (core)](subjects/java%28core%29.md)
 
@@ -111,7 +111,7 @@ To achieve the goals the follwoing materials will be or have been used. Every li
 
 :white_check_mark: [HTML & CSS design and build websites, Jon Duckett (Book)](html-and-css-design-and-build-websites/hcdbw.md)
 
-:clock1: [HTML5 & CSS3, Brian P. Hogan (Book)](html-and-css3/hc.md)
+:white_check_mark: [HTML5 & CSS3, Brian P. Hogan (Book)](html-and-css3/hc.md)
 
 :white_medium_square: Introduction to the Theory of Computation, Michael Sipser (Book)
 
