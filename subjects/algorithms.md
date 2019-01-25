@@ -1,12 +1,12 @@
-# Algorithms
+# Algorithms and Data Structures
 
 ## Description
 
->[Wikipedia](https://en.wikipedia.org/wiki/Algorithm)
+>[Algorithms (Wikipedia)](https://en.wikipedia.org/wiki/Algorithm)
 
 ## Courses, books...
 
-> Resources used to learn about the topic (It is advisable to complete tham)
+> Resources used to learn about the topic (It is advisable to complete them)
 
 ## Documentation, manual references...
 

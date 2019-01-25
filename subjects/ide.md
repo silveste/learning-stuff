@@ -4,8 +4,6 @@
 
 >[Description (Wikipedia)](https://en.wikipedia.org/wiki/Integrated_development_environment)
 
->[BlueJ (Wikipedia)](https://en.wikipedia.org/wiki/BlueJ)
-
 >[Netbeans (Wikipedia)](https://en.wikipedia.org/wiki/NetBeans)
 
 >[Eclipse (Wikipedia)](https://en.wikipedia.org/wiki/Eclipse_(software))
@@ -17,8 +15,6 @@
 >[Complete Java Masterclass, Tim Buchalka (Udemy course)](../complete-java-masterclass/cjm.md)
 
 ## Documentation, manual references...
-
->[BlueJ Website](https://bluej.org/)
 
 >[Netbeans Website](https://netbeans.org/)
 

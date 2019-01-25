@@ -6,7 +6,7 @@
 
 ## Courses, books...
 
-> Resources used to learn about the topic (It is advisable to complete tham)
+> Resources used to learn about the topic (It is advisable to complete them)
 
 ## Documentation, manual references...
 

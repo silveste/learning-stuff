@@ -14,7 +14,7 @@
 
 >[The Web developer bootcamp, Colt Steele (Udemy course)](../the-web-developer-bootcamp/twdb.md)
 
-<!--Todo: must be inclueded when editing the courses-->
+<!--Todo: must be included when editing the courses-->
 
 ## Documentation, manual references...
 

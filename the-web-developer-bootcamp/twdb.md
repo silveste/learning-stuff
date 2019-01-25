@@ -11,13 +11,6 @@
 
 ## Subjects
 
->### General concepts
-
->>[API Development](../subjects/api-development.md)
-
->>[Encryption, security, authentication](../subjects/security.md)
-
-
 >### Languages, Markups, Frameworks
 
 >>[Bootstrap](../subjects/bootstrap.md)
@@ -32,10 +25,9 @@
 
 >>[MongoDB](../subjects/mongodb.md)
 
->>[NodeJS](../subjects/nodejs.md)
-
-
 >### Tools, Servers, Operating systems, Deployment
+
+>>[NodeJS](../subjects/nodejs.md)
 
 >>[Integration Development Environments](../subjects/ide.md)
 
