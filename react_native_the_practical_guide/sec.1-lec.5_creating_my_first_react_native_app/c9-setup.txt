@@ -1,0 +1,16 @@
+CLOUD 9 SETUP
+
+1 - Update nodejs version
+$ nvm install 8.15.1
+
+2 - Install required packages
+$ npm install -g create-react-native-app expo-cli exp
+
+(exp is required to use Expo CLI with tunneling, see here https://community.c9.io/t/support-expo-io-for-native-app-development/16437/2)
+
+3 - Create the app
+$ create-react-native-app <my-app>
+
+4 - Start the app
+$ cd <my-app>
+$ exp start --tunnel
