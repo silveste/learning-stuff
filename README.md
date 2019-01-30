@@ -23,3 +23,5 @@ You are currently in branch **learning-html**, if you want to see all subjects s
 [HTML5 & CSS3, Brian P. Hogan (Book)](html-and-css3/hc.md)
 
 [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
+
+[Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
