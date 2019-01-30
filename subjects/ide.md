@@ -14,6 +14,8 @@
 
 >[Complete Java Masterclass, Tim Buchalka (Udemy course)](../complete-java-masterclass/cjm.md)
 
+>[Java EE with Vaadin, Spring boot and Maven (Udemy course)](../java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
+
 ## Documentation, manual references...
 
 >[Netbeans Website](https://netbeans.org/)

@@ -8,7 +8,7 @@
 
 ## Courses, books...
 
-><!--Todo: Add courses-->
+>>[Java EE with Vaadin, Spring boot and Maven (Udemy course)](../java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
 
 ## Documentation, manual references...
 
@@ -16,4 +16,4 @@
 
 ## Related content
 
->[Java (Core)](java(core).md)
+>[Java (core)](../subjects/java%28core%29.md)

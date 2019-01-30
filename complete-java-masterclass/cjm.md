@@ -1,10 +1,12 @@
+# Complete Java Masterclass, Tim Buchalka
+
 ## Source
+
+>[Complete Java Masterclass - Udemy](https://www.udemy.com/java-the-complete-java-developer-course/)
 
 ## Requirements
 
 >Basic level, no special knowledge is required
-
->[Complete Java Masterclass, Tim Buchalka (Udemy course)](https://www.udemy.com/java-the-complete-java-developer-course/)
 
 ## Subjects
 

@@ -48,7 +48,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [SASS](subjects/sass.md) Goal: Solid understanding to be able to provide immediately solutions to new projects.
 
-:black_square_button: [Spring](subjects/spring.md) Goal: Basic understanding to be able to understand applications that use it and to be able to develop applications using documentation
+:clock1: [Spring](subjects/spring.md) Goal: Basic understanding to be able to understand applications that use it and to be able to develop applications using documentation
 
 ### Tools, Environments, Servers, Operating systems, Deployment
 
@@ -87,7 +87,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :black_square_button: Introduction to the Theory of Computation, Michael Sipser (Book)
 
-:clock1: [Java EE with Vaadin, Spring Boot and Maven, Holczer Balazs (Udemy course)](https://www.udemy.com/java-ee-with-vaadin-spring-boot-and-maven/)
+:clock1: [Java EE with Vaadin, Spring boot and Maven, Holczer Balazs (Udemy course)](java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
 
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
