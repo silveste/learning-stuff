@@ -13,8 +13,8 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 @Configuration
 @EnableAutoConfiguration
 @ComponentScan({"com.silveste"})
-@EnableJpaRepositories({"com.silveste"})
-@EntityScan({"com.silveste"})
+//@EnableJpaRepositories({"com.silveste"})
+//@EntityScan({"com.silveste"})
 public class SpringBootApplication extends SpringBootServletInitializer {
 
     @Override
