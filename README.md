@@ -99,10 +99,6 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [The Advanced Web Developer Bootcamp](the-advanced-web-developer-bootcamp/tawdb.md)
 
-<<<<<<< HEAD
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
-=======
-[The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
 
-[Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
->>>>>>> learning-html
+:clock1: [Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
