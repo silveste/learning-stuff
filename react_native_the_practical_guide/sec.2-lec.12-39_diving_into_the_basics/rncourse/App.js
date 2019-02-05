@@ -8,9 +8,10 @@
  */
 
 import React, {Component} from 'react';
-import {Platform, StyleSheet, Text, View, TextInput, Button} from 'react-native';
+import {Platform, StyleSheet, View, } from 'react-native';
 
-import ListItem from './src/components/ListItem/ListItem';
+import ListView from './src/components/ListView/ListView';
+import InputView from './src/components/InputView/InputView';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -23,52 +24,22 @@ type Props = {};
 export default class App extends Component<Props> {
 
   state = {
-    placeName: '',
     places: []
   };
 
-  placeNameChangeHandler = val => {
-    this.setState({
-      placeName: val
-    })
-  }
-
-  placeSubmitHandler = () => {
-    //Prevent input values to be parsed as a different value than string
-    const val = this.state.placeName.trim();
-    if (val) {
-      this.setState(prevState => {
-        return {
-          places: prevState.places.concat(val),
-          placeName: ''
-        };
+  handleSubmit = val => {
+    this.setState(prevState => {
+      return {
+        places: prevState.places.concat(val)
+      };
     });
-    }
-  }
+  };
 
   render() {
-    const placesList = this.state.places.map( (place, i) => (
-      <ListItem key={i} placeName={place} />
-    ));
     return (
       <View style={styles.container}>
-        <View style={styles.inputContainer}>
-          <TextInput
-            style={styles.inputText}
-            placeholder = "An Awesome Place"
-            value={this.state.placeName}
-            onChangeText = {this.placeNameChangeHandler}/>
-          <Button
-            style={styles.inputButton}
-            title = "Add"
-            onPress = {this.placeSubmitHandler}
-          />
-        </View>
-        <View
-          style = {styles.listContainer}
-        >
-          {placesList}
-        </View>
+        <InputView onSubmit = {this.handleSubmit}/>
+        <ListView places = {this.state.places} />
       </View>
     );
   }
@@ -80,20 +51,5 @@ const styles = StyleSheet.create({
     justifyContent: 'flex-start',
     alignItems: 'center',
     backgroundColor: '#ffffff',
-  },
-  inputContainer: {
-    flexDirection: 'row',
-    justifyContent: 'space-between',
-    alignItems: 'flex-start',
-    margin: 10,
-  },
-  listContainer: {
-      width: '100%'
-  },
-  inputText: {
-    width: '70%'
-  },
-  inputButton: {
-    width: '20%'
   }
 });
