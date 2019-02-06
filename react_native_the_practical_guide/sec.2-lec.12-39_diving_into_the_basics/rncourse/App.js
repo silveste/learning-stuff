@@ -7,18 +7,20 @@
  * @lint-ignore-every XPLATJSCOPYRIGHT1
  */
 
-import React, {Component} from 'react';
-import {Platform, StyleSheet, View, } from 'react-native';
+import React, { Component } from 'react';
+import { StyleSheet, View } from 'react-native';
 
 import ListView from './src/components/ListView/ListView';
 import InputView from './src/components/InputView/InputView';
 
+/*
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
   android:
     'Double tap R on your keyboard to reload,\n' +
     'Shake or press menu button for dev menu',
 });
+*/
 
 type Props = {};
 export default class App extends Component<Props> {
@@ -35,11 +37,19 @@ export default class App extends Component<Props> {
     });
   };
 
+  placeDeletedHandler = id => {
+    this.setState(prevState => {
+        return {
+          places: prevState.places.filter((place, i) => i !== id)
+        };
+    });
+  }
+
   render() {
     return (
       <View style={styles.container}>
-        <InputView onSubmit = {this.handleSubmit}/>
-        <ListView places = {this.state.places} />
+        <InputView onSubmit={this.handleSubmit} />
+        <ListView places={this.state.places} onItemDeleted={this.placeDeletedHandler} />
       </View>
     );
   }
