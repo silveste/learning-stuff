@@ -91,6 +91,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
+:clock1: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
+
 :white_check_mark: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
 
 :white_check_mark: [Sams Teach Yourself Regular Expressions in 10 Minutes, Ben Forta](sams-teach-yourself-regular-expressions-in-10-minutes/styrem.md)
