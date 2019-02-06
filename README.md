@@ -89,6 +89,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :clock1: [Java EE with Vaadin, Spring boot and Maven, Holczer Balazs (Udemy course)](java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
 
+:clock1: [Java Spring Tutorial Masterclass - Learn Spring Framework 5 (Udemy course)](java-spring-tutorial-masterclass/jstm.md)
+
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
 :clock1: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
