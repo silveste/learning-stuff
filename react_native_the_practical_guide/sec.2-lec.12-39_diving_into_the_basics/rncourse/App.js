@@ -12,7 +12,6 @@ import { StyleSheet, View } from 'react-native';
 
 import ListView from './src/components/ListView/ListView';
 import InputView from './src/components/InputView/InputView';
-import placeImage from './src/assets/place.jpg';
 
 /*
 const instructions = Platform.select({
@@ -40,7 +39,9 @@ export default class App extends Component<Props> {
         places: prevState.places.concat({
           key: Math.random(),
           name: val,
-          image: placeImage
+          image: {
+            uri: 'https://loremflickr.com/300/300'
+          }
         })
       };
     });
