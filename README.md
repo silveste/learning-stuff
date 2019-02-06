@@ -6,8 +6,10 @@ The repository will probably have unnecessary branches and commits in order to f
 
 You are currently in branch **learning-spring**, if you want to see all subjects switch to master
 
-:clock1: [Spring](subjects/spring.md) Goal: Basic understanding to be able to understand applications that use it and to be able to develop applications using documentation
+[Spring](subjects/spring.md) Goal: Basic understanding to be able to understand applications that use it and to be able to develop applications using documentation
 
 ## Learning materials: courses, books <!--Future: If a new material is included use the MD template to include it-->
 
-:clock1: [Java EE with Vaadin, Spring Boot and Maven, Holczer Balazs (Udemy course)](java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
+[Java EE with Vaadin, Spring Boot and Maven, Holczer Balazs (Udemy course)](java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
+
+[Java Spring Tutorial Masterclass - Learn Spring Framework 5, Tim Buchalka (Udemy course)](java-spring-tutorial-masterclass/jstm.md)

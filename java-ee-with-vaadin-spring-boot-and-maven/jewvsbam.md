@@ -1,4 +1,4 @@
-# Java EE with Vaadin, Spring Boot and Maven
+# Java EE with Vaadin, Spring Boot and Maven, Holczer Balazs
 
 (On branch **learning-spring**, switch to master if you want to see all contents)
 
