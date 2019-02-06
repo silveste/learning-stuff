@@ -1,22 +1,25 @@
 import React from 'react';
-import { ScrollView, StyleSheet } from 'react-native';
+import { FlatList, StyleSheet } from 'react-native';
 
 import ListItem from '../ListItem/ListItem';
 
 const listView = (props) => {
-  const placesList = props.places.map((place, i) => (
-    <ListItem
-      key={i}
-      placeName={place}
-      onItemPressed={() => props.onItemDeleted(i)}
-    />
-  ));
   return (
-    <ScrollView
+    <FlatList
       style={styles.listContainer}
-    >
-      {placesList}
-    </ScrollView>
+      data={props.places}
+      renderItem={(info) => (
+        <ListItem
+          /*
+            I'm not sure why info object has item property
+            which stores places array
+            TODO: check ListItem documentation
+          */
+          placeName={info.item.name}
+          onItemPressed={() => props.onItemDeleted(info.item.key)}
+        />
+      )}
+    />
   );
 };
 

@@ -31,16 +31,23 @@ export default class App extends Component<Props> {
 
   handleSubmit = val => {
     this.setState(prevState => {
+      /*
+      Math.random is not a correct solution to set a key as
+      there is a chance to get the same number
+      */
       return {
-        places: prevState.places.concat(val)
+        places: prevState.places.concat({
+          key: Math.random(),
+          name: val
+        })
       };
     });
   };
 
-  placeDeletedHandler = id => {
+  placeDeletedHandler = key => {
     this.setState(prevState => {
         return {
-          places: prevState.places.filter((place, i) => i !== id)
+          places: prevState.places.filter(place => place.key !== key)
         };
     });
   }
