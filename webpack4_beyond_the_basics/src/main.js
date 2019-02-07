@@ -1,1 +1,1 @@
-alert("Yuhuuuu!!")
+require("./main.css")
