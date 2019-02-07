@@ -12,6 +12,8 @@
 
 >[The Web developer bootcamp, Colt Steele (Udemy course)](../the-web-developer-bootcamp/twdb.md)
 
+>[Webpack 4: Beyond the basics, Lawrence Whiteside, (Udemy course)](webpack4_beyond_the_basics/wbtb.md)
+
 ## Documentation, manual references...
 
 >[w3schools](https://www.w3schools.com/jsref/)

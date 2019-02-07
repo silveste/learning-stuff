@@ -95,6 +95,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :clock1: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
 
+:clock1: [Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
+
 :white_check_mark: [Ry's Git Tutorial, Ryan Hodson (Book)](rys-git-tutorial/rgt.md)
 
 :white_check_mark: [Sams Teach Yourself Regular Expressions in 10 Minutes, Ben Forta](sams-teach-yourself-regular-expressions-in-10-minutes/styrem.md)
@@ -105,4 +107,4 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
 
-:clock1: [Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
+:clock1: [Webpack 4: Beyond the basics, Lawrence Whiteside, (Udemy course)](webpack4_beyond_the_basics/wbtb.md)
