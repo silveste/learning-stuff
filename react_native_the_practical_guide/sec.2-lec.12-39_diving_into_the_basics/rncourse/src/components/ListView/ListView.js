@@ -17,7 +17,7 @@ const listView = (props) => {
           */
           placeName={info.item.name}
           placeImage={info.item.image}
-          onItemPressed={() => props.onItemDeleted(info.item.key)}
+          onItemPressed={() => props.onItemSelected(info.item.key)}
         />
       )}
     />

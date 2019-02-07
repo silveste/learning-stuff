@@ -12,6 +12,7 @@ import { StyleSheet, View } from 'react-native';
 
 import ListView from './src/components/ListView/ListView';
 import InputView from './src/components/InputView/InputView';
+import PlaceDetail from './src/components/PlaceDetail/PlaceDetail';
 
 /*
 const instructions = Platform.select({
@@ -26,7 +27,8 @@ type Props = {};
 export default class App extends Component<Props> {
 
   state = {
-    places: []
+    places: [],
+    selectedPlace: null
   };
 
   handleSubmit = val => {
@@ -47,19 +49,38 @@ export default class App extends Component<Props> {
     });
   };
 
-  placeDeletedHandler = key => {
+  placeSeletedHandler = key => {
     this.setState(prevState => {
         return {
-          places: prevState.places.filter(place => place.key !== key)
+          selectedPlace: prevState.places.find(place => place.key === key)
         };
     });
   }
 
+  placeDeletedHandler = () => {
+    this.setState(prevState => {
+        return {
+          places: prevState.places.filter(place => place.key !== prevState.selectedPlace.key),
+          selectedPlace: null
+        };
+    });
+  }
+  
+  modalClosedHandler = () => this.setState({ selectedPlace: null });
+
   render() {
     return (
       <View style={styles.container}>
+        <PlaceDetail
+          selectedPlace={this.state.selectedPlace}
+          onItemDeleted={this.placeDeletedHandler}
+          onModalClosed={this.modalClosedHandler}
+        />
         <InputView onSubmit={this.handleSubmit} />
-        <ListView places={this.state.places} onItemDeleted={this.placeDeletedHandler} />
+        <ListView
+          places={this.state.places}
+          onItemSelected={this.placeSeletedHandler}
+        />
       </View>
     );
   }
