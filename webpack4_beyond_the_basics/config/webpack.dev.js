@@ -29,7 +29,8 @@ module.exports = {
   },
   module: {
     //Rules that webpack will use when encounter with a file with different
-    //language than js
+    //language than js. it also can have rules for js files, i.e. use babel to transpile
+    //a js file to ES2015
     rules: [
       {
         //test parameter points to a regex that catch the file(s) target
@@ -94,6 +95,17 @@ module.exports = {
             }
           }
         ]
+      },
+      {
+        //Catching js to transpile to es2015
+        test: /\.js$/,
+        use: [
+          {
+            loader: "babel-loader"
+          }
+        ],
+        //Exclude js in node_modules folder
+        exclude: /node_modules/
       }
     ]
   }
