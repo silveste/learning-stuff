@@ -9,75 +9,35 @@
 
 import React, { Component } from 'react';
 import { StyleSheet, View } from 'react-native';
+import { connect } from 'react-redux';
 
 import ListView from './src/components/ListView/ListView';
 import InputView from './src/components/InputView/InputView';
 import PlaceDetail from './src/components/PlaceDetail/PlaceDetail';
-
-/*
-const instructions = Platform.select({
-  ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
-  android:
-    'Double tap R on your keyboard to reload,\n' +
-    'Shake or press menu button for dev menu',
-});
-*/
+import { addPlace, deletePlace, selectPlace, deselectPlace } from './src/store/actions';
 
 type Props = {};
-export default class App extends Component<Props> {
+class App extends Component<Props> {
 
-  state = {
+  handleSubmit = val => this.props.onAddPlace(val);
 
-  };
+  placeSeletedHandler = key => this.props.onSelectPlace(key);
 
-  handleSubmit = val => {
-    this.setState(prevState => {
-      /*
-      Math.random is not a correct solution to set a key as
-      there is a chance to get the same number
-      */
-      return {
-        places: prevState.places.concat({
-          key: Math.random(),
-          name: val,
-          image: {
-            uri: 'https://loremflickr.com/300/300'
-          }
-        })
-      };
-    });
-  };
+  placeDeletedHandler = () => this.props.onDeletePlace();
 
-  placeSeletedHandler = key => {
-    this.setState(prevState => {
-        return {
-          selectedPlace: prevState.places.find(place => place.key === key)
-        };
-    });
-  }
-
-  placeDeletedHandler = () => {
-    this.setState(prevState => {
-        return {
-          places: prevState.places.filter(place => place.key !== prevState.selectedPlace.key),
-          selectedPlace: null
-        };
-    });
-  }
-
-  modalClosedHandler = () => this.setState({ selectedPlace: null });
+  modalClosedHandler = () => this.props.onDeselectPlace()
 
   render() {
     return (
       <View style={styles.container}>
         <PlaceDetail
-          selectedPlace={this.state.selectedPlace}
+          selectedPlace={this.props.selectedPlace}
           onItemDeleted={this.placeDeletedHandler}
           onModalClosed={this.modalClosedHandler}
         />
         <InputView onSubmit={this.handleSubmit} />
         <ListView
-          places={this.state.places}
+          places={this.props.places}
           onItemSelected={this.placeSeletedHandler}
         />
       </View>
@@ -93,3 +53,25 @@ const styles = StyleSheet.create({
     backgroundColor: '#ffffff',
   }
 });
+
+//map state properties (in store) to props
+//these props can be used to read the state
+const mapStateToProps = state => {
+  return {
+    //state comes from the store, 1st places from combineReducers refers to places reducer
+    places: state.places.places, //second places refers to places array set in reducer places.js
+    selectedPlace: state.places.selectedPlace //selectedPlace is set in reducer places.js
+  };
+};
+
+//map actions defined in store/actions/index.js to props functions (action dispatch functions)
+//these props can be used to modify(write) the state
+const mapDispatchToProps = dispatch => {
+  return {
+    onAddPlace: (placeName) => dispatch(addPlace(placeName)),
+    onDeletePlace: () => dispatch(deletePlace()),
+    onSelectPlace: (key) => dispatch(selectPlace(key)),
+    onDeselectPlace: () => dispatch(deselectPlace())
+  };
+};
+export default connect(mapStateToProps, mapDispatchToProps)(App);
