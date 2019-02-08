@@ -93,7 +93,7 @@
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"h1 {\\n  color: red;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/main.css?./node_modules/css-loader/dist/cjs.js");
+eval("exports = module.exports = __webpack_require__(/*! ../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \"body {\\n  background-color: #444;\\n  margin: 0;\\n}\\n\\nh1 {\\n  height: 100vh;\\n  display: flex;\\n  color: white;\\n  align-items: center;\\n  justify-content: center;\\n  font-size: 5em;\\n  font-family: sans-serif;\\n  text-shadow: 0 0 20px black;\\n}\\n\", \"\"]);\n\n\n\n//# sourceURL=webpack:///./src/main.css?./node_modules/css-loader/dist/cjs.js");
 
 /***/ }),
 
@@ -131,6 +131,17 @@ eval("\n/**\n * When source maps are enabled, `style-loader` uses a link element
 
 /***/ }),
 
+/***/ "./src/index.html":
+/*!************************!*\
+  !*** ./src/index.html ***!
+  \************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+eval("module.exports = __webpack_require__.p + \"index.html\";\n\n//# sourceURL=webpack:///./src/index.html?");
+
+/***/ }),
+
 /***/ "./src/main.css":
 /*!**********************!*\
   !*** ./src/main.css ***!
@@ -149,7 +160,7 @@ eval("\nvar content = __webpack_require__(/*! !../node_modules/css-loader/dist/c
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("__webpack_require__(/*! ./main.css */ \"./src/main.css\")\n\n\n//# sourceURL=webpack:///./src/main.js?");
+eval("//requires two loaders css-loader to lint the file and style-loader\n//to insert the code in the html\n__webpack_require__(/*! ./main.css */ \"./src/main.css\");\n//Requires html-loader, extract-loader and file-loader\n__webpack_require__(/*! ./index.html */ \"./src/index.html\");\n\n\n//# sourceURL=webpack:///./src/main.js?");
 
 /***/ })
 

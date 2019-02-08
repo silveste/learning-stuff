@@ -21,7 +21,11 @@ module.exports = {
   //config for web-dev-server
   devServer: {
     //wen running webpack-dev-server everything in dist folder will be served
-    contentBase: "dist"
+    contentBase: "dist",
+    //To see any error in the browser overlay: true
+    //note that by the default webpack shows errors only in the console or the
+    //terminal where webpack-dev-server is executed
+    overlay: true
   },
   module: {
     //Rules that webpack will use when encounter with a file with different
@@ -42,6 +46,52 @@ module.exports = {
           {
             //loader responsible for linting the file
             loader: "css-loader"
+          }
+        ]
+      },
+      {
+        test: /\.html$/,
+        //Loaders in use array are executed in inverse order
+        use: [
+          {
+            //loader responsible for create a file. In this case we need to create a file
+            //as we want the file separated from the main-bundle.js
+            loader: "file-loader",
+            options: {
+              //name indicates how is going to be the file name in the output
+              //[name] = name of the original file, therefore the name won change in this case
+              name: "[name].html"
+            }
+          },
+          {
+            //loader responsible to tell webpack that the file will be a separate file
+            //not  included in the main-bundle.js
+            loader: "extract-loader"
+          },
+          {
+            //loader responsible for parsing (linting) the html file
+            loader: "html-loader",
+            options: {
+              //Targeting src attribute in img elements, this option indicates
+              //that webpack will provide whatever is in the src for all img elements
+              //there should be an image in the path the the source html indicates
+              attrs: ["img:src"]
+            }
+          }
+        ]
+      },
+      {
+        //loader for imges
+        //regex that captures jpg or gif or png
+        test: /\.(jpg|gif|png)$/,
+        use: [
+          {
+            loader: "file-loader",
+            options: {
+              //All images will be set in images path with the original name and extension and
+              //a hash between them
+              name: "images/[name]-[hash:8].[ext]"
+            }
           }
         ]
       }
