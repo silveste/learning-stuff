@@ -5,7 +5,7 @@ import java.util.Random;
 public class NumberGeneratorImpl implements NumberGenerator {
 
     // -- FIELDS --
-    private final Random random = new Random();
+    private static final Random random = new Random();
 
     private int maxNumber = 100;
 
