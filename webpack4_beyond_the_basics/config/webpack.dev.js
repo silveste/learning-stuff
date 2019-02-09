@@ -6,7 +6,10 @@ module.exports = {
     //therefore in this case webpack must be executed in ../src
     //main key can also point to an array of different files and webpack
     //will concatenate then togheter i.e. main: ["./src/first.js", "./src/second.js"]
-    main: "./src/main.js"
+    //core-js/fn/promise library includes polyfill only for promises. If you want to
+    //change for all polyfills include babel-polyfill instead
+    //The polyfill code will only be ran if is not included natively in the browser
+    main: [/*"core-js/fn/promise",*/"./src/main.js"]
   },
   mode: "development",
   output: {
