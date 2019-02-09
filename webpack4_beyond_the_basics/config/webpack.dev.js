@@ -1,4 +1,6 @@
-const path = require("path") //package that comes with node
+const path = require("path"); //package that comes with node
+const webpack = require("webpack");
+const HTMLWebpackPlugin = require("html-webpack-plugin"); //used to reload  browser when changes in HTML file
 
 module.exports = {
   entry : {
@@ -28,7 +30,14 @@ module.exports = {
     //To see any error in the browser overlay: true
     //note that by the default webpack shows errors only in the console or the
     //terminal where webpack-dev-server is executed
-    overlay: true
+    overlay: true,
+    //hot: true =>To reload and update the web browser on changes (Not necesary for webpack-dev-server,
+    //only when including webpack hot server into frameworks such as express)
+    hot: true,
+    //To see colors in the console output
+    stats: {
+      colors: true
+    }
   },
   module: {
     //Rules that webpack will use when encounter with a file with different
@@ -57,6 +66,7 @@ module.exports = {
         test: /\.html$/,
         //Loaders in use array are executed in inverse order
         use: [
+          /* File and extract loader has been replaced by html-webpack-plugin, see at the botton (plugins section)
           {
             //loader responsible for create a file. In this case we need to create a file
             //as we want the file separated from the main-bundle.js
@@ -71,7 +81,7 @@ module.exports = {
             //loader responsible to tell webpack that the file will be a separate file
             //not  included in the main-bundle.js
             loader: "extract-loader"
-          },
+          },*/
           {
             //loader responsible for parsing (linting) the html file
             loader: "html-loader",
@@ -111,5 +121,15 @@ module.exports = {
         exclude: /node_modules/
       }
     ]
-  }
+  },
+  plugins: [
+    //Includes webpack-hot-middleware to reload page on changes,
+    //note require webpack at the beginning of the file
+    new webpack.HotModuleReplacementPlugin(),
+    //html-webpack-plugin allows hot reloading when changin html
+    //file. used with nodemon (which reload server side)
+    new HTMLWebpackPlugin({
+      template: "./src/index.html"
+    })
+  ]
 }
