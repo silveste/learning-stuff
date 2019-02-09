@@ -9,6 +9,8 @@
 ## Requirements
 
 >Basic knowledge of javascript and terminal
+>Basic knowledge of HTML, CSS and CSS preprocessors
+>Basic knowledge of JS frameworks such as NodeJS Express, React, Angular and what they are used for
 
 ## Subjects
 
