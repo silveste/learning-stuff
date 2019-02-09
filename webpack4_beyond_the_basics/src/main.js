@@ -9,7 +9,7 @@ require("webpack-hot-middleware/client?reload=true");
 require("./main.css");
 //Requires html-loader, extract-loader and file-loader
 require("./index.html");
-
+debugger
 
 /*Setting Up Babel*/
 //Not all browsers support arrow functions, however babel will transpile for old browsers

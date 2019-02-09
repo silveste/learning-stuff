@@ -39,6 +39,8 @@ module.exports = {
       colors: true
     }
   },
+  //source-map allows devtools to show the real code when debugging not the compiled by wbepack
+  devtool: "source-map",
   module: {
     //Rules that webpack will use when encounter with a file with different
     //language than js. it also can have rules for js files, i.e. use babel to transpile
