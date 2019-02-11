@@ -1,5 +1,12 @@
 import React from 'react';
-import { Modal, View, Image, Text, Button, StyleSheet } from 'react-native';
+import { Modal, View, Image, Text, Button, StyleSheet, TouchableOpacity } from 'react-native';
+
+
+//See https://github.com/oblador/react-native-vector-icons for more instructions on how to install
+// this 3rd party library
+//Once fullfilled steps for Android/Ios we can import the whole library or only the part that
+//content the icons that we want
+import Icon from 'react-native-vector-icons/Ionicons';
 
 const placedetail = props => {
   let modalContent = null;
@@ -21,7 +28,12 @@ const placedetail = props => {
       <View style={styles.modalContainer}>
         {modalContent}
         <View>
-          <Button title='Delete' color='red' onPress={props.onItemDeleted} />
+          <TouchableOpacity onPress={props.onItemDeleted}>
+            <View style={styles.deleteButton}>
+              <Icon size={30} name='md-trash' color='red' />
+            </View>
+          </TouchableOpacity>
+
           <Button title='Close' onPress={props.onModalClosed} />
         </View>
       </View>
@@ -42,6 +54,9 @@ const styles = StyleSheet.create({
     textAlign: 'center',
     fontSize: 28,
     margin: 5
+  },
+  deleteButton: {
+    alignItems: 'center'
   }
 });
 export default placedetail;
