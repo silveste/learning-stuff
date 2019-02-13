@@ -6,7 +6,7 @@ Every action needs to have at least a key called type where the value
 is the action that will be performed.
 */
 
-import { ADD_PLACE, DELETE_PLACE, SELECT_PLACE, DESELECT_PLACE } from './actionTypes';
+import { ADD_PLACE, DELETE_PLACE } from './actionTypes';
 
 export const addPlace = (placeName) => {
   return {
@@ -18,18 +18,5 @@ export const addPlace = (placeName) => {
 export const deletePlace = () => {
   return {
     type: DELETE_PLACE,
-  };
-};
-
-export const selectPlace = (placeKey) => {
-  return {
-    type: SELECT_PLACE,
-    placeKey
-  };
-};
-
-export const deselectPlace = () => {
-  return {
-    type: DESELECT_PLACE
   };
 };

@@ -1,15 +1,15 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import { View, TextInput, Button, StyleSheet } from 'react-native';
 
 export default class InputView extends Component {
   state = {
-    placeName: ""
+    placeName: ''
   }
 
   placeNameChangeHandler = val => {
     this.setState({
       placeName: val
-    })
+    });
   }
 
   placeSubmitHandler = () => {
@@ -19,8 +19,8 @@ export default class InputView extends Component {
     */
     const val = this.state.placeName.trim();
     if (val) {
-      this.setState({placeName: ''});
-      return this.props.onSubmit(val)
+      this.setState({ placeName: '' });
+      return this.props.onSubmit(val);
     }
   }
 
@@ -29,13 +29,14 @@ export default class InputView extends Component {
       <View style={styles.inputContainer}>
         <TextInput
           style={styles.inputText}
-          placeholder = "An Awesome Place"
+          placeholder='An Awesome Place'
           value={this.state.placeName}
-          onChangeText = {this.placeNameChangeHandler}/>
+          onChangeText={this.placeNameChangeHandler}
+        />
         <Button
           style={styles.inputButton}
-          title = "Add"
-          onPress = {this.placeSubmitHandler}
+          title='Add'
+          onPress={this.placeSubmitHandler}
         />
       </View>
     );
