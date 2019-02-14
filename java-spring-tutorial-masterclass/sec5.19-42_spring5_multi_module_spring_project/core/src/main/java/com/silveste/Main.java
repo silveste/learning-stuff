@@ -17,6 +17,7 @@ public class Main {
         // Create the context (container)
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext(CONFIG_LOCATION);
 
+        // get number generator bean from context (container)
         //To instatiate a class, context.getBean needs the id of the class specified in CONFIG_LOCATION
         NumberGenerator numberGenerator = context.getBean("numberGenerator", NumberGenerator.class);
 
@@ -26,6 +27,12 @@ public class Main {
         //log generated number
         //Curly braces are replaced by number due to internal configuration of slf4j
         log.info("number = {}", number);
+
+        // get game bean from context (container)
+        Game game = context.getBean(Game.class);
+
+        //Call reset method
+        game.reset();
 
         //Close context (container)
         context.close();

@@ -18,6 +18,14 @@ public class GameImpl implements Game {
     private int remainingGuesses;
     private boolean validNumberRange = true;
 
+    // -- CONSTRUCTORS --
+    //Using constructor based dependency injection
+    //The gameImpl class depends on the initialization of NumberGenerator
+    //To inject the numbergenerator dependency into this class
+    //a anotation can be used or change the bean definition in beans.xml
+    public GameImpl(NumberGenerator numberGenerator) {
+        this.numberGenerator = numberGenerator;
+    }
 
     // -- PUBLIC METHODS --
     @Override
@@ -27,7 +35,7 @@ public class GameImpl implements Game {
         remainingGuesses = guessCount;
         biggest = numberGenerator.getMaxNumber();
         number = numberGenerator.next();
-        log.debug("the nmber is {}", number);
+        log.debug("the number is {}", number);
     }
 
 

@@ -5,4 +5,15 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <bean id="numberGenerator" class="com.silveste.NumberGeneratorImpl" />
+
+
+
+    <bean id="game" class="com.silveste.GameImpl" >
+         <!--
+         The bean definition has been changed to include a dependency injection
+         constructor-arg and ref are used to specified the id that is going to be injected by the container
+         note that ref and the bean id are the same ob the object injected are the same.
+         -->
+        <constructor-arg ref="numberGenerator"/>
+    </bean>
 </beans>
