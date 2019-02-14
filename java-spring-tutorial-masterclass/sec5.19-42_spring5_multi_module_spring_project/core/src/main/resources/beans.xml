@@ -14,6 +14,14 @@
          constructor-arg and ref are used to specified the id that is going to be injected by the container
          note that ref and the bean id are the same ob the object injected are the same.
          -->
-        <constructor-arg ref="numberGenerator"/>
+        <!-- constructor arg is used in contructor based strategy of dependency injection
+        Now using setter based so that this is commented
+        <constructor-arg ref="numberGenerator"/>-->
+
+        <!--setter based dependency injection uses the property tag
+        the property uses two attributes name and ref
+        name must match the name of the field in the class (which in gameImple is numberGenerator)
+        The ref matches the Id of the bean (also numberGenerator in this case)-->
+        <property name="numberGenerator" ref="numberGenerator" />
     </bean>
 </beans>

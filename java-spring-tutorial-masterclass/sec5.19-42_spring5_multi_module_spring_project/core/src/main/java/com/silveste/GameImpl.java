@@ -21,13 +21,22 @@ public class GameImpl implements Game {
     // -- CONSTRUCTORS --
     //Using constructor based dependency injection
     //The gameImpl class depends on the initialization of NumberGenerator
-    //To inject the numbergenerator dependency into this class
-    //a anotation can be used or change the bean definition in beans.xml
-    public GameImpl(NumberGenerator numberGenerator) {
+    //To inject the numbergenerator dependency into this class 2 strategies can be used
+    // 1 constructor based and using beans.xml
+    // 2 setter based
+
+    //Constructor has been commented to use setter based dependency injection
+//    public GameImpl(NumberGenerator numberGenerator) {
+//        this.numberGenerator = numberGenerator;
+//    }
+
+    // -- PUBLIC METHODS --
+
+    //setter use to inject the numbergenerator as a dependency
+    public void setNumberGenerator(NumberGenerator numberGenerator) {
         this.numberGenerator = numberGenerator;
     }
 
-    // -- PUBLIC METHODS --
     @Override
     public void reset() {
         smallest = 0;
