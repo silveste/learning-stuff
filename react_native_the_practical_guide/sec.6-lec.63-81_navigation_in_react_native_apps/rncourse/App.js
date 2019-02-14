@@ -9,6 +9,7 @@ import AuthScreen from './src/screens/Auth/Auth';
 import SharePlaceScreen from './src/screens/SharePlace/SharePlace';
 import FindPlaceScreen from './src/screens/FindPlace/FindPlace';
 import PlaceDetailScreen from './src/screens/PlaceDetail/PlaceDetail';
+import SideDrawerScreen from './src/screens/SideDrawer/SideDrawer';
 import configureStore from './src/store/configureStore';
 
 const store = configureStore();
@@ -46,6 +47,10 @@ Navigation.registerComponent(
   Provider
 );
 
+Navigation.registerComponent(
+  'rncourses.SideDrawerScreen',
+  () => SideDrawerScreen
+);
 //Start AppRegistry
 //In this case our app will be a single screenby default
 Navigation.startSingleScreenApp({

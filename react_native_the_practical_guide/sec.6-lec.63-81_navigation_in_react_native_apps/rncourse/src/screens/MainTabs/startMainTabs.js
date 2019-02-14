@@ -11,7 +11,8 @@ const startTabs = () => {
   //the then() method
   Promise.all([
     getImageSource('md-map', 30), //Arguments: Icon, size, color
-    getImageSource('ios-share-alt', 30)
+    getImageSource('ios-share-alt', 30),
+    getImageSource('ios-menu', 30)
   ])
   .then(icons => {
     //Automatically render a tab bar
@@ -26,15 +27,42 @@ const startTabs = () => {
               screen: 'rncourses.FindPlaceScreen',
               label: 'Find Place', //Appears in the tab
               title: 'Find Place', //Appears in the top screen
-              icon: icons[0]
+              icon: icons[0],
+              //includes the button to show the side pane (sidedrawer)
+              navigatorButtons: {
+                leftButtons: [
+                  {
+                    icon: icons[2],
+                    title: 'Menu',
+                    //Id is required to identify the event that is triggered when pressing the buton
+                    id: 'sideDrawerToggle'
+                  }
+                ]
+              }
           },
           {
               screen: 'rncourses.SharePlaceScreen',
               label: 'Share Place',
               title: 'Share Place',
-              icon: icons[1]
+              icon: icons[1],
+              navigatorButtons: {
+                leftButtons: [
+                  {
+                    icon: icons[2],
+                    title: 'Menu',
+                    id: 'sideDrawerToggle'
+                  }
+                ]
+              }
           }
-      ]
+      ],
+      //See react native navigaton docs to find more information about drawer Object
+      //drawer shows a side pane either on the left or on the right
+      drawer: {
+        left: {
+          screen: 'rncourses.SideDrawerScreen'
+        }
+      }
     });
   });
 };

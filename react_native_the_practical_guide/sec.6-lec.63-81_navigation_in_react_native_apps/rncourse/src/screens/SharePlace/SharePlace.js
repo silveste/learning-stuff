@@ -6,6 +6,23 @@ import InputView from '../../components/InputView/InputView';
 import { addPlace } from '../../store/actions';
 
 class SharePlaceScreen extends Component {
+  constructor(props) {
+    super(props);
+    //listener for navigation events
+    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+  }
+
+  onNavigatorEvent = event => {
+    //To find out event types name, the faster way
+    //is to click the event and check the console using devtools
+    if (event.type === 'NavBarButtonPress'
+        && event.id === 'sideDrawerToggle') {
+          //see toggelDrawerMathod in in react native navigation docs
+          this.props.navigator.toggleDrawer({
+            side: 'left'
+          });
+    }
+  }
   placeAddedHandler = placeName => {
     this.props.onAddPlace(placeName);
   }
