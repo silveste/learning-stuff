@@ -20,12 +20,12 @@ class AuthScreen extends Component {
         {/*
         By using a container to style the width of the text inputs
         we can now make the textinput reusable accross the app as the width
-        is adaptable depending on the container
+        is adaptable depending on the container.
         */}
         <View style={styles.inputContainer}>
-          <DefaultInput placeholder="E-mail Address" />
-          <DefaultInput placeholder="E-mail Address" />
-          <DefaultInput placeholder="Password" />
+          <DefaultInput placeholder="E-mail Address" style={styles.input} />
+          <DefaultInput placeholder="E-mail Address" style={styles.input} />
+          <DefaultInput placeholder="Password" style={styles.input} />
         </View>
         <Button
           title="Submit"
@@ -44,6 +44,10 @@ const styles = StyleSheet.create({
   },
   inputContainer: {
     width: '80%'
+  },
+  input: {
+    backgroundColor: '#eee',
+    borderColor: '#bbb'
   }
 });
 export default AuthScreen;
