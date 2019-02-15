@@ -5,6 +5,7 @@ import startMainTabs from '../MainTabs/startMainTabs';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import MainText from '../../components/UI/MainText/MainText';
+import MainButton from '../../components/UI/MainButton/MainButton';
 
 import backgroundImage from '../../assets/bg.jpg';
 
@@ -22,8 +23,9 @@ class AuthScreen extends Component {
           <MainText>
             <HeadingText>Please Log In</HeadingText>
           </MainText>
-          <Button
-            title="Switch to Login"
+          <MainButton
+            title='Switch to Login'
+            onPress={this.loginHandler}
           />
           {/*
           By using a container to style the width of the text inputs
