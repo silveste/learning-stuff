@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
-import { View, Text, Button, TextInput, StyleSheet } from 'react-native';
+import { View, Button, StyleSheet } from 'react-native';
 
 import startMainTabs from '../MainTabs/startMainTabs';
-import DefaultInput from '../../components/ui/DefaultInput/DefaultInput';
+import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
+import HeadingText from '../../components/UI/HeadingText/HeadingText';
+import MainText from '../../components/UI/MainText/MainText';
+
 class AuthScreen extends Component {
   loginHandler = () => {
     //Check for Auth
@@ -13,7 +16,9 @@ class AuthScreen extends Component {
   render() {
     return (
       <View style={styles.container} >
-        <Text>Please Log In</Text>
+        <MainText>
+          <HeadingText>Please Log In</HeadingText>
+        </MainText>
         <Button
           title="Switch to Login"
         />
