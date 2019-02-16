@@ -64,6 +64,66 @@ module.exports = {
           }
         ]
       },
+      //Loader for sass
+      {
+        test: /\.sass$/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          //post-css loader automatically inser autoprefixes to get compaibility across all browsers
+          /*{
+            loader: "postcss-loader"
+          },*/
+          //sass loader
+          {
+            loader: "sass-loader"
+          }
+        ]
+      },
+      //Loader for less
+      {
+        test: /\.less/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          //post-css loader automatically inser autoprefixes to get compaibility across all browsers
+          /*{
+            loader: "postcss-loader"
+          },*/
+          //less loader
+          {
+            loader: "less-loader"
+          }
+        ]
+      },
+      //Loader for stylus
+      {
+        test: /\.styl/,
+        use: [
+          {
+            loader: "style-loader"
+          },
+          {
+            loader: "css-loader"
+          },
+          //post-css loader automatically inser autoprefixes to get compaibility across all browsers
+          {
+            loader: "postcss-loader"
+          },
+          //stylus loader
+          {
+            loader: "stylus-loader"
+          }
+        ]
+      },
       {
         test: /\.html$/,
         //Loaders in use array are executed in inverse order

@@ -6,7 +6,12 @@ require("babel-runtime/regenerator");
 require("webpack-hot-middleware/client?reload=true");
 //requires two loaders css-loader to lint the file and style-loader
 //to insert the code in the html
-require("./main.css");
+//require("./main.css");
+//requires for sass, less ans stylus, same loaders as css plus sass-loader, less-loader and stylus loader
+//it also needs the compilers node-sass, less or stylus
+//require("./main.sass");
+//require("./main.less");
+require("./main.styl");
 //Requires html-loader, extract-loader and file-loader
 require("./index.html");
 
