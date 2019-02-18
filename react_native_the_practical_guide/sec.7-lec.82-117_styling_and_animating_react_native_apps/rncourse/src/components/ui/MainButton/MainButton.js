@@ -1,18 +1,38 @@
 import React from 'react';
-import { TouchableOpacity, Text, View, StyleSheet } from 'react-native';
+import {
+  TouchableOpacity,
+  TouchableNativeFeedback, //Wrapper that only can be used on Android
+  Text,
+  View,
+  StyleSheet,
+  Platform // Can be used to find out the OS at runtime
+} from 'react-native';
 
-const mainButton = props => (
-  <TouchableOpacity onPress={props.onPress}>
-    <View
-      style={[
-        styles.button,
-        [props.style]
-      ]}
-    >
-      <Text style={[styles.text, props.style]} >{props.title}</Text>
-    </View>
-  </TouchableOpacity>
-);
+const mainButton = props => {
+  const content = (
+      <View
+        style={[
+          styles.button,
+          [props.style]
+        ]}
+      >
+        <Text style={[styles.text, props.style]} >{props.title}</Text>
+      </View>
+  );
+  if (Platform.OS === 'android') {
+    return (
+      <TouchableNativeFeedback onPress={props.onPress}>
+       {content}
+      </TouchableNativeFeedback>
+    );
+  }
+  //If is not android, therefore IOS
+  return (
+        <TouchableOpacity onPress={props.onPress}>
+          {content}
+        </TouchableOpacity>
+  );
+};
 
 //Styles are default values and can be overrided by passing style property in props
 const styles = StyleSheet.create({

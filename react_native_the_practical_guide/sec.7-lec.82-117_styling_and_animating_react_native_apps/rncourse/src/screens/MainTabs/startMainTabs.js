@@ -1,4 +1,5 @@
 import { Navigation } from 'react-native-navigation';
+import { Platform } from 'react-native';
 import { getImageSource } from 'react-native-vector-icons/Ionicons';
 
 //A function is required so that the tabs are loaded when call the
@@ -9,10 +10,11 @@ const startTabs = () => {
   //hoewever, the helper that retrieves the image return a promise as it is asyncronous
   //therefore we have to start the tab after the promise has finished by including it inside
   //the then() method
+  const isAndroid = Platform.OS === 'android';
   Promise.all([
-    getImageSource('md-map', 30), //Arguments: Icon, size, color
-    getImageSource('ios-share-alt', 30),
-    getImageSource('ios-menu', 30)
+    getImageSource(isAndroid ? 'md-map' : 'ios-map', 30), //Arguments: Icon, size, color
+    getImageSource(isAndroid ? 'md-share-alt' : 'ios-share-alt', 30),
+    getImageSource(isAndroid ? 'md-menu' : 'ios-menu', 30)
   ])
   .then(icons => {
     //Automatically render a tab bar
