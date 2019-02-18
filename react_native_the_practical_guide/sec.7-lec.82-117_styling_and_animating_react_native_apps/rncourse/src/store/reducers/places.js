@@ -13,7 +13,7 @@ const reducer = (state = initialState, action) => {
           Math.random is not a correct solution to set a key as
           there is a chance to get the same number
           */
-          key: Math.random(),
+          key: Math.random().toString(),
           name: action.placeName,
           image: {
             uri: 'https://loremflickr.com/300/300'
