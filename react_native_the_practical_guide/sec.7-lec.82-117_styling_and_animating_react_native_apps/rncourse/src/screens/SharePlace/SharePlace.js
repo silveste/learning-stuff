@@ -12,6 +12,10 @@ import PickLocation from '../../components/PickLocation/PickLocation';
 
 class SharePlaceScreen extends Component {
 
+  static navigatorStyle = {
+    navBarButtonColor: 'orange'
+  };
+
   constructor(props) {
     super(props);
     //listener for navigation events
@@ -20,7 +24,7 @@ class SharePlaceScreen extends Component {
 
   state = {
     placeName: ''
-  }
+  };
 
   onNavigatorEvent = event => {
     //To find out event types name, the faster way

@@ -5,6 +5,11 @@ import { connect } from 'react-redux';
 import ListView from '../../components/ListView/ListView';
 
 class FindPlaceScreen extends Component {
+
+  static navigatorStyle = {
+    navBarButtonColor: 'orange'
+  };
+  
   constructor(props) {
     super(props);
     //listener for navigation events

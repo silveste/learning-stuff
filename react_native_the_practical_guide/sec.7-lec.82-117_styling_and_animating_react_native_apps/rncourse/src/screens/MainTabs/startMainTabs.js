@@ -58,6 +58,14 @@ const startTabs = () => {
               }
           }
       ],
+
+      //See react-navigation docs for styles
+      tabStyle: {
+        tabBarSelectedButtonColor: 'orange'
+      },
+      appStyle: {
+        tabBarSelectedButtonColor: 'orange'
+      },
       //See react native navigaton docs to find more information about drawer Object
       //drawer shows a side pane either on the left or on the right
       drawer: {
