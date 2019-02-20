@@ -27,14 +27,14 @@ class AuthScreen extends Component {
     fields: {
       email: {
         value: '',
-        valid: false,
+        valid: true,
         validationRules: {
           isEmail: true
         }
       },
       password: {
         value: '',
-        valid: false,
+        valid: true,
         //If other fields state depend on this field,
         //it should be included in validates property
         validates: ['confirmPassword'],
@@ -44,10 +44,15 @@ class AuthScreen extends Component {
       },
       confirmPassword: {
         value: '',
-        valid: false,
+        valid: true,
         validationRules: {
           equalTo: 'password'
         }
+      }
+    },
+    buttons: {
+      submit: {
+        disabled: true
       }
     }
   };
@@ -108,16 +113,34 @@ class AuthScreen extends Component {
           ...field, //By including all prev values for the specific
           //key value doesn't need to include all key pairs of the specific key
           value: field.value,
-          valid: validate(field.value, validationRules)
+
+          //If field is empty the invalid style is also removed
+          valid: field.value === '' ? true : validate(field.value, validationRules)
         }
       };
     }, {});
 
+    //Set new fields object
+    const newFields = {
+      ...this.state.fields,
+      ...fieldsToUpdate
+    };
+
+    //Check if submit button should be disable
+    const submitDisable = !Object.keys(newFields).every(field => {
+      return newFields[field].valid && newFields[field].value !== '';
+    });
+
     this.setState(prevState => {
       return {
+        ...prevState,
         fields: {
-          ...prevState.fields,
-          ...fieldsToUpdate
+          ...newFields
+        },
+        buttons: {
+          submit: {
+            disabled: submitDisable
+          }
         }
       };
     });
@@ -166,6 +189,7 @@ class AuthScreen extends Component {
               style={styles.input}
               value={this.state.fields.email.value}
               onChangeText={val => this.updateInputState('email', val)}
+              valid={this.state.fields.email.valid}
             />
             <View
               style={
@@ -186,6 +210,7 @@ class AuthScreen extends Component {
                   style={styles.input}
                   value={this.state.fields.password.value}
                   onChangeText={val => this.updateInputState('password', val)}
+                  valid={this.state.fields.password.valid}
                 />
               </View>
               <View
@@ -200,14 +225,16 @@ class AuthScreen extends Component {
                   style={styles.input}
                   value={this.state.fields.confirmPassword.value}
                   onChangeText={val => this.updateInputState('confirmPassword', val)}
+                  valid={this.state.fields.confirmPassword.valid}
                 />
               </View>
             </View>
           </View>
-          <Button
+          <MainButton
             title="Submit"
             onPress={this.loginHandler}
             style={styles.button}
+            disabled={this.state.buttons.submit.disabled}
           />
         </View>
       </ImageBackground>
