@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Button, StyleSheet, ScrollView } from 'react-native';
+import { View, StyleSheet, ScrollView, KeyboardAvoidingView } from 'react-native';
 import { connect } from 'react-redux';
 
 import { addPlace } from '../../store/actions';
@@ -8,6 +8,7 @@ import MainText from '../../components/UI/MainText/MainText';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import PickImage from '../../components/PickImage/PickImage';
 import PickLocation from '../../components/PickLocation/PickLocation';
+import MainButton from '../../components/UI/MainButton/MainButton';
 
 
 class SharePlaceScreen extends Component {
@@ -23,7 +24,8 @@ class SharePlaceScreen extends Component {
   }
 
   state = {
-    placeName: ''
+    placeName: '',
+    shareButtonDisabled: true
   };
 
   onNavigatorEvent = event => {
@@ -38,14 +40,17 @@ class SharePlaceScreen extends Component {
     }
   }
   placeAddedHandler = () => {
-    if (this.state.placeName.trim() !== '') {
-      this.props.onAddPlace(this.state.placeName);
-    }
+      this.props.onAddPlace(this.state.placeName.trim());
+      this.setState({
+        placeName: '',
+        shareButtonDisabled: true
+      });
   }
 
   placeNameChangeHandler = val => {
     this.setState({
-      placeName: val
+      placeName: val,
+      shareButtonDisabled: val === ''
     });
   }
 
@@ -64,7 +69,7 @@ class SharePlaceScreen extends Component {
     */
     return (
       <ScrollView>
-        <View style={styles.container}>
+        <KeyboardAvoidingView behavior="padding" style={styles.container}>
           <MainText>
             <HeadingText>Share a Place with us!</HeadingText>
           </MainText>
@@ -73,11 +78,16 @@ class SharePlaceScreen extends Component {
           <InputView
             placeName={this.state.placeName}
             onChangeText={this.placeNameChangeHandler}
+            style={styles.input}
           />
           <View style={styles.button}>
-            <Button title="Share the place" onPress={this.placeAddedHandler} />
+            <MainButton
+              title="Share the place"
+              onPress={this.placeAddedHandler}
+              disabled={this.state.shareButtonDisabled}
+            />
           </View>
-        </View>
+        </KeyboardAvoidingView>
       </ScrollView>
     );
   }
@@ -86,7 +96,9 @@ class SharePlaceScreen extends Component {
 const styles = StyleSheet.create({
     container: {
       flex: 1,
-      alignItems: 'center'
+      alignItems: 'center',
+      marginLeft: 20,
+      marginRight: 20
     },
     button: {
       margin: 8

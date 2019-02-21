@@ -23,7 +23,7 @@ const styles = StyleSheet.create({
       borderWidth: 1,
       borderColor: 'black',
       backgroundColor: '#eee',
-      width: '80%',
+      width: '100%',
       height: 150
     },
     button: {

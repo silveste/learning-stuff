@@ -14,7 +14,9 @@ const mainText = props => (
 const styles = StyleSheet.create({
   mainText: {
     color: '#444',
-    backgroundColor: 'transparent'
+    backgroundColor: 'transparent',
+    marginTop: 5,
+    marginBottom: 5
   }
 });
 
