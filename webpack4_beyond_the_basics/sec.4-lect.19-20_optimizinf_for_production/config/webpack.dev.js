@@ -140,6 +140,13 @@ module.exports = {
       //template: "./src/index.hbs",
       //The following parameter is passed to the ejs file as a variable
       title: "Link's journal"
+    }),
+    //We can define a new plugin that allows to specify env variables
+    new webpack.DefinePlugin({
+      'process.env': {
+        'WEBPACK_FILE': JSON.stringify('webpack.dev.js'),
+        'NODE_ENV': JSON.stringify('development')
+      }
     })
   ]
 }

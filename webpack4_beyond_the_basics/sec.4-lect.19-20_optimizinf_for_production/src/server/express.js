@@ -3,11 +3,12 @@ import path from "path";
 
 const server = express();
 
-const isProd = process.env.NODE_ENV ==='production';
+const isDev = process.env.NODE_ENV ==='development';
+console.log(isDev);
 
-if (!isProd){
+if (isDev){
   const webpack = require("webpack");
-  const config = require("../../config/webpack.dev.js");
+  const config = require("../../config/webpack.prod.js");
   const compiler = webpack(config);
 
 
