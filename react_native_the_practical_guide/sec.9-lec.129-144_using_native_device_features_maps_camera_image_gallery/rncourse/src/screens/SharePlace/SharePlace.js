@@ -38,6 +38,10 @@ class SharePlaceScreen extends Component {
         validationRules: {
           notEmpty: true
         }
+      },
+      image: {
+        value: null,
+        valid: false
       }
     }
   };
@@ -53,10 +57,12 @@ class SharePlaceScreen extends Component {
           });
     }
   }
+
   placeAddedHandler = () => {
       this.props.onAddPlace(
         this.state.controls.placeName.value,
         this.state.controls.location.value,
+        this.state.controls.image.value,
       );
 
       this.setState(prevState => {
@@ -68,6 +74,24 @@ class SharePlaceScreen extends Component {
           shareButtonDisabled: true
         });
       });
+  }
+
+  imagePickedHandler = image => {
+    this.setState(prevState => {
+      return ({
+          controls: {
+            ...prevState.controls,
+            image: {
+              value: image,
+              valid: true
+            }
+          },
+          shareButtonDisabled: !(
+            prevState.controls.placeName.valid &&
+            prevState.controls.location.valid
+          )
+        });
+    });
   }
 
   placeNameChangeHandler = val => {
@@ -82,7 +106,11 @@ class SharePlaceScreen extends Component {
             valid
           }
         },
-        shareButtonDisabled: !(valid && prevState.controls.location.valid)
+        shareButtonDisabled: !(
+          valid &&
+          prevState.controls.location.valid &&
+          prevState.controls.image.valid
+        )
       });
     });
   }
@@ -97,7 +125,10 @@ class SharePlaceScreen extends Component {
             valid: true
           }
         },
-        shareButtonDisabled: !prevState.controls.placeName.valid
+        shareButtonDisabled: !(
+          prevState.controls.placeName.valid &&
+          prevState.controls.image.valid
+        )
       };
     });
   };
@@ -121,7 +152,7 @@ class SharePlaceScreen extends Component {
           <MainText>
             <HeadingText>Share a Place with us!</HeadingText>
           </MainText>
-          <PickImage />
+          <PickImage onImagePicked={this.imagePickedHandler} />
           <PickLocation onLocationPicked={this.locationPickedHandler} />
           <InputView
             placeName={this.state.controls.placeName.value}
@@ -155,7 +186,7 @@ const styles = StyleSheet.create({
 
 const mapDispatchToProps = dispatch => {
   return {
-    onAddPlace: (placeName, location) => dispatch(addPlace(placeName, location))
+    onAddPlace: (placeName, location, image) => dispatch(addPlace(placeName, location, image))
   };
 };
 

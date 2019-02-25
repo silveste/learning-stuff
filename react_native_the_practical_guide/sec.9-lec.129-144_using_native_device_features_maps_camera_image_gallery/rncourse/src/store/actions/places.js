@@ -8,11 +8,12 @@ is the action that will be performed.
 
 import { ADD_PLACE, DELETE_PLACE } from './actionTypes';
 
-export const addPlace = (placeName, location) => {
+export const addPlace = (placeName, location, image) => {
   return {
     type: ADD_PLACE,
     placeName, //Using ES6 enhanced object literals to initialize key from variable with same name
-    location
+    location,
+    image
   };
 };
 
