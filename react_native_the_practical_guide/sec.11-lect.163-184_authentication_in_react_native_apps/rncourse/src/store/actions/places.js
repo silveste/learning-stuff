@@ -7,21 +7,29 @@ is the action that will be performed.
 */
 
 import { SET_PLACES, DELETE_PLACE } from './actionTypes';
-import { uiStartLoading, uiStopLoading } from './index';
+import { uiStartLoading, uiStopLoading, getAuthToken } from './index';
 
 // To return a function instad an object thunk is required
 // see comments on configureStore.js
 export const addPlace = (placeName, location, image) => (dispatch) => {
-  dispatch(uiStartLoading());
-  fetch('https://us-central1-rncourse-d2df3.cloudfunctions.net/saveImage', {
-    method: 'POST',
-    body: JSON.stringify({
-      image: image.base64
+  let authToken;
+  return dispatch(getAuthToken())
+    .then((token) => {
+      authToken = token;
+      dispatch(uiStartLoading());
+      return fetch('https://us-central1-rncourse-d2df3.cloudfunctions.net/saveImage', {
+        method: 'POST',
+        body: JSON.stringify({
+          image: image.base64
+        }),
+        headers: {
+          Authorization: `Bearer ${authToken}`
+        }
+      });
     })
-  })
     .catch((err) => {
       console.log(err);
-      alert('Ups something went wrong! Please try again');
+      alert('Ups something went wrong! Please try again, IMAge');
       dispatch(uiStopLoading());
     })
     .then(res => res.json())
@@ -31,7 +39,7 @@ export const addPlace = (placeName, location, image) => (dispatch) => {
         location,
         image: parsedRes.imageUrl
       };
-      return fetch('https://rncourse-d2df3.firebaseio.com/places.json', {
+      return fetch(`https://rncourse-d2df3.firebaseio.com/places.json?auth=${authToken}`, {
         method: 'POST',
         body: JSON.stringify(placeData)
       });
@@ -45,17 +53,15 @@ export const addPlace = (placeName, location, image) => (dispatch) => {
     })
     .catch((err) => {
       console.log(err);
-      alert('Ups something went wrong! Please try again');
+      alert(`Ups something went wrong! Please try again, AuthToken: ${authToken}`);
       dispatch(uiStopLoading());
     });
 };
 
-export const getPlaces = () => (dispatch, getState) => {
-  const { token } = getState().auth;
-  if (!token) {
-    return;
-  }
-  fetch(`https://rncourse-d2df3.firebaseio.com/places.json?auth=${token}`)
+
+export const getPlaces = () => (dispatch) => {
+  dispatch(getAuthToken())
+    .then(token => fetch(`https://rncourse-d2df3.firebaseio.com/places.json?auth=${token}`))
     .then(res => res.json())
     .then((parsedRes) => {
       const places = Object.keys(parsedRes).map(val => ({
@@ -71,9 +77,10 @@ export const getPlaces = () => (dispatch, getState) => {
     });
 };
 
-export const deletePlace = key => dispatch => fetch(`https://rncourse-d2df3.firebaseio.com/places/${key}.json`, {
-  method: 'DELETE',
-})
+export const deletePlace = key => dispatch => dispatch(getAuthToken())
+  .then(token => fetch(`https://rncourse-d2df3.firebaseio.com/places/${key}.json?auth=${token}`, {
+    method: 'DELETE',
+  }))
   .then(res => res.json())
   .then((parsedRes) => {
     console.log(parsedRes);

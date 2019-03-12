@@ -40,3 +40,12 @@ export const authSetToken = token => ({
   type: AUTH_SET_TOKEN,
   token
 });
+
+export const getAuthToken = () => (dispatch, getState) => new Promise((resolve, reject) => {
+  const { token } = getState().auth;
+  if (!token) {
+    reject();
+  } else {
+    resolve(token);
+  }
+});
