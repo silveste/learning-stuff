@@ -38,44 +38,50 @@ export const addPlace = (placeName, location, image) => (dispatch) => {
     })
   // Remember!!! Catch only capture failed network connections,
   // it won't catch 4XX and 5XX error codes
-    .catch((err) => {
-      console.log(err);
-      alert('Ups something went wrong! Please try again');
-      dispatch(uiStopLoading());
-    })
     .then(res => res.json())
     .then((parsedRes) => {
       console.log(parsedRes);
       dispatch(uiStopLoading());
+    })
+    .catch((err) => {
+      console.log(err);
+      alert('Ups something went wrong! Please try again');
+      dispatch(uiStopLoading());
     });
 };
 
-export const getPlaces = () => dispatch => fetch('https://rncourse-d2df3.firebaseio.com/places.json')
-  .catch((err) => {
-    alert('Something went wrong!!');
-    console.log(err);
-  })
-  .then(res => res.json())
-  .then((parsedRes) => {
-    const places = Object.keys(parsedRes).map(val => ({
-      ...parsedRes[val],
-      image: { uri: parsedRes[val].image },
-      key: val
-    }));
-    dispatch(setPlaces(places));
-  });
+export const getPlaces = () => (dispatch, getState) => {
+  const { token } = getState().auth;
+  if (!token) {
+    return;
+  }
+  fetch(`https://rncourse-d2df3.firebaseio.com/places.json?auth=${token}`)
+    .then(res => res.json())
+    .then((parsedRes) => {
+      const places = Object.keys(parsedRes).map(val => ({
+        ...parsedRes[val],
+        image: { uri: parsedRes[val].image },
+        key: val
+      }));
+      dispatch(setPlaces(places));
+    })
+    .catch((err) => {
+      alert('Something went wrong!!');
+      console.log(err);
+    });
+};
 
 export const deletePlace = key => dispatch => fetch(`https://rncourse-d2df3.firebaseio.com/places/${key}.json`, {
   method: 'DELETE',
 })
-  .catch((err) => {
-    alert('Something went wrong!!, Place not deleted');
-    console.log(err);
-  })
   .then(res => res.json())
   .then((parsedRes) => {
     console.log(parsedRes);
     dispatch(deleteStorePlace(key));
+  })
+  .catch((err) => {
+    alert('Something went wrong!!, Place not deleted');
+    console.log(err);
   });
 
 export const deleteStorePlace = key => ({

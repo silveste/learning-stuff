@@ -1,9 +1,14 @@
-import { TRY_AUTH } from './actionTypes';
+import { AUTH_SET_TOKEN } from './actionTypes';
+import { uiStopLoading, uiStartLoading } from './index';
+import startTabs from '../../screens/MainTabs/startMainTabs';
 
-export const tryAuth = authData => authSingUp(authData);
-
-export const authSingUp = authData => () => {
-  fetch('https://www.googleapis.com/identitytoolkit/v3/relyingparty/signupNewUser?key=AIzaSyDlnvxBmDS7BmxsCfTX5rb5ekDxFctprrM', {
+export const tryAuth = (authData, authMode) => (dispatch) => {
+  dispatch(uiStartLoading());
+  const apiKey = 'AIzaSyDlnvxBmDS7BmxsCfTX5rb5ekDxFctprrM';
+  const urlAuthMode = authMode === 'login'
+    ? 'verifyPassword'
+    : 'signupNewUser';
+  return fetch(`https://www.googleapis.com/identitytoolkit/v3/relyingparty/${urlAuthMode}?key=${apiKey}`, {
     method: 'POST',
     body: JSON.stringify({
       email: authData.email,
@@ -17,7 +22,21 @@ export const authSingUp = authData => () => {
     .catch((err) => {
       console.log(err);
       alert('Authentication failed');
+      dispatch(uiStopLoading());
     })
     .then(res => res.json())
-    .then(parsedRes => alert(JSON.stringify(parsedRes)));
+    .then((parsedRes) => {
+      dispatch(uiStopLoading());
+      if (parsedRes.idToken) {
+        dispatch(authSetToken(parsedRes.idToken));
+        startTabs();
+      } else {
+        alert('Authentication failed');
+      }
+    });
 };
+
+export const authSetToken = token => ({
+  type: AUTH_SET_TOKEN,
+  token
+});

@@ -6,11 +6,11 @@ import {
   Dimensions,
   KeyboardAvoidingView,
   Keyboard,
-  TouchableWithoutFeedback
+  TouchableWithoutFeedback,
+  ActivityIndicator
 } from 'react-native';
 import { connect } from 'react-redux';
 
-import startMainTabs from '../MainTabs/startMainTabs';
 import DefaultInput from '../../components/UI/DefaultInput/DefaultInput';
 import HeadingText from '../../components/UI/HeadingText/HeadingText';
 import MainText from '../../components/UI/MainText/MainText';
@@ -97,98 +97,93 @@ class AuthScreen extends Component {
     this.setState({ viewMode: dims.window.height > 500 ? 'portrait' : 'landscape' });
   }
 
-  loginHandler = () => {
-    const { controls } = this.state;
-    const { onLogin } = this.props;
+  authHandler = () => {
+    const { controls, authMode } = this.state;
+    const { onTryAuth } = this.props;
     // Check for Auth
     const authData = {
       email: controls.email.value,
       password: controls.password.value
     };
-    onLogin(authData);
-    // If auth show main tabs
-    startMainTabs();
+    onTryAuth(authData, authMode);
   }
 
   updateInputState = (key, value) => {
-    //get the controls that must be updated
-    //taking into account that if controls[key] has "validates" property
-    //the controls included in validates must be updated as well
+    const { controls } = this.state;
+    // get the controls that must be updated
+    // taking into account that if controls[key] has "validates" property
+    // the controls included in validates must be updated as well
     let controlsNamesToUpdate = [key];
-    if (this.state.controls[key].validates) {
-      controlsNamesToUpdate = controlsNamesToUpdate.concat(this.state.controls[key].validates);
+    if (controls[key].validates) {
+      controlsNamesToUpdate = controlsNamesToUpdate.concat(controls[key].validates);
     }
 
     const controlsToUpdate = controlsNamesToUpdate.reduce((acc, val, index) => {
-      //confirm password control might be null, if that is the case
-      //return the acc and do nothing
-      if (!this.state.controls[val]) {
+      // confirm password control might be null, if that is the case
+      // return the acc and do nothing
+      if (!controls[val]) {
         return acc;
       }
 
-      //get the control[key]
-      const control = { ...this.state.controls[val] };
+      // get the control[key]
+      const control = { ...controls[val] };
 
-      //get the validation validation rules
-      const validationRules = { ...this.state.controls[val].validationRules };
+      // get the validation validation rules
+      const validationRules = { ...controls[val].validationRules };
 
-      //equalTo rule points to other control
-      //if controls[key] contains equalTo rule
-      //equalTo is updated with the value to compare, required by validate()
-      //which could be a new value if key === validationRules.equalTo
-      //or the value in the state
+      // equalTo rule points to other control
+      // if controls[key] contains equalTo rule
+      // equalTo is updated with the value to compare, required by validate()
+      // which could be a new value if key === validationRules.equalTo
+      // or the value in the state
       if (validationRules.equalTo === key) {
         validationRules.equalTo = value;
       } else if (validationRules.equalTo) {
-        validationRules.equalTo = this.state.controls[validationRules.equalTo].value;
+        validationRules.equalTo = controls[validationRules.equalTo].value;
       }
 
-      //Update the value only for the fied[key] that called the fuction
-      //which allways is the 1st key in controlsNamesToUpdate
+      // Update the value only for the fied[key] that called the fuction
+      // which allways is the 1st key in controlsNamesToUpdate
       control.value = index === 0 ? value : control.value;
 
       return {
         ...acc,
         [val]: {
-          ...control, //By including all prev values for the specific
-          //key value doesn't need to include all key pairs of the specific key
+          ...control, // By including all prev values for the specific
+          // key value doesn't need to include all key pairs of the specific key
           value: control.value,
 
-          //If control is empty the invalid style is also removed
+          // If control is empty the invalid style is also removed
           valid: control.value === '' ? true : validate(control.value, validationRules)
         }
       };
     }, {});
 
-    //Set new controls object
+    // Set new controls object
     const newControls = {
-      ...this.state.controls,
+      ...controls,
       ...controlsToUpdate
     };
 
-    //Check if submit button should be disable
+    // Check if submit button should be disable
     const submitReady = this.isReadyToSubmit(newControls);
 
-    this.setState(prevState => {
-      return {
-        ...prevState,
-        controls: {
-          ...newControls
-        },
-        submitReady
-      };
-    });
+    this.setState(prevState => ({
+      ...prevState,
+      controls: {
+        ...newControls
+      },
+      submitReady
+    }));
   }
 
-  isReadyToSubmit = controlsToNewState => {
-    return Object.keys(controlsToNewState).filter(control => {
-    //Remove controls if they are null
-      return controlsToNewState[control];
-    })
-    .every(control => {
-      return controlsToNewState[control].valid && controlsToNewState[control].value !== '';
-    });
-  }
+  isReadyToSubmit = controlsToNewState => (
+    // Filter to remove controls if they are null
+    // return if all not null are valid
+    Object.keys(controlsToNewState).filter(control => controlsToNewState[control])
+      .every(control => controlsToNewState[control].valid && controlsToNewState[control].value !== '')
+  );
+
   /* Debuggin purposes
   seeState = () => {
     const keys = Object.keys(this.state.controls);
@@ -199,48 +194,65 @@ class AuthScreen extends Component {
       alert(`${key}: ${value}, valid: ${valid}`);
     });
   } */
+
   render() {
+    const {
+      viewMode,
+      authMode,
+      controls,
+      submitReady
+    } = this.state;
+    const {
+      isLoading
+    } = this.props;
     let headingText = null;
     let confirmPasswordControl = null;
-    /*
-    Dimensions.get returns the dimensions of the screen or the window,
-    the differece is that android window doesn't include the
-    soft menu bar in window dimensions
-    */
-    if (this.state.viewMode === 'portrait') {
+
+    let submitButton = (
+      <MainButton
+        title="Submit"
+        onPress={this.authHandler}
+        style={styles.button}
+        disabled={!submitReady}
+      />
+    );
+
+    if (viewMode === 'portrait') {
       headingText = (
         <MainText>
           <HeadingText style={{ color: '#fff' }}>Please Log In</HeadingText>
         </MainText>
       );
     }
-    if (this.state.authMode === 'signup') {
+    if (authMode === 'signup') {
       confirmPasswordControl = (
-          <DefaultInput
-            placeholder="Confirm Password"
-            style={[
-              styles.input,
-              this.state.viewMode === 'landscape'
-              ? styles.inputColumn :
-              null
-            ]}
-            value={this.state.controls.confirmPassword.value}
-            onChangeText={val => this.updateInputState('confirmPassword', val)}
-            invalid={!this.state.controls.confirmPassword.valid}
-            secureTextEntry
-          />
+        <DefaultInput
+          placeholder="Confirm Password"
+          style={[
+            styles.input,
+            viewMode === 'landscape'
+              ? styles.inputColumn
+              : null
+          ]}
+          value={controls.confirmPassword.value}
+          onChangeText={val => this.updateInputState('confirmPassword', val)}
+          invalid={!controls.confirmPassword.valid}
+          secureTextEntry
+        />
       );
     }
+    if (isLoading) {
+      submitButton = <ActivityIndicator />;
+    }
     return (
-
       <ImageBackground source={backgroundImage} style={styles.bgImage}>
         <KeyboardAvoidingView
           style={styles.container}
-          behavior='padding'
+          behavior="padding"
         >
           {headingText}
           <MainButton
-            title={this.state.authMode === 'login' ? 'Sign Up' : 'Login'}
+            title={authMode === 'login' ? 'Sign Up' : 'Login'}
             onPress={this.switchAuthModeHandler}
             style={styles.button}
           />
@@ -254,43 +266,38 @@ class AuthScreen extends Component {
               <DefaultInput
                 placeholder="E-mail Address"
                 style={styles.input}
-                value={this.state.controls.email.value}
+                value={controls.email.value}
                 onChangeText={val => this.updateInputState('email', val)}
-                invalid={!this.state.controls.email.valid}
-                autoCapitalize='none'
+                invalid={!controls.email.valid}
+                autoCapitalize="none"
                 autoCorrect={false}
-                keyboardType='email-address'
+                keyboardType="email-address"
               />
               <View
                 style={
-                  this.state.viewMode === 'portrait'
-                  ? styles.portraitPwdContainer :
-                  styles.landscapePwdContainer
+                  viewMode === 'portrait'
+                    ? styles.portraitPwdContainer
+                    : styles.landscapePwdContainer
                 }
               >
                 <DefaultInput
                   placeholder="Password"
                   style={[
                     styles.input,
-                    this.state.viewMode === 'landscape' && this.state.authMode === 'signup'
-                    ? styles.inputColumn :
-                    null
+                    viewMode === 'landscape' && authMode === 'signup'
+                      ? styles.inputColumn
+                      : null
                   ]}
-                  value={this.state.controls.password.value}
+                  value={controls.password.value}
                   onChangeText={val => this.updateInputState('password', val)}
-                  invalid={!this.state.controls.password.valid}
+                  invalid={!controls.password.valid}
                   secureTextEntry
                 />
                 {confirmPasswordControl}
               </View>
             </View>
           </TouchableWithoutFeedback>
-          <MainButton
-            title="Submit"
-            onPress={this.loginHandler}
-            style={styles.button}
-            disabled={!this.state.submitReady}
-          />
+          {submitButton}
         </KeyboardAvoidingView>
       </ImageBackground>
     );
@@ -332,10 +339,12 @@ const styles = StyleSheet.create({
   }
 });
 
-const mapDispatchToProps = dispatch => {
-  return {
-    onLogin: (authData) => dispatch(tryAuth(authData))
-  };
-};
+const mapStateToProps = state => ({
+  isLoading: state.ui.isLoading
+});
 
-export default connect(null, mapDispatchToProps)(AuthScreen);
+const mapDispatchToProps = dispatch => ({
+  onTryAuth: (authData, authMode) => dispatch(tryAuth(authData, authMode))
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);
