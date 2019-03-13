@@ -20,8 +20,9 @@ class SharePlaceScreen extends Component {
 
   constructor(props) {
     super(props);
-    //listener for navigation events
-    this.props.navigator.setOnNavigatorEvent(this.onNavigatorEvent);
+    const { navigator } = this.props;
+    // listener for navigation events
+    navigator.setOnNavigatorEvent(this.onNavigatorEvent);
   }
 
   state = {
@@ -34,7 +35,6 @@ class SharePlaceScreen extends Component {
       placeName: {
         value: '',
         valid: false,
-        touched: false,
         validationRules: {
           notEmpty: true
         }
@@ -69,7 +69,11 @@ class SharePlaceScreen extends Component {
         return ({
           controls: {
             ...prevState.controls,
-            placeName: '',
+            placeName: {
+              ...prevState.controls.placeName,
+              value: '',
+              valid: false
+            }
           },
           shareButtonDisabled: true
         });

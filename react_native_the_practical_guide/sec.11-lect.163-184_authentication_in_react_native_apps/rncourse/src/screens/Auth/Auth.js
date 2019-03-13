@@ -18,7 +18,7 @@ import MainButton from '../../components/UI/MainButton/MainButton';
 
 import backgroundImage from '../../assets/bg.jpg';
 import validate from '../../utility/validation';
-import { tryAuth } from '../../store/actions';
+import { tryAuth, authAutoSignIn } from '../../store/actions';
 
 class AuthScreen extends Component {
   constructor(props) {
@@ -28,22 +28,18 @@ class AuthScreen extends Component {
 
   state = {
     viewMode: Dimensions.get('window').height > 500 ? 'portrait' : 'landscape',
-    // submitReady should be false, however it has an intial value to
-    // true to speed up during testing
-    submitReady: true,
+    submitReady: false,
     authMode: 'login',
     controls: {
       email: {
-        // Value should be empty, however it has an intial value to speed up during testing
-        value: 'test@gmail.com',
+        value: '',
         valid: true,
         validationRules: {
           isEmail: true
         }
       },
       password: {
-        // Value should be empty, however it has an intial value to speed up during testing
-        value: '123456',
+        value: '',
         valid: true,
         // If other controls state depend on this control,
         // it should be included in validates property
@@ -61,6 +57,11 @@ class AuthScreen extends Component {
   when the component is unmounted it's advisable to remove the event listener to avoid memory leaks
   as the event is not neccesary anymore
   */
+  componentDidMount() {
+    const { onAutoSignIn } = this.props;
+    onAutoSignIn();
+  }
+
   componentWillUnmount() {
     Dimensions.removeEventListener('change', this.updateStyles);
   }
@@ -344,7 +345,8 @@ const mapStateToProps = state => ({
 });
 
 const mapDispatchToProps = dispatch => ({
-  onTryAuth: (authData, authMode) => dispatch(tryAuth(authData, authMode))
+  onTryAuth: (authData, authMode) => dispatch(tryAuth(authData, authMode)),
+  onAutoSignIn: () => dispatch(authAutoSignIn())
 });
 
 export default connect(mapStateToProps, mapDispatchToProps)(AuthScreen);
