@@ -7,7 +7,6 @@ import App from './App';
 import { name as appName } from './app.json';
 
 
-//Register components expect a function as a second parameter that returns the JSX
-//that's why RNRedux must be a function that returns JSX instead an object that
-//contains the JSX
-AppRegistry.registerComponent(appName, () => App);
+AppRegistry.registerComponent(appName, App);
+
+App();

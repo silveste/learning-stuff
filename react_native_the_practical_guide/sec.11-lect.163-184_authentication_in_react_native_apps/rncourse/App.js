@@ -15,10 +15,10 @@ import configureStore from './src/store/configureStore';
 const store = configureStore();
 
 
-//Register screens
-//Every screen must hava unique Id which by convention usually is NameOfApp.NameOfScreen
-//and as a second parameter a function that returns the navigation compoenent (Screen)
-//Third and fourth parmeters are related with redux (store and provider)
+// Register screens
+// Every screen must hava unique Id which by convention usually is NameOfApp.NameOfScreen
+// and as a second parameter a function that returns the navigation compoenent (Screen)
+// Third and fourth parmeters are related with redux (store and provider)
 Navigation.registerComponent(
   'rncourses.AuthScreen',
   () => AuthScreen,
@@ -49,11 +49,13 @@ Navigation.registerComponent(
 
 Navigation.registerComponent(
   'rncourses.SideDrawerScreen',
-  () => SideDrawerScreen
+  () => SideDrawerScreen,
+  store,
+  Provider
 );
-//Start AppRegistry
-//In this case our app will be a single screenby default
-Navigation.startSingleScreenApp({
+// Start AppRegistry
+// In this case our app will be a single screenby default
+export default () => Navigation.startSingleScreenApp({
   screen: {
     screen: 'rncourses.AuthScreen',
     title: 'Login'
