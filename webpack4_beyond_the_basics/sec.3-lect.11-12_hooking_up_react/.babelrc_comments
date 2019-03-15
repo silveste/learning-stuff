@@ -1,0 +1,20 @@
+{
+ "presets": [ /* presets are a collection of plugins, checkout presets for react angular etc. */
+   [
+     "env",
+     {
+       "targets": {
+         "browsers": ["last 2 versions"]
+       },
+       "debug": true/ false /* show verbose messages in the console when true */
+     }
+   ],
+   "babel-preset-react" //Allows to use JSX among other features common in react
+ ],
+ "plugins": [ /* plugins allow babel to perform a specific task */
+             "transform-runtime", /* Used with a preset to avoid code duplication. The plugins will be using
+             same hgelpers referenced to the same module */
+             "transform-es2015-arrow-functions",/* Transpiles arrow functions to es2015 specification */
+             "async-to-promises" /* Transpiles arrow functions into promises */
+            ]
+}

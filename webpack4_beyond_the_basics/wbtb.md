@@ -6,11 +6,7 @@
 
 ## Requirements
 
->Include what knowledge is compulsory/advisable to undertake the course
-
-## Information
-
->Include links to review, previews etc
+> Javascript, and basic knowledge about react
 
 ## Subjects
 
