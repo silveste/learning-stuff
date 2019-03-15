@@ -11,7 +11,6 @@ The repository will probably have unnecessary branches and commits in order to f
 ### General Concepts
 
 :black_square_button: [Algorithms](subjects/algorithms.md) Goal: General understanding of main algorithms, to be able apply them in new projects.
-
 :black_square_button: [Data Structures](subjects/data-structures.md) Goal: General understanding of data structures to be able apply them in new projects.
 
 :black_square_button: [Design Patterns](subjects/design-patterns.md) Goal: General understanding of main design patterns to be able apply them in new projects.
@@ -62,7 +61,6 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :clock1: [Source Code Editors](subjects/source-code-editors.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
 
-
 ## Learning materials: courses, books <!--Future: If a new material is included use the MD template to include it-->
 
 (:black_square_button: not started, :clock1: started, :white_check_mark: completed)
@@ -93,7 +91,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
-:clock1: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
+:white_check_mark: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
 
 :clock1: [Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
 

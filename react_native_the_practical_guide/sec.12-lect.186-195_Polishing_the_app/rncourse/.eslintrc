@@ -1,0 +1,21 @@
+{
+  'extends': 'airbnb',
+  'parser': 'babel-eslint',
+  'env': {
+    'jest': 'true',
+  },
+  'rules': {
+    'no-alert': 'off',
+    'no-console': 'off',
+    'no-use-before-define': 'off',
+    'react/jsx-filename-extension': 'off',
+    'react/prop-types': 'off',
+    'comma-dangle': 'off',
+    'import/prefer-default-export': 'off',
+    'no-underscore-dangle': ['error', { 'allow': ['__REDUX_DEVTOOLS_EXTENSION__'] }]
+  },
+  'globals': {
+    'fetch': 'true',
+    'alert': 'true'
+  }
+}

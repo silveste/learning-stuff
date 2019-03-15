@@ -12,6 +12,8 @@ Contents in branch: **learning-react**
 
 >[The Advanced Web Developer Bootcamp](../the-advanced-web-developer-bootcamp/tawdb.md)
 
+>[React Native - The Practical Guide](../react_native_the_practical_guide/rntpg.md)
+
 ## Documentation, manual references...
 
 >[Website](https://reactjs.org/)
