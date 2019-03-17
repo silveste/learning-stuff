@@ -91,6 +91,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
+:white_check_mark: [Learn Webpack Course, Cool Steel (Youtube)](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
+
 :white_check_mark: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
 
 :clock1: [Responsive Web Design Certification, (freeCodecamp)](responsive-web-design-certification/rwdc.md)
