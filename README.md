@@ -103,6 +103,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [Scrum: a Breathtakingly Brief and Agile Introduction, Chris Sims (Book)](scrum-a-breathtakingly-brief-and-agile-introduction/sbbai.md)
 
+:clock1: [Master Electron: Desktop Apps using HTML, JavaScript & CSS, Ray Viljoen (Udemy Course) ](master_electron_desktop_apps_using_html_javascript_and_css/medauhjac.md)
+
 :white_check_mark: [The Advanced Web Developer Bootcamp](the-advanced-web-developer-bootcamp/tawdb.md)
 
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
