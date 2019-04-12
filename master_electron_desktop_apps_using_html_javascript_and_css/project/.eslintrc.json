@@ -23,7 +23,7 @@
       "node/prefer-global/url-search-params": ["error", "always"],
       "node/prefer-global/url": ["error", "always"],
       "node/no-unpublished-require": ["error", {
-        "allowModules": ["dotenv"],
+        "allowModules": ["dotenv","electron","devtron","electron-reload"],
         "convertPath": null,
         "tryExtensions": [".js", ".json", ".node"]
       }],
