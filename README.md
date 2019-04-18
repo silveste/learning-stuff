@@ -15,9 +15,9 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :black_square_button: [Design Patterns](subjects/design-patterns.md) Goal: General understanding of main design patterns to be able apply them in new projects.
 
-:black_square_button: [Project development, Agile methodologies, scrum...](subjects/project-development.md) Goal: Basic understanding of project development processes to be able to work in a team using those procedures or to implement them in new personal projects.
+:clock1: [Project development, Agile methodologies, scrum...](subjects/project-development.md) Goal: Understanding of project development processes to be able to work in a team using those procedures or to implement them in new personal projects.
 
-:black_square_button: [Network: Protocols, Layers, models...](subjects/network.md) Goal: basic understanding of how a network works
+:clock1: [Network: Protocols, Layers, models...](subjects/network.md) Goal: Comprehensive understanding of how a network works
 
 :white_check_mark: [REGEX](subjects/regex.md) Goal: To be able to read and create regular expressions and to know when to use them.
 
@@ -41,7 +41,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :clock1: [MongoDB](subjects/mongodb.md) Goal: Basic understanding and to be able to apply it to perform queries while testing applications.
 
-:black_square_button: [MySQL](subjects/mysql.md) Goal: Basic understanding and to be able to apply it to perform queries while testing applications.
+:clock1: [MySQL](subjects/mysql.md) Goal: Basic understanding and to be able to apply it to perform queries while testing applications.
 
 :clock1: [React](subjects/react.md) Goal: Solid understanding about its different flavors (Web and native) and the integration with other libraries (Redux, d3, Jasmine)
 
@@ -51,7 +51,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 ### Tools, Environments, Servers, Operating systems, Deployment
 
-:clock1: [Integration Development Environments](subjects/ide.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
+:white_check_mark: [Integration Development Environments](subjects/ide.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
 
 :white_check_mark: [GIT & GitHub](subjects/git.md) Goal: Able to use it as a tool
 
@@ -59,7 +59,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :clock1: [NodeJS](subjects/nodejs.md) Goal: Solid understanding about the runtime environment, node package manger (npm) and package.json. Be able to use it as a tool.
 
-:clock1: [Source Code Editors](subjects/source-code-editors.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
+:white_check_mark: [Source Code Editors](subjects/source-code-editors.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
 
 ## Learning materials: courses, books <!--Future: If a new material is included use the MD template to include it-->
 
