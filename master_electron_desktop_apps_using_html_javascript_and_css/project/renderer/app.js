@@ -1,5 +1,18 @@
 /* global $ */
 const {ipcRenderer} = require('electron');
+const items = require('./items');
+
+//Set global navigation keys
+$(document).keydown((event) => {
+  switch (event.key) {
+  case 'ArrowUp':
+    items.changeItem('up');
+    break;
+  case 'ArrowDown':
+    items.changeItem('down');
+    break;
+  }
+});
 
 //Show modal
 $('.open-add-modal').click(() => $('#add-modal').addClass('is-active'));
@@ -22,7 +35,10 @@ $('#add-button').click(() => {
 });
 //Listen for the answer
 ipcRenderer.on('new-item-success', (e, item) => {
-  console.log(item);
+  //Add item
+  items.toReadItems.push(item);
+  items.saveItems();
+  items.addItem(item);
 
   //Reset modal and close it
   $('#add-modal').removeClass('is-active');
@@ -33,3 +49,17 @@ ipcRenderer.on('new-item-success', (e, item) => {
 
 // simulate add clic on enter
 $('#item-input').keyup((e) => e.key === 'Enter' ? $('#add-button').click() : null);
+
+//filter items by title
+$('#search').keyup((event) =>{
+  //get current search input value
+  let filter = $(event.currentTarget).val().toLowerCase();
+  console.log(filter);
+  $('.read-item').each((i, el) => {
+    $(el).text().toLowerCase().includes(filter) ? $(el).show(): $(el).hide();
+  });
+});
+
+
+//Add saved items on load
+items.toReadItems.length !== 0 ? items.toReadItems.forEach(items.addItem): null;
