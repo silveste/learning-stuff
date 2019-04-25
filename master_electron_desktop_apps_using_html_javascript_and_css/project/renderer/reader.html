@@ -30,6 +30,16 @@
         </div>
       </div>
     </section>
+
+    <a href="" id="mark-read" class="is-hidden">
+      <span class="block">
+        <span class="tag is-large is-primary">
+          <span class="icon">
+            <i class="fa fa-check fa-inverse"></i>
+          </span>&nbsp;Read
+        </span>
+      </span>
+    </a>
     <!--
     webview tag allows to embed unknow and therefore unsecure code into out application
     Check electron documentation to find more about webview tag.
@@ -43,6 +53,10 @@
 
       //Get the query string url
       const queryParams = queryString.parse(location.search);
+
+      //Get the item index
+      let itemIndex = queryParams.itemIndex
+
       let url = decodeURIComponent(queryParams.url);
       //Load remote content once webview is ready
       $('webview').one('dom-ready', (e) =>{
@@ -50,11 +64,21 @@
         e.currentTarget.loadURL(url);
       }).one('did-finish-load', ()=> {
         $('#loader').fadeOut(100);
+        $('#mark-read').removeClass('is-hidden');
       }).on('did-fail-load'), () => {
+        $('#mark-read').addClass('is-hidden');
         $('#loader, .busy').addClass('is-hidden');
         $('#loader').fadeIn(100);
         $('#loader, .failed').removeClass('is-hidden');
       };
+
+      // Handle mark-read clicked
+      $('#mark-read').click(() =>{
+        //NOTE: check MDN documentation Window.postMessage() as that is other way to handle this
+        //Parent window
+        window.opener.eval(`deleteItem(${itemIndex})`);
+        window.close();
+      });
     </script>
   </body>
 </html>

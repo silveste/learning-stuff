@@ -32,5 +32,15 @@
 }
 
 #loader .fas {
-  color: #00D1B2;
+  color: #00d1b2;
+}
+
+#mark-read {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+}
+
+#mark-read .tag {
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.25);
 }

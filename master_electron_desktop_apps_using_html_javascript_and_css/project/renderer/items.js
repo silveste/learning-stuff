@@ -32,8 +32,29 @@ module.exports.changeItem = (where) => {
   }
 };
 
+//Window function - delete item by id
+window.deleteItem = (i) => {
+  //Remove from DOM
+  $('.read-item').eq(i).remove(); //in JQuery eq method refers to the array of elements selected therefore index is 0 based
+  //remove from toreadItems array
+  this.toReadItems = this.toReadItems.filter((item, index) => i !== index);
+  // Update local localStorage
+  this.saveItems();
+  //select other item or show empty message if empty
+  if(this.toReadItems.length) {
+    //Select the previous item or new first if i is the first
+    let index = (i === 0)? 0 : i-1;
+    //Assign active class to the item
+    $('.read-item').eq(index).addClass('is-active');
+
+  //If no item show no items message
+  } else {
+    $('#no-items').show();
+  }
+};
+
 //Open item for reading
-module.exports.openItem = (e) => {
+module.exports.openItem = () => {
   //check if there are saveItems
   if(!this.toReadItems.length) return;
 
@@ -44,8 +65,11 @@ module.exports.openItem = (e) => {
   //get item's content url (encoded to pass along the url that opens the reader window)
   let contentURL = encodeURIComponent(targetItem.data('url'));
 
+  //get item index to pass to proxy window
+  let itemIndex = targetItem.index() - 1;
+
   //Reader Window url
-  let readerWinURL = `file://${__dirname}/reader.html?url=${contentURL}`;
+  let readerWinURL = `file://${__dirname}/reader.html?url=${contentURL}&itemIndex=${itemIndex}`;
 
   //Open item in new proxy BrowserWindow which it will load the url into a secure webview
   let readerWin = window.open(readerWinURL, targetItem.data('title'));
@@ -55,10 +79,8 @@ module.exports.addItem = (item) => {
   //Hide no items message
   $('#no-items').hide();
 
-  //If item is the first one make it active
-  let active = this.toReadItems[0] === item ? 'is-active' : '';
   // New item HTML
-  let itemHTML = `<a class="panel-block read-item ${active}" data-url="${item.url}" data-title="${item.title}">
+  let itemHTML = `<a class="panel-block read-item" data-url="${item.url}" data-title="${item.title}">
                     <figure class="image has-shadow is-64x64 thumb">
                       <img src="${item.screenshot}">
                     </figure>
@@ -67,6 +89,9 @@ module.exports.addItem = (item) => {
   // Append to read-Listen
   $('#read-list').append(itemHTML);
 
-  //Event listener to show whe the element is selected
+  //Event listener to show when the element is selected
   $('.read-item').off('click, dblclick').on('click', this.selectItem).on('dblclick', this.openItem);
+
+  //trigger click event to make the new element active
+  $('.read-item').last().trigger('click');
 };
