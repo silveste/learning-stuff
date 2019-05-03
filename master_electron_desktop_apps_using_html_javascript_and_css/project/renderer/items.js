@@ -9,6 +9,7 @@ module.exports.saveItems = () => {
 module.exports.selectItem = (event) => {
   $('.read-item').removeClass('is-active');
   $(event.currentTarget).addClass('is-active');
+
 };
 
 //Select next/prev item
@@ -33,7 +34,10 @@ module.exports.changeItem = (where) => {
 };
 
 //Window function - delete item by id
-window.deleteItem = (i) => {
+window.deleteItem = (i= null) => {
+
+  //Set i to active element if is not pased as argument
+  i = i || $('.react-item.is-active').index() -1;
   //Remove from DOM
   $('.read-item').eq(i).remove(); //in JQuery eq method refers to the array of elements selected therefore index is 0 based
   //remove from toreadItems array
@@ -53,8 +57,17 @@ window.deleteItem = (i) => {
   }
 };
 
+//Open in Browser
+window.openInBrowser = () => {
+  if (!this.toReadItems.length) return;
+
+  //Get selected items
+  let targetItem = $('.read-item.is-active');
+  require('electron').shell.openExternal(targetItem.data('url'));
+};
+
 //Open item for reading
-module.exports.openItem = () => {
+window.openItem = () => {
   //check if there are saveItems
   if(!this.toReadItems.length) return;
 
@@ -90,7 +103,7 @@ module.exports.addItem = (item) => {
   $('#read-list').append(itemHTML);
 
   //Event listener to show when the element is selected
-  $('.read-item').off('click, dblclick').on('click', this.selectItem).on('dblclick', this.openItem);
+  $('.read-item').off('click, dblclick').on('click', this.selectItem).on('dblclick', window.openItem);
 
   //trigger click event to make the new element active
   $('.read-item').last().trigger('click');

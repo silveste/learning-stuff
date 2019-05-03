@@ -1,6 +1,7 @@
 /* global $ */
 const {ipcRenderer} = require('electron');
 const items = require('./items');
+const menu =require('./menu');
 
 //Set global navigation keys
 $(document).keydown((event) => {
