@@ -1,6 +1,6 @@
 # HTML5 and CSS3: Develop with Tomorrow's Standards Today, Brian P. Hogan
 
-(On branch learning-css switch to master to see all contents)
+(On branch **learning-html-css**, switch to master if you want to see all contents)
 
 ## Requirements
 
@@ -14,4 +14,4 @@
 
 >### Languages, Markups, Frameworks
 
->>[CSS](../subjects/css.md)
+>>[HTML & CSS](../subjects/html-css.md)

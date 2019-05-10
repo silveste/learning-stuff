@@ -18,4 +18,4 @@
 
 >### Languages, Markups, Frameworks
 
->>[CSS](../subjects/css.md)
+>>[HTML & CSS](../subjects/html-css.md)

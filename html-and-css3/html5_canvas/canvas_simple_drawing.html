@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en-uk">
+  <head>
+    <link rel="stylesheet" href="stylesheets/style.css">
+    <meta charset="utf-8" />
+    <title>Drawing a Logo on the Canvas</title>
+  </head>
+  <body>
+    <canvas id="my_canvas">
+      Fallback content here
+    </canvas>
+    <script>
+      // Checking if browser support canvas element
+
+      var canvas = document.getElementById('my_canvas');
+
+      if (canvas.getContext){
+        console.log("Browser supports canvas elements");
+        var context = canvas.getContext('2d');
+        context.fillStyle = "rgb(200,0,0)";
+        context.fillRect(10, 10, 100, 100);
+        context.fillStyle = "rgb(0,200,0)";
+        context.fillRect(20, 20, 100, 100);
+        context.fillStyle = "rgb(0,0,200)";
+        context.fillRect(30, 30, 100, 100);
+
+      } else {
+        console.log("Browser do not support canvas elements");
+        // Fallback
+      }
+    </script>
+  </body>
+</html>
