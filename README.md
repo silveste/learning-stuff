@@ -24,4 +24,6 @@ You are currently in branch **learning-javascript**, if you want to see all subj
 
 [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
 
+[Web Components & Stencil.js - Build Custom HTML Elements, Maximilian Schwarzmüller (Udemy course)](web-components-and-stencil/wcas.md)
+
 [Webpack 4: Beyond the basics, Lawrence Whiteside (Udemy course)](webpack4_beyond_the_basics/wbtb.md)
