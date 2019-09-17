@@ -53,7 +53,7 @@ class Tooltip extends HTMLElement {
     switch(name) {
       case 'text':
         this._tooltipText = newValue;
-        //break;
+        break;
       default:
         return;
     }
