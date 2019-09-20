@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=5.0">
+  <title>Stencil Component Starter</title>
+  <style>
+    :root{
+      --color-primary: #3b013b;
+      --color-primary-inverse: #fff;
+      --color-error: #be9f13;
+      --color-primary-light: #b304b2;
+    }
+  </style>
+  <script type="module" src="/build/advanced-stencil.esm.js"></script>
+  <script nomodule src="/build/advanced-stencil.js"></script>
+
+</head>
+<body>
+
+  <se-stock-price></se-stock-price>
+  <se-stock-price id='test' stock-symbol="MSFT"></se-stock-price>
+  <se-stock-finder></se-stock-finder>
+  <!--The following code is not needed as the component is already listening for
+  the event seSymbolSelected
+  <script>
+    const stockFinderEl = document.querySelector('se-stock-finder');
+    const stockPrice = document.querySelector('#test');
+    stockFinderEl.addEventListener('seSymbolSelected', event => {
+      stockPrice.setAttribute('stock-symbol', event.detail);
+    });
+  </script>
+-->
+</body>
+</html>
