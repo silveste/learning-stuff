@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Web components & Stencil</title>
+    <style>
+
+      /*Custom components styles have access to live DOM CSS variables*/
+      :root {
+        --color-primary: lightblue;
+      }
+      div {
+        color: black;
+        background-color: orange;
+      }
+      .highlight {
+        background-color: yellow;
+        /*
+         Live DOM styles overrides shadow dom styles when refers to slot elements
+         By uncommenting the following rule the border bottom defined
+         in the component to apply to the slot will be overrided
+        */
+        /*border-bottom: 3px solid blue;*/
+      }
+
+      /*
+        Custom components (Host) can be styled from live dom and have more specifity
+        than the styles from shadow dom
+      */
+      silveste-tooltip {
+        /*border: 3px solid #999999;*/
+        padding: 2px;
+      }
+    </style>
+    <script src="tooltip.js"></script>
+    <script src="confirm-link.js"></script>
+  </head>
+  <body>
+    <!-- Using templates for web components is a bad approach as part of the component will be out of the component file making the code more difficult to mantain. for that is better define the template in tooltip.js (See .innerHTML property) -->
+    <!--
+    <template id="tooltip-template">
+      <slot>This is the default value</slot><!-- The content between the component tags that uses this template is inserted inside the slot element --><!--
+      <span>(?)</span>
+    </template>
+    -->
+
+    <h1><silveste-tooltip text="Set of standards to create custom html elements"><span class="highlight">Web components</span></silveste-tooltip> are awesome!</h1>
+
+    <p><silveste-tooltip class="important"></silveste-tooltip> with no configuration at all</p><!--Should have the default content-->
+
+    <p class="wrapper"><silveste-tooltip>Styling component based on surrounding elements</silveste-tooltip></p>
+    <div>Div to show that web component div style is not applied</div>
+
+    <!--To extend a built in component instead HTMLElement is a bit different: -->
+    <a is="silveste-confirm-link" href="https://www.google.com">Google</a>
+  </body>
+</html>

@@ -16,7 +16,10 @@
 
 >[Learn Webpack Course, Cool Steel (Youtube)](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
 
->[Webpack 4: Beyond the basics, Lawrence Whiteside, (Udemy course)](webpack4_beyond_the_basics/wbtb.md)
+>[Web Components & Stencil.js - Build Custom HTML Elements, Maximilian Schwarzmüller (Udemy course)](../web-components-and-stencil/wcas.md)
+
+>[Webpack 4: Beyond the basics, Lawrence Whiteside (Udemy course)](../webpack4_beyond_the_basics/wbtb.md)
+>>>>>>> learning-javascript
 
 ## Documentation, manual references...
 
