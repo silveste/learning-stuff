@@ -8,4 +8,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 ## Learning materials: courses, books <!--Future: If a new material is included use the MD template to include it-->
 
+[React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
+
+[React - The Complete Guide](react_the_complete_guide/rtcg.md)
+
 [The Advanced Web Developer Bootcamp](the-advanced-web-developer-bootcamp/tawdb.md)
