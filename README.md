@@ -73,10 +73,6 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [HTML5 & CSS3, Brian P. Hogan (Book)](html-and-css3/hc.md)
 
-:clock1: [Java EE with Vaadin, Spring boot and Maven, Holczer Balazs (Udemy course)](java-ee-with-vaadin-spring-boot-and-maven/jewvsbam.md)
-
-:clock1: [Java Spring Tutorial Masterclass - Learn Spring Framework 5 (Udemy course)](java-spring-tutorial-masterclass/jstm.md)
-
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
 :white_check_mark: [Learn Webpack Course, Cool Steel (Youtube)](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
