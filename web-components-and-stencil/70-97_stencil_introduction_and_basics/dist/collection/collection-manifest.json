@@ -1,0 +1,14 @@
+{
+  "entries": [
+    "components/my-component/my-component.js",
+    "components/side-drawer/side-drawer.js",
+    "components/se-tooltip/tooltip.js"
+  ],
+  "compiler": {
+    "name": "@stencil/core",
+    "version": "1.4.0",
+    "typescriptVersion": "3.6.2"
+  },
+  "collections": [],
+  "bundles": []
+}

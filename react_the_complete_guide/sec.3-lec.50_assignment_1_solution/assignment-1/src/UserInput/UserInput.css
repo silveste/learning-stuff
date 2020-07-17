@@ -1,0 +1,7 @@
+.user-input {
+  display: block;
+  width: 100%;
+  padding: 1rem;
+  text-align: right;
+  box-sizing: border-box;
+}

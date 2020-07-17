@@ -10,9 +10,9 @@ Contents in branch: **learning-react**
 
 >[React Native - The Practical Guide](../react_native_the_practical_guide/rntpg.md)
 
->[The Advanced Web Developer Bootcamp](../the-advanced-web-developer-bootcamp/tawdb.md)
+>[React - The Complete Guide](../react_the_complete_guide/rtcg.md)
 
->[React Native - The Practical Guide](../react_native_the_practical_guide/rntpg.md)
+>[The Advanced Web Developer Bootcamp](../the-advanced-web-developer-bootcamp/tawdb.md)
 
 ## Documentation, manual references...
 
