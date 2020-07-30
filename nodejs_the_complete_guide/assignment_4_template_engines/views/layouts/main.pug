@@ -1,0 +1,14 @@
+doctype html
+head
+  meta(charset='utf-8')
+  title #{pageTitle}
+  link(rel='stylesheet' href='/css/main.css')
+header
+  nav
+    ul
+      li
+        a(href='/' class=( path === '/' ? 'active' : '' )) Main
+      li
+        a(href='/users' class=( path === '/users' ? 'active' : '' )) Users
+main
+  block main
