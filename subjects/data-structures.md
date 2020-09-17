@@ -6,7 +6,9 @@
 
 ## Courses, books...
 
-> Resources used to learn about the topic (It is advisable to complete them)
+>[Learning Javascript Data Structures and Algorithms, Loiane Groner (Book)](../js_data_structures_and_algorithms/jdsaa.md)
+
+<!--
 
 ## Documentation, manual references...
 
@@ -15,3 +17,4 @@
 ## Related content
 
 > Different technologies, libraries etc. that perform similar function
+-->

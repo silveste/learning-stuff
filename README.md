@@ -10,9 +10,9 @@ The repository will probably have unnecessary branches and commits in order to f
 
 ### General Concepts
 
-:black_square_button: [Algorithms](subjects/algorithms.md) Goal: General understanding of main algorithms, to be able apply them in new projects.
+:clock1: [Algorithms](subjects/algorithms.md) Goal: General understanding of main algorithms, to be able apply them in new projects.
 
-:black_square_button: [Data Structures](subjects/data-structures.md) Goal: General understanding of data structures to be able apply them in new projects.
+:clock1: [Data Structures](subjects/data-structures.md) Goal: General understanding of data structures to be able apply them in new projects.
 
 :black_square_button: [Design Patterns](subjects/design-patterns.md) Goal: General understanding of main design patterns to be able apply them in new projects.
 
@@ -77,6 +77,8 @@ The repository will probably have unnecessary branches and commits in order to f
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
 :white_check_mark: [Learn Webpack Course, Cool Steel (Youtube)](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
+
+:clock1: [Learning Javascript Data Structures and Algorithms, Loiane Groner (Book)](js_data_structures_and_algorithms/jdsaa.md)
 
 :white_check_mark: [NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)](nodejs_the_complete_guide/ntcg.md)
 
