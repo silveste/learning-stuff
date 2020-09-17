@@ -1,4 +1,7 @@
-# Ignore files for NodeJS and JetBrains IDEs
+# Ignore files for NodeJS, Deno and JetBrains IDEs
+#############################################################################
+#Deno
+.deno_plugins
 #############################################################################
 # NodeJS
 # Logs
