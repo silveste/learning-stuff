@@ -11,6 +11,7 @@ The repository will probably have unnecessary branches and commits in order to f
 ### General Concepts
 
 :black_square_button: [Algorithms](subjects/algorithms.md) Goal: General understanding of main algorithms, to be able apply them in new projects.
+
 :black_square_button: [Data Structures](subjects/data-structures.md) Goal: General understanding of data structures to be able apply them in new projects.
 
 :black_square_button: [Design Patterns](subjects/design-patterns.md) Goal: General understanding of main design patterns to be able apply them in new projects.
@@ -55,7 +56,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :black_square_button: [Linux/Unix command line and bash](subjects/bash.md) Goal: basic knowledge and be able to write scripts in bash.
 
-:clock1: [NodeJS](subjects/nodejs.md) Goal: Solid understanding about the runtime environment, node package manger (npm) and package.json. Be able to use it as a tool. Development of backend APIs using node frameworks such as Express
+:white_check_mark: [NodeJS](subjects/nodejs.md) Goal: Solid understanding about the runtime environment, node package manger (npm) and package.json. Be able to use it as a tool. Development of backend APIs using node frameworks such as Express
 
 :white_check_mark: [Source Code Editors](subjects/source-code-editors.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
 
@@ -76,6 +77,8 @@ The repository will probably have unnecessary branches and commits in order to f
 :white_check_mark: [JavaScript: Understanding the Weird parts, Anthony Alicea (Udemy Course)](javascript-understanding-the-weird-parts/jutwp.md)
 
 :white_check_mark: [Learn Webpack Course, Cool Steel (Youtube)](https://www.youtube.com/playlist?list=PLblA84xge2_zwxh3XJqy6UVxS60YdusY8)
+
+:white_check_mark: [NodeJS - The Complete Guide (MVC, REST APIs, GraphQL, Deno)](nodejs_the_complete_guide/ntcg.md)
 
 :white_check_mark: [React Native - The Practical Guide](react_native_the_practical_guide/rntpg.md)
 

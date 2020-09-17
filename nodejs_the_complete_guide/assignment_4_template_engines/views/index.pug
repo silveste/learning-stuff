@@ -1,0 +1,6 @@
+extends layouts/main.pug
+block main
+  h1 Home Page
+  form(action="/users" method="POST")
+    input#title(type='text' name='user')
+    button.btn(type='submit') Add User
