@@ -96,6 +96,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [React - The Complete Guide](react_the_complete_guide/rtcg.md)
 
+:white_check_mark: [Intro to React Testing \[Jest and React Testing Library Tutorial\]](https://www.youtube.com/watch?v=ZmVBCpefQe8)
+
 :white_check_mark: [The Advanced Web Developer Bootcamp](the-advanced-web-developer-bootcamp/tawdb.md)
 
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
