@@ -48,6 +48,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [SASS](subjects/sass.md) Goal: Solid understanding to be able to provide immediately solutions to new projects.
 
+:clock1: [Typescript](subjects/typescript.md) Goal: Solid understanding of typescript language, able to use with frameworks such as react.
+
 ### Tools, Environments, Servers, Operating systems, Deployment
 
 :white_check_mark: [Integration Development Environments](subjects/ide.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
@@ -101,5 +103,7 @@ The repository will probably have unnecessary branches and commits in order to f
 :white_check_mark: [The Advanced Web Developer Bootcamp](the-advanced-web-developer-bootcamp/tawdb.md)
 
 :white_check_mark: [The Web developer bootcamp, Colt Steele (Udemy course)](the-web-developer-bootcamp/twdb.md)
+
+:clock1: [Understanding TypeScript - 2022 Edition (Udemy Course)](understanding-typescript/ut.md)
 
 :white_check_mark: [Webpack 4: Beyond the basics, Lawrence Whiteside (Udemy course)](webpack4_beyond_the_basics/wbtb.md)
