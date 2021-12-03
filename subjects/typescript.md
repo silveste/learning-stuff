@@ -18,8 +18,6 @@
 
 In typescript, variable declaration must include **type assignment**. However, it is not allways required due to **type inference**, when the type can be inferred (For example when assigning a value to a variable), typescript assignautomatically the type to the variable.
 
-#### 1. Core Types
-
 - number:
 
   ```typescript
@@ -128,7 +126,7 @@ In typescript, variable declaration must include **type assignment**. However, i
   const myUnknownType: unknown;
   ```
 
-#### 2. Functions
+### Functions
 
 - define a function with parameters and return value
 
@@ -152,4 +150,258 @@ In typescript, variable declaration must include **type assignment**. However, i
 - never type: Used to indicate that the function never returns (i.e. infinite loops or throws errors)
   ```typescript
   function neverRetunrs(a: number): never {...}
+  ```
+
+### classes
+
+- define a class:
+
+  ```typescript
+  class myclass {
+    myfield1: mytype1;
+    myfield2: mytype2;
+
+    constructor(myfield1: mytype1) {...}
+    mymethod1(){...}
+  }
+  ```
+
+- enforce "this" to refers to the own class:
+
+  ```typescript
+  class myclass {
+    ...
+    mymethod(...params: any[], this: myclass) {...}
+    ...
+  }
+  ```
+
+- private fields: the compiler throws an error if we try to access to a private field outside the class scope.
+
+  ```typescript
+  class myclass {
+    public myfield1: mytype1; //public is the default and can be omited
+    private myfield2: mytype2
+    ...
+  }
+  const myinstance = new myclass()
+  myinstance.myfield2 = anyvalueoftype2 //compiler throws error
+  ```
+
+- shorthand initialization: public or private keywords can be used in the constructor definition
+
+  ```typescript
+  class myclass {
+    constructor(private myfield1: mytype1) {...}
+  }
+  ```
+
+- read only properties: it only can be assigned once
+
+  ```typescript
+  class myclass {
+    //it can also be declared here
+    // private readonly myfield1: mytype1
+    constructor(private readonly myfield1: mytype1) {
+      this.myfield1 = myfield1;
+    }
+  }
+  ```
+
+- inheritance:
+
+  ```typescript
+  class myparentclass {
+    constructor(myparentfield1: mytype1,myparentfield2: mytype2) {
+      this.myparentfield1 = myparentfield1
+      this.myparentfield2 = myparentfield2
+    }
+    ...
+  }
+  class mychildclass extends myparentclass {
+    constructor(myparentfield2: mytype2, mychildfield1: mytype3){
+      super('value of parent field 1 of type 1', myparentfield2)
+      this.mychildfield1 = mychildfield1
+    }
+    ...
+  }
+  ```
+
+- protected fields: fields that behaves like private but still are accesible by classes that extend the current one
+
+  ```typescript
+  class myparentclass {
+    protected myfield1: mytype1;
+    private myfield2: mytype2
+    ...
+  }
+  const myinstance = new myparentclass()
+  myinstance.myfield2 = anyvalueoftype2 //compiler throws error
+  myinstance.myfield1 = anyvalueoftype1 //compiler throws error
+  class mychildclass extends myparentclass {
+    ...
+    anymethod(myfield1: mytype1, myfield2: mytype2) {
+      this.myfield1 = myfield1
+      this.myfield2 = myfield2 //throws error
+    }
+    ...
+  }
+  ```
+
+- inheritance, overriding methods
+
+  ```typescript
+    class myparentclass {
+      ...
+      mymethoda(){//do somthing}
+      ...
+    }
+    class mychildclass {
+      ...
+      mymethoda(){//do something different}
+      ...
+    }
+
+  ```
+
+- getters and setters: special methods that can be treated as a property whthin the instances of the class
+
+  ```typescript
+    class myclass {
+      private myfield1: mytype1;
+      ...
+      get myfieldone() {
+        return myfield1
+      }
+
+      set myfieldone(a: mytype1) {
+        this.myfield1 = a
+      }
+    }
+    const myinstance = new myclass()
+    myinstance.myfieldone = valuetype1 //uses set method
+    myinstance.myfieldone //uses get method
+    myinstance.myfield1 = valuetype1 //throws an error
+  ```
+
+- static methods and properties:
+
+  ```typescript
+    class myclass {
+      static mystaticfield: staticfieldtype = value;
+      ...
+      static mystaticmethod(param: paramtype) {...}
+      mymethod(){
+        //to access static methods/properties we must refer to the class
+        const fromstaticfield = myclass.mystaticfield
+        ...
+      }
+      ...
+    }
+  ```
+
+- abstract classes: classes that are meant to be inherited and cannot be instantiated, which provides some methods declaration but leaving the implementation for the children classes
+
+  ```typescript
+  class abstract myparentclass {
+    ...
+    abstract myabstracmethod(param: paramtype): returntype;
+    ...
+  }
+  class myclass extends myparentclass {
+    ...
+    myabstractmethod(param: paramtype) {
+      ...
+      return value //value is type "returntype"
+    }
+    ...
+  }
+  ```
+
+- singletons: to enforce that only once instance of a class can be created the constructor can be set as private and use a static method to check if there are one instance of the class. so that either a new instance is created or the already created instance is returned
+
+  ```typescript
+  class mysingleton {
+    private static instance: mysingleton;
+    ...
+    private constructor(...) {...}
+    static getinstance() {
+      if(!this.instance) {
+        this.instance = new mysingleton()
+      }
+      return this.instance
+    }
+
+  }
+  ```
+
+### Interfaces
+
+- Describes the structure of an object. It's similar to types however types are more flexible as you can use union types to assign values while interfaces are more rigid but more clear.
+
+  ```typescript
+  interface MyInterface {
+    myKey1: myType1;
+    myMethod(param: paramType): returnType;
+  }
+
+  let myObject: MyInterface;
+
+  myObject = {
+    myKey1: valueOfType1,
+    myMethod(a: paramType) {
+      ...
+      return valueOfReturnType
+    }
+  }
+  ```
+
+- Interfaces can be implemented by classes, therefore an interface can be used to describe part of class so that the class needs to have the keys defined by the interface among other that also could have
+
+  ```typescript
+  interface MyInterface {
+    key1: type1;
+    method1(): void;
+  }
+
+  class MyClass implements MyInterface {
+    key1: type1;
+    method1() { ... }
+  }
+  ```
+
+- A class can implement more than one interface
+
+  ```typescript
+  interface MyInterface1 {...}
+  interface MyInterface2 {...}
+  class MyClass implements MyInterface1, MyInterface2 {...}
+  ```
+
+- Interfaces can define read only properties
+
+  ```typescript
+  interface MyInterface1 {
+    readonly myKey: type1;
+  }
+  ```
+
+- Interfaces, like classes, also allows inheritance. However, while classes don't, interfaces also can inherit from multiple interfaces
+
+  ```typescript
+  interface MyInterface1 { ... }
+  interface MyInterface2 { ... }
+  interface MyInterface3 extends MyInterface1, MyInterface2 {
+    //It gets all properties declared in parents interface
+    ...
+  }
+  ```
+
+- Interfaces, classesand functions can declare optional keys
+
+  ```typescript
+  interface MyInterface {
+    requiredKy: type1;
+    optionalKey?: type2;
+  }
   ```
