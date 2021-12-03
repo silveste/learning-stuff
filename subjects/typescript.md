@@ -405,3 +405,145 @@ In typescript, variable declaration must include **type assignment**. However, i
     optionalKey?: type2;
   }
   ```
+
+### Advanced Types
+
+- Intersection types: Types that are a combination of 2 or more other types.
+
+  ```typescript
+  type TypeA = {
+    key1: Type1;
+    key2: Type2;
+  };
+
+  type TypeB = {
+    key1: Type1;
+    key3: Type3;
+  };
+
+  type TypeC = TypeA & TypeB;
+
+  const myObject: TypeC = {
+    key1: valueOfType1,
+    key2: valueOfType2,
+    key3: valueOfType3,
+  };
+  ```
+
+- Type guards: Code that validates the types at a runtime.
+
+  ```typescript
+  type TypeA = {
+    key0: string | number;
+    key1: Type1;
+    key2: Type2;
+  }
+
+  type TypeB = {
+    key0: string | number;
+    key1: Type1;
+    key3: Type3;
+  }
+
+  class MyClassA {...}
+  class MyClassB {...}
+
+  type TypeC = TypeA | TypeB
+  type TypeOfClasses = MyClassA | MyClassB
+
+  const myMethod = (a: TypeC, b: TypeOfClasses): void => {
+    //Type gard: check if property a valid JS type
+    if(typeof a.key0 === 'string') {
+      //Do something
+    }
+    //Type gard: check if property is in object
+    if('key2' in TypeC) {
+      //Do something
+    }
+    //Type gard: check specific instaces of a class
+    if(TypeOfClasses instanceof MyCLassA) {
+      //Do something
+    }
+  }
+  ```
+
+- Discriminate unions: A pattern that allows to implement type gards in an easier way than if statements. All interfaces or objects must have a common property with a literal that defines the property and allows to check using a switch statement so that the rest of properties can be handled in a properly manner.
+
+  ```typescript
+  interface InterfaceA {
+    type: 'interfacea',
+    aId: string
+  }
+
+  interface InterfaceB {
+    type: 'interfaceb',
+    bId: string
+  }
+
+  type UnionInterfaces = InterfaceA | InterfaceB
+
+  function (unknownInterface: UnionInterfaces) {
+    let id: string;
+    switch(unknownInterface.type) {
+      case 'interfacea':
+        id = unknownInterface.aId
+        break;
+      case 'interfaceb':
+        id = unknownInterface.bId
+        break;
+    }
+    //Do something with id
+  }
+  ```
+
+- Type casting: Allows to set the type of a variable that Typescript cannot determine.
+
+  ```typescript
+  //When DOM element is unknown TS assign a generic HTMLElemnt type
+  //Note "!" sign which indicates that is not null value
+  let myTagThatIKnowIsInput = document.getElementById('my-html-id')!;
+
+  //HTMLElement doesn't have property "value" therefore the compiler throws an error
+  myTagThatIKnowIsInput.value = 'Any string';
+
+  //Sintax A of type casting:
+  myTagThatIKnowIsInput = <HTMLInputElement>(
+    document.getElementById('my-html-id')!
+  );
+  myTagThatIKnowIsInput.value = 'Any string';
+
+  //Sintax B of type casting (avoid clashing with JSX):
+  myTagThatIKnowIsInput = document.getElementById(
+    'my-html-id'
+  )! as HTMLInputElement;
+  myTagThatIKnowIsInput.value = 'Any string';
+  ```
+
+- Index types: Allows to create more flexible objects, where the property names are unknown but the data that holds is known.
+
+  ```typescript
+  interface InterfaceWithUnknownProps {
+    [prop: string]: string;
+  }
+  ```
+
+- Function overload: We can define the same funcion with different params and return values.
+
+  ```typescript
+  function myFunction(a: number): number;
+  function myFunction(a: string): string;
+  function myFunction(a: number, b: number): number;
+  function myFunction(a: string, b: string): string {
+    //Implementation
+  }
+  ```
+
+- Nulish coalescing operator: Operator that yield to a default value if a value is null or undefined. (Similar to OR operator in JS but doesn't yield with falsy values)
+
+  ```typescript
+  const userInput = '';
+  const userInputAlt = undefined;
+  const dataA = userInput || 'DEFAULT'; // -> 'DEFAULT'
+  const dataB = userInput ?? 'DEFAULT'; // -> ''
+  const dataC = userInputAlt ?? 'DEFAULT'; // -> 'DEFAULT'
+  ```
