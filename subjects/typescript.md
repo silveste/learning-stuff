@@ -152,7 +152,7 @@ In typescript, variable declaration must include **type assignment**. However, i
   function neverRetunrs(a: number): never {...}
   ```
 
-### classes
+### Classes
 
 - define a class:
 
@@ -547,3 +547,51 @@ In typescript, variable declaration must include **type assignment**. However, i
   const dataB = userInput ?? 'DEFAULT'; // -> ''
   const dataC = userInputAlt ?? 'DEFAULT'; // -> 'DEFAULT'
   ```
+
+### Generics
+
+Generics allows to implement code that manage data without the need of care about the data type and also gives the compiler enough information about the data type that is being handled.
+
+- Built-in generics:
+
+  ```typescript
+  //Array is a built in generic data type that includes the data type that is being stored in the array
+  const Array<string>
+  //Promise is a built in generic data type that includes the data type that returns when resolved
+  const myPromise: Promise<number>
+  ```
+
+- Implementing generics:
+
+  ```typescript
+  //Function that accepts arguments of 2 generic types and return the intersection
+  function myFunction<T,U>(a: T, b: U): T & U {...}
+  ```
+
+- Calling a function indicating the type of the generics
+
+  ```typescript
+  //Note that this code is reduntdant, therefore there is no need to indicate the types as TS infers it
+  const myResult = myFunction<string, number>(myNumber, myString);
+  ```
+
+- Generic types constrains:
+
+  ```typescript
+  //constrain the type to be an object
+  function myFunction<T extends object>(objParam){...}
+  ```
+
+- "keyof" constrain: Indicates that the type is a key of other generic type
+
+  ```typescript
+  function myFunction<T extends object, U extends keyof T>(obj: T, key: U){...}
+  ```
+
+- Generic classes:
+
+  ```typescript
+  class MyClass<T> {...}
+  ```
+
+- Generic utility types: TS builtin generic helpers that either gives more flexibility or type safety. See [here](https://www.typescriptlang.org/docs/handbook/utility-types.html) for more information.
