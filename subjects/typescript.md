@@ -112,7 +112,7 @@ In typescript, variable declaration must include **type assignment**. However, i
 - literal types: Define a variable with specific values (useful combined with union type)
 
   ```typescript
-  const myLiteral: 'value-1' | 'value-2';
+  const myLiteral: "value-1" | "value-2";
   ```
 
 - type aliases or custom types: Reusable type than can be used to define type schemas
@@ -501,22 +501,22 @@ In typescript, variable declaration must include **type assignment**. However, i
   ```typescript
   //When DOM element is unknown TS assign a generic HTMLElemnt type
   //Note "!" sign which indicates that is not null value
-  let myTagThatIKnowIsInput = document.getElementById('my-html-id')!;
+  let myTagThatIKnowIsInput = document.getElementById("my-html-id")!;
 
   //HTMLElement doesn't have property "value" therefore the compiler throws an error
-  myTagThatIKnowIsInput.value = 'Any string';
+  myTagThatIKnowIsInput.value = "Any string";
 
   //Sintax A of type casting:
   myTagThatIKnowIsInput = <HTMLInputElement>(
-    document.getElementById('my-html-id')!
+    document.getElementById("my-html-id")!
   );
-  myTagThatIKnowIsInput.value = 'Any string';
+  myTagThatIKnowIsInput.value = "Any string";
 
   //Sintax B of type casting (avoid clashing with JSX):
   myTagThatIKnowIsInput = document.getElementById(
-    'my-html-id'
+    "my-html-id"
   )! as HTMLInputElement;
-  myTagThatIKnowIsInput.value = 'Any string';
+  myTagThatIKnowIsInput.value = "Any string";
   ```
 
 - Index types: Allows to create more flexible objects, where the property names are unknown but the data that holds is known.
@@ -538,14 +538,15 @@ In typescript, variable declaration must include **type assignment**. However, i
   }
   ```
 
-- Nulish coalescing operator: Operator that yield to a default value if a value is null or undefined. (Similar to OR operator in JS but doesn't yield with falsy values)
+- Nulish coalescing operator: Operator that yield to a default value if a value
+  is null or undefined. (Similar to OR operator in JS but doesn't yield with falsy values)
 
   ```typescript
-  const userInput = '';
+  const userInput = "";
   const userInputAlt = undefined;
-  const dataA = userInput || 'DEFAULT'; // -> 'DEFAULT'
-  const dataB = userInput ?? 'DEFAULT'; // -> ''
-  const dataC = userInputAlt ?? 'DEFAULT'; // -> 'DEFAULT'
+  const dataA = userInput || "DEFAULT"; // -> 'DEFAULT'
+  const dataB = userInput ?? "DEFAULT"; // -> ''
+  const dataC = userInputAlt ?? "DEFAULT"; // -> 'DEFAULT'
   ```
 
 ### Generics
@@ -595,3 +596,86 @@ Generics allows to implement code that manage data without the need of care abou
   ```
 
 - Generic utility types: TS builtin generic helpers that either gives more flexibility or type safety. See [here](https://www.typescriptlang.org/docs/handbook/utility-types.html) for more information.
+
+### Decorators
+
+Decorators provide a way to add both annotations and a meta-programming syntax
+for class declarations and members.
+
+To use decorators, the compiler options in the `tsconfig.json` file, must target
+es6 version or above (`"target": "es6"`) and experimental decorators must be
+enabled (`"experimentalDecorators": true`)
+
+A Decorator is a declaration that can be attached to a class declaration, method,
+accessor, property, or parameter. Decorators use the form @Decorator, where
+Decorator is a function that will be called at runtime (when the decorated element
+is defined) with information about the decorated declaration.
+A decorator is a function that can be used by other developers to implement new
+features within the code, by convention the name of the function starts with
+capital letter although is not mandatory.
+
+The decorator function is called with arguments related to the decorated element.
+The type and number of arguments depends on the decoreted element type (class, method...)
+A decorated element can use more than one decorator and they are executed in
+reverse order, therefore the closest decorator to the decorated element is
+executed first.
+
+```typescript
+function MyDecorator(...args){ //do something}
+
+@MyDecorator
+class MyClass {//Class using the decorator}
+```
+
+The decorator can be set up as a factory (A function that returns another
+function) to enhance the configuration settings. (i.e. it can be used as a
+closure)
+
+```typescript
+function MyDecoratorFactory(){
+  const myVarToUseAsClosure = 'whatever'
+  return function(...args){ //do something}
+}
+
+@MyDecoratorFactory()
+class MyClass {//Class using the decorator}
+```
+
+Depending on where the decorators are applied, it receives different arguments:
+
+- Class decorators: It receives 1 argument with the constructor.
+
+- Property decorators: It receives 2 arguments, target with the prototype or
+  constructor function (if used within a class) and the property name.
+
+- Accessors and method decorators: It receives the target, the property name
+  and a [property descriptor](https://javascript.info/property-descriptors) with
+  information about the accessor or methods.
+
+- Parameter decorators: It receives 3 arguments, target, name of the method
+  where is being used and position of the parameter (zero based)
+
+The decorator function (not the factory which already returns a decorator) can
+return a value. The value returned is used depending on where the decorator is
+applied:
+
+- Class decorator: can return a new constructor function which replaces the
+  original constructor. It is also possible to use the original constructor by
+  returning a new class that extends the original constructor.
+
+```typescript
+function MyClassDecorator<T extends {new(...args: any[]): {}}>(originalConstructor: T){
+  //do something
+  return class extend originalContructor {
+    constructor(...args: any[]) {
+      super()
+      //do something
+    }
+  }
+}
+```
+
+- Accessor and method decorators: Returns a new [property descriptor](https://javascript.info/property-descriptors)
+  of the accessor or method. See [Object.defineProperty()](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/defineProperty)
+
+- Property and parameter decorators: The value returned is ignored by the compiler.
