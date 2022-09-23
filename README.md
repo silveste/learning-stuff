@@ -38,6 +38,8 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [JQuery](subjects/jquery.md) Goal: Basic understanding and to be able to apply it using documentation.
 
+:clock1: [Lua](subjects/lua.md)
+
 :white_check_mark: [Markdown](subjects/markdown.md) Goal: Basic understanding and to be able to apply it using documentation.
 
 :clock1: [MongoDB](subjects/mongodb.md) Goal: Basic understanding of console commands to be able to apply it to perform queries while testing applications. Understanding of DB to be able to use it in applications either on its own or using libraries such as mongoose.
@@ -56,9 +58,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [GIT & GitHub/GitLab](subjects/git.md) Goal: Able to use it as a tool
 
-:black_square_button: [Linux/Unix command line and bash](subjects/bash.md) Goal: basic knowledge and be able to write scripts in bash.
-
-:white_check_mark: [NodeJS](subjects/nodejs.md) Goal: Solid understanding about the runtime environment, node package manger (npm) and package.json. Be able to use it as a tool. Development of backend APIs using node frameworks such as Express
+## [Lua](subjects/lua.md)
 
 :white_check_mark: [Source Code Editors](subjects/source-code-editors.md) Goal: Be able to use it as a tool and to know basic settings such as install plugins and shortcuts.
 
@@ -69,6 +69,8 @@ The repository will probably have unnecessary branches and commits in order to f
 :white_check_mark: [Advanced CSS and Sass: Take Your CSS to the Next Level!](advanced-css-and-sass/acas.md)
 
 :white_check_mark: [Complete Java Masterclass, Tim Buchalka (Udemy course)](complete-java-masterclass/cjm.md)
+
+:clock1: [Full Lua Programming Crash Course - Beginner to Advanced](lua-crash-course/lcc.md)
 
 :white_check_mark: [GitHub Training & Guides, GitHub (Youtube tutorial)](https://www.youtube.com/channel/UCP7RrmoueENv9TZts3HXXtw)
 
