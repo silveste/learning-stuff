@@ -38,7 +38,7 @@ The repository will probably have unnecessary branches and commits in order to f
 
 :white_check_mark: [JQuery](subjects/jquery.md) Goal: Basic understanding and to be able to apply it using documentation.
 
-:clock1: [Lua](subjects/lua.md)
+:clock1: [Lua](subjects/lua.md) Goal: Basic understanding and be able to use it in tools such as neovim
 
 :white_check_mark: [Markdown](subjects/markdown.md) Goal: Basic understanding and to be able to apply it using documentation.
 
