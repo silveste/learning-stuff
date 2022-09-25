@@ -58,7 +58,7 @@ Data types: Lua is a dynamically typed language. This means that variables do no
   print("we " .. "can " .. "concatenate " .. "with " .. "2 " .. "dots")
   ```
 
-- boolean
+- boolean: Note that in lua only `nil` and `false` are falsy values
 
 - table
 
