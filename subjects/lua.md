@@ -24,8 +24,59 @@ Comments:
 ]]
 ```
 
-String concatenation:
+Creating a variable:
 
 ```lua
-print("we " .. "can " .. "concatenate " .. "with " .. "2 " .. "dots")
+local my_variable
 ```
+
+Data types: Lua is a dynamically typed language. This means that variables do not have types; only values do. There are no type definitions in the language. All values carry their own type.
+
+- nil: Is the only value in lua (besides `boolean = false`) that evealuates false
+
+- number
+
+- string
+
+  - Single line string:
+
+  ```lua
+  local my_string = "my string"
+  ```
+
+  - Multiline string:
+
+  ```lua
+  local my_string = [[
+  my multiline string
+  ]]
+  ```
+
+  - String concatenation:
+
+  ```lua
+  print("we " .. "can " .. "concatenate " .. "with " .. "2 " .. "dots")
+  ```
+
+- boolean
+
+- table
+
+To find out the type of a variable value:
+
+```lua
+type(my_var)
+```
+
+Scope: By default lua creates variables with global scope. To create local we need to specify `local`
+
+- local
+
+  ```lua
+  local my_local_var
+  ```
+
+- global
+  ```lua
+  MY_GLOBAL_VAR = "value"
+  ```
