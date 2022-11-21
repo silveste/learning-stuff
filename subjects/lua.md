@@ -36,6 +36,13 @@ Data types: Lua is a dynamically typed language. This means that variables do no
 
 - number
 
+  - To convert a string to a number:
+
+  ```lua
+  local str = "22"
+  local num - tonumber(str)
+  ```
+
 - string
 
   - Single line string:
@@ -80,3 +87,45 @@ Scope: By default lua creates variables with global scope. To create local we ne
   ```lua
   MY_GLOBAL_VAR = "value"
   ```
+
+Math operators:
+
+- Sum: `+`
+
+- Subtract: `-`
+
+- Multiplication: `*`
+
+- Division: `/`
+
+- Remainder: `%`
+
+- Power: `^`
+
+Math functions:
+
+- PI: `math.pi`
+
+- Random number:
+
+```lua
+local some_random_value - os.time()
+math.randomseed(some_random_value)
+math.random() -- between 0 to 1
+math.random(10) -- between 0 to 10
+math.random(10, 50) --between 10 and 50
+```
+
+- Max and Min:
+
+```lua
+math.max(5,4,6,9,7) -- 9
+math.min(5,4,6,9,7) -- 4
+```
+
+- Floor and ceil:
+
+```lua
+math.floor(3.456) -- 3
+math.ceil(3.456) -- 4
+```
