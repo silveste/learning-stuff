@@ -89,7 +89,7 @@ In typescript, variable declaration must include **type assignment**. However, i
     READ_ONLY = 1,
     AUTHOR = 3,
   }
-  //Typescript inferes the value of the other 2 constants when missing
+  //Typescript infers the value of the other 2 constants when missing
   enum UserTypes {
     ADMIN = 0,
     READ_ONLY,
@@ -157,7 +157,7 @@ In typescript, variable declaration must include **type assignment**. However, i
 - define a class:
 
   ```typescript
-  class myclass {
+  class MyClass {
     myfield1: mytype1;
     myfield2: mytype2;
 
@@ -169,9 +169,9 @@ In typescript, variable declaration must include **type assignment**. However, i
 - enforce "this" to refers to the own class:
 
   ```typescript
-  class myclass {
+  class MyClass {
     ...
-    mymethod(...params: any[], this: myclass) {...}
+    mymethod(...params: any[], this: MyClass) {...}
     ...
   }
   ```
@@ -179,19 +179,19 @@ In typescript, variable declaration must include **type assignment**. However, i
 - private fields: the compiler throws an error if we try to access to a private field outside the class scope.
 
   ```typescript
-  class myclass {
+  class MyClass {
     public myfield1: mytype1; //public is the default and can be omited
     private myfield2: mytype2
     ...
   }
-  const myinstance = new myclass()
+  const myinstance = new MyClass()
   myinstance.myfield2 = anyvalueoftype2 //compiler throws error
   ```
 
 - shorthand initialization: public or private keywords can be used in the constructor definition
 
   ```typescript
-  class myclass {
+  class MyClass {
     constructor(private myfield1: mytype1) {...}
   }
   ```
@@ -199,7 +199,7 @@ In typescript, variable declaration must include **type assignment**. However, i
 - read only properties: it only can be assigned once
 
   ```typescript
-  class myclass {
+  class MyClass {
     //it can also be declared here
     // private readonly myfield1: mytype1
     constructor(private readonly myfield1: mytype1) {
@@ -267,7 +267,7 @@ In typescript, variable declaration must include **type assignment**. However, i
 - getters and setters: special methods that can be treated as a property whthin the instances of the class
 
   ```typescript
-    class myclass {
+    class MyClass {
       private myfield1: mytype1;
       ...
       get myfieldone() {
@@ -278,7 +278,7 @@ In typescript, variable declaration must include **type assignment**. However, i
         this.myfield1 = a
       }
     }
-    const myinstance = new myclass()
+    const myinstance = new MyClass()
     myinstance.myfieldone = valuetype1 //uses set method
     myinstance.myfieldone //uses get method
     myinstance.myfield1 = valuetype1 //throws an error
@@ -287,13 +287,13 @@ In typescript, variable declaration must include **type assignment**. However, i
 - static methods and properties:
 
   ```typescript
-    class myclass {
+    class MyClass {
       static mystaticfield: staticfieldtype = value;
       ...
       static mystaticmethod(param: paramtype) {...}
       mymethod(){
         //to access static methods/properties we must refer to the class
-        const fromstaticfield = myclass.mystaticfield
+        const fromstaticfield = MyClass.mystaticfield
         ...
       }
       ...
@@ -308,7 +308,7 @@ In typescript, variable declaration must include **type assignment**. However, i
     abstract myabstracmethod(param: paramtype): returntype;
     ...
   }
-  class myclass extends myparentclass {
+  class MyClass extends myparentclass {
     ...
     myabstractmethod(param: paramtype) {
       ...
@@ -321,13 +321,13 @@ In typescript, variable declaration must include **type assignment**. However, i
 - singletons: to enforce that only once instance of a class can be created the constructor can be set as private and use a static method to check if there are one instance of the class. so that either a new instance is created or the already created instance is returned
 
   ```typescript
-  class mysingleton {
-    private static instance: mysingleton;
+  class MySingleton {
+    private static instance: MySingleton;
     ...
     private constructor(...) {...}
     static getinstance() {
       if(!this.instance) {
-        this.instance = new mysingleton()
+        this.instance = new MySingleton()
       }
       return this.instance
     }
@@ -397,7 +397,7 @@ In typescript, variable declaration must include **type assignment**. However, i
   }
   ```
 
-- Interfaces, classesand functions can declare optional keys
+- Interfaces, classes and functions can declare optional keys
 
   ```typescript
   interface MyInterface {
@@ -580,7 +580,16 @@ Generics allows to implement code that manage data without the need of care abou
 
   ```typescript
   //constrain the type to be an object
-  function myFunction<T extends object>(objParam){...}
+  function myFunction<T extends object>(objParam: T){...}
+  //constrain the type to have a specific key
+  interface Lengthy {
+    length: number;
+  }
+  function myFunction<T extends Lengthy>(param: T){
+    ...
+    const { length } = param
+    ...
+  }
   ```
 
 - "keyof" constrain: Indicates that the type is a key of other generic type
